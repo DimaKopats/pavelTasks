@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="230" id="KGk-i7-Jjw" customClass="DKCustomCell" customModule="constraints_task1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="368" height="230"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="368" height="229.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelDescription" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGH-8j-D69">
+                        <rect key="frame" x="33" y="160.5" width="237" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" placeholderIntrinsicWidth="237" placeholderIntrinsicHeight="78.5" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D42-RQ-LtM">
+                        <rect key="frame" x="33" y="23" width="237" height="122.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                        </variation>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tJo-Ql-UPA">
+                        <rect key="frame" x="285" y="89.5" width="50" height="50.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="ZCL-Ct-d88"/>
+                            <constraint firstAttribute="height" constant="50" id="xvj-R3-uNy"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHy-2u-Rna">
+                        <rect key="frame" x="0.0" y="0.0" width="270" height="2"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="FhV-pv-M9h"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="D42-RQ-LtM" firstAttribute="leading" secondItem="tJo-Ql-UPA" secondAttribute="trailing" constant="15" id="5jb-dk-9wj"/>
+                    <constraint firstItem="D42-RQ-LtM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="BDH-iC-tJV"/>
+                    <constraint firstItem="D42-RQ-LtM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="25" id="EQ0-JI-rV3"/>
+                    <constraint firstItem="tJo-Ql-UPA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ime-U7-jRI"/>
+                    <constraint firstItem="tJo-Ql-UPA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="25" id="IrF-EH-PL5"/>
+                    <constraint firstItem="dGH-8j-D69" firstAttribute="leading" secondItem="D42-RQ-LtM" secondAttribute="leading" id="OGo-Pr-KKO"/>
+                    <constraint firstItem="VHy-2u-Rna" firstAttribute="trailing" secondItem="D42-RQ-LtM" secondAttribute="trailing" id="VPt-Bv-FEG"/>
+                    <constraint firstItem="VHy-2u-Rna" firstAttribute="leading" secondItem="dGH-8j-D69" secondAttribute="leading" id="Vdk-Ig-pZJ"/>
+                    <constraint firstItem="D42-RQ-LtM" firstAttribute="trailing" secondItem="dGH-8j-D69" secondAttribute="trailing" id="agk-CH-QZw"/>
+                    <constraint firstItem="tJo-Ql-UPA" firstAttribute="leading" secondItem="D42-RQ-LtM" secondAttribute="trailing" constant="15" id="aqq-pm-dvy"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="dGH-8j-D69" secondAttribute="bottom" constant="25" id="cFY-gN-rPc"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="D42-RQ-LtM" secondAttribute="trailing" constant="25" id="jft-YY-PVT"/>
+                    <constraint firstItem="VHy-2u-Rna" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ko1-sF-qts"/>
+                    <constraint firstAttribute="trailing" secondItem="VHy-2u-Rna" secondAttribute="trailing" id="qwf-48-puR"/>
+                    <constraint firstAttribute="top" secondItem="VHy-2u-Rna" secondAttribute="top" id="rLh-r5-amR"/>
+                    <constraint firstItem="dGH-8j-D69" firstAttribute="top" secondItem="D42-RQ-LtM" secondAttribute="bottom" constant="15" id="rxK-Xl-mM7"/>
+                    <constraint firstAttribute="bottom" secondItem="VHy-2u-Rna" secondAttribute="bottom" id="tAa-VS-TNN"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="tJo-Ql-UPA" secondAttribute="trailing" constant="25" id="xmz-ZA-ark"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Vdk-Ig-pZJ"/>
+                        <exclude reference="ko1-sF-qts"/>
+                        <exclude reference="qwf-48-puR"/>
+                        <exclude reference="rLh-r5-amR"/>
+                        <exclude reference="tAa-VS-TNN"/>
+                        <exclude reference="5jb-dk-9wj"/>
+                        <exclude reference="EQ0-JI-rV3"/>
+                        <exclude reference="jft-YY-PVT"/>
+                        <exclude reference="IrF-EH-PL5"/>
+                        <exclude reference="aqq-pm-dvy"/>
+                        <exclude reference="xmz-ZA-ark"/>
+                    </mask>
+                </variation>
+                <variation key="heightClass=regular-widthClass=compact">
+                    <mask key="constraints">
+                        <include reference="Vdk-Ig-pZJ"/>
+                        <include reference="qwf-48-puR"/>
+                        <include reference="tAa-VS-TNN"/>
+                        <include reference="5jb-dk-9wj"/>
+                        <include reference="jft-YY-PVT"/>
+                        <include reference="IrF-EH-PL5"/>
+                    </mask>
+                </variation>
+                <variation key="heightClass=regular-widthClass=regular">
+                    <mask key="subviews">
+                        <include reference="tJo-Ql-UPA"/>
+                    </mask>
+                    <mask key="constraints">
+                        <include reference="VPt-Bv-FEG"/>
+                        <include reference="ko1-sF-qts"/>
+                        <include reference="rLh-r5-amR"/>
+                        <include reference="EQ0-JI-rV3"/>
+                        <include reference="aqq-pm-dvy"/>
+                        <include reference="xmz-ZA-ark"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="ImageViewCircle" destination="tJo-Ql-UPA" id="SZG-xV-kKl"/>
+                <outlet property="labelDescription" destination="dGH-8j-D69" id="OG5-ma-Lh2"/>
+                <outlet property="labelTitle" destination="D42-RQ-LtM" id="Qls-4F-rP5"/>
+            </connections>
+            <point key="canvasLocation" x="11" y="150"/>
+        </tableViewCell>
+    </objects>
+</document>
