@@ -8,20 +8,51 @@
 
 import UIKit
 
-private let reuseIdentifier = "DKCell"
 
 class DKCollectionVC: UICollectionViewController {
-
+    
+    private let reuseIdentifier = "DKCell"
+    fileprivate let itemsPerRow: CGFloat = 3
+    fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+    var roundedMode = false
+    
+    @IBOutlet var modeButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-        // Register cell classes
         self.collectionView?.register(UINib.init(nibName: "DKCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: reuseIdentifier)
-//        self.collectionView!.register(DKCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+//        print("supportedInterfaceOrientations")
+        return UIInterfaceOrientationMask.all
+    }
 
-        // Do any additional setup after loading the view.
+    override var shouldAutorotate: Bool {
+//        print("shouldAutorotate")
+        return true
+    }
+    
+    
+    
+    
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        print("traitCollectionDidChange")
+//        let horizontalSizeClass = traitCollection.horizontalSizeClass
+//        let verticalSizeClass = traitCollection.verticalSizeClass
+//
+//        if horizontalSizeClass == .regular && verticalSizeClass == .regular {
+//            setConstraintsForiPad()
+//        } else if verticalSizeClass == .compact {
+//            setConstraintsForLandscape()
+//        } else if horizontalSizeClass == .compact && verticalSizeClass == .regular {
+//            setConstraintsForPortrait()
+//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,6 +70,32 @@ class DKCollectionVC: UICollectionViewController {
     }
     */
 
+    // MARK: modeButton
+
+    @IBAction func modeButtonTapped(_ sender: Any) {
+        var imageForButton: UIImage
+        if roundedMode {
+            imageForButton = #imageLiteral(resourceName: "round")
+    
+            print("go to square mode")
+        } else {
+            imageForButton = #imageLiteral(resourceName: "square")
+            print("go to rounded mode")
+        }
+        modeButton = UIBarButtonItem(image:imageForButton,
+                                          style: .plain,
+                                          target: self,
+                                          action: #selector(modeButtonTapped(_:)))
+        
+//        var button = UIButton(type: .roundedRect)
+//        button.frame.size = CGSize.init(width: 10, height: 10)
+//        button.setBackgroundImage(imageForButton, for: UIControlState.normal)
+//        modeButton.customView = button
+        
+        self.navigationItem.rightBarButtonItem = modeButton
+        roundedMode = !roundedMode
+    }
+    
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -52,10 +109,11 @@ class DKCollectionVC: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-
-        //        cell.backgroundColor = createRandomColor()
+        
         return cell
     }
+    
+
 
     // MARK: UICollectionViewDelegate
 
@@ -90,17 +148,66 @@ class DKCollectionVC: UICollectionViewController {
     
     // MARK: Customize cell
     
-    func createRandomColor() -> (UIColor) {
-        let rand1:CGFloat = ((CGFloat)(arc4random() % 256))/255
-        let rand2:CGFloat = ((CGFloat)(arc4random() % 256))/255
-        let rand3:CGFloat = ((CGFloat)(arc4random() % 256))/255
-        
-        let color = UIColor.init(red: rand1,
-                                 green: rand2,
-                                 blue: rand3,
-                                 alpha: 1)
-        return color
+//    func createRandomColor() -> (UIColor) {
+//        let rand1:CGFloat = ((CGFloat)(arc4random() % 256))/255
+//        let rand2:CGFloat = ((CGFloat)(arc4random() % 256))/255
+//        let rand3:CGFloat = ((CGFloat)(arc4random() % 256))/255
+//        
+//        let color = UIColor.init(red: rand1,
+//                                 green: rand2,
+//                                 blue: rand3,
+//                                 alpha: 1)
+//        return color
+//    }
+
+
+}
+
+// MARK: for rotate to all modes
+
+extension UINavigationController {
+    
+    override open var shouldAutorotate: Bool {
+        get {
+            if let visibleVC = visibleViewController {
+                return visibleVC.shouldAutorotate
+            }
+            return super.shouldAutorotate
+        }
     }
+    
+    override open var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation{
+        get {
+            if let visibleVC = visibleViewController {
+                return visibleVC.preferredInterfaceOrientationForPresentation
+            }
+            return super.preferredInterfaceOrientationForPresentation
+        }
+    }
+    
+    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        get {
+            if let visibleVC = visibleViewController {
+                return visibleVC.supportedInterfaceOrientations
+            }
+            return super.supportedInterfaceOrientations
+        }
+    }}
+// MARK: UICollectionViewDelegateFlowLayout
 
-
+extension DKCollectionVC : UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+        let availableWidth = UIScreen.main.bounds.width - paddingSpace
+        let widthPerItem = availableWidth / itemsPerRow
+        return CGSize(width: widthPerItem, height: widthPerItem)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
+    }
 }

@@ -16,7 +16,6 @@ class DKCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         cellImage.backgroundColor = createRandomColor()
-        print("DKCollectionViewCell - awakeFromNib")
     }
     
     // MARK: Customize cell
