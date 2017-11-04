@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vhg-TM-CUQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vhg-TM-CUQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,23 +28,29 @@
                                 <rect key="frame" x="87.5" y="90" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="201" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QwQ-Mv-lCo">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         </imageView>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="1ba-hr-D8k">
+                                            <rect key="frame" x="82" y="82" width="37" height="37"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="QwQ-Mv-lCo" firstAttribute="top" secondItem="7kE-Mn-gz2" secondAttribute="top" id="54U-Wi-B3x"/>
                                     <constraint firstAttribute="bottom" secondItem="QwQ-Mv-lCo" secondAttribute="bottom" id="S8g-bK-izq"/>
+                                    <constraint firstItem="1ba-hr-D8k" firstAttribute="centerX" secondItem="7kE-Mn-gz2" secondAttribute="centerX" id="UPg-L4-LEi"/>
+                                    <constraint firstItem="1ba-hr-D8k" firstAttribute="centerY" secondItem="7kE-Mn-gz2" secondAttribute="centerY" id="qFW-5y-vVu"/>
                                     <constraint firstAttribute="trailing" secondItem="QwQ-Mv-lCo" secondAttribute="trailing" id="tnz-zz-Z1d"/>
                                     <constraint firstItem="QwQ-Mv-lCo" firstAttribute="leading" secondItem="7kE-Mn-gz2" secondAttribute="leading" id="wym-72-Rg1"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="ImageView" destination="QwQ-Mv-lCo" id="ig9-4L-gl3"/>
+                                    <outlet property="activityIndicator" destination="1ba-hr-D8k" id="hrV-Zl-lhg"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -53,7 +59,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Leg-cE-6J3">
-                                    <rect key="frame" x="149" y="26.5" width="77.5" height="38.5"/>
+                                    <rect key="frame" x="150" y="26.5" width="75.5" height="38.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -97,7 +103,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vhg-TM-CUQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="z7l-18-sts">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

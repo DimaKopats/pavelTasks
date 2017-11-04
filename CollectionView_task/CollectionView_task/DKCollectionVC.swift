@@ -15,51 +15,35 @@ class DKCollectionVC: UICollectionViewController {
     fileprivate let itemsPerRow: CGFloat = 3
     fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     var roundedMode = false
+    let squareLayout = UICollectionViewFlowLayout()
+    let roundedLayout = UICollectionViewLayout()
+    let buttonForNaviBar = UIButton(type: .roundedRect)
     
     @IBOutlet var modeButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.customizeButtonWith(image: #imageLiteral(resourceName: "round"))
+        self.navigationItem.rightBarButtonItem?.customView = buttonForNaviBar
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         self.collectionView?.register(UINib.init(nibName: "DKCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: reuseIdentifier)
     }
     
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-//        print("supportedInterfaceOrientations")
         return UIInterfaceOrientationMask.all
     }
 
     override var shouldAutorotate: Bool {
-//        print("shouldAutorotate")
+        self.collectionView?.setCollectionViewLayout(self.collectionViewLayout, animated: true)
+
+        print("shouldAutorotate")
+        
         return true
     }
     
-    
-    
-    
-    
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-        print("traitCollectionDidChange")
-//        let horizontalSizeClass = traitCollection.horizontalSizeClass
-//        let verticalSizeClass = traitCollection.verticalSizeClass
-//
-//        if horizontalSizeClass == .regular && verticalSizeClass == .regular {
-//            setConstraintsForiPad()
-//        } else if verticalSizeClass == .compact {
-//            setConstraintsForLandscape()
-//        } else if horizontalSizeClass == .compact && verticalSizeClass == .regular {
-//            setConstraintsForPortrait()
-//        }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     /*
     // MARK: - Navigation
 
@@ -76,32 +60,31 @@ class DKCollectionVC: UICollectionViewController {
         var imageForButton: UIImage
         if roundedMode {
             imageForButton = #imageLiteral(resourceName: "round")
-    
             print("go to square mode")
+            self.collectionView?.setCollectionViewLayout(self.squareLayout, animated: true)
         } else {
             imageForButton = #imageLiteral(resourceName: "square")
             print("go to rounded mode")
+            self.collectionView?.setCollectionViewLayout(self.roundedLayout, animated: true)
         }
-        modeButton = UIBarButtonItem(image:imageForButton,
-                                          style: .plain,
-                                          target: self,
-                                          action: #selector(modeButtonTapped(_:)))
         
-//        var button = UIButton(type: .roundedRect)
-//        button.frame.size = CGSize.init(width: 10, height: 10)
-//        button.setBackgroundImage(imageForButton, for: UIControlState.normal)
-//        modeButton.customView = button
-        
-        self.navigationItem.rightBarButtonItem = modeButton
+        imageForButton = imageForButton.withRenderingMode(.alwaysTemplate)
+        buttonForNaviBar.setBackgroundImage(imageForButton, for: UIControlState.normal)
+        self.navigationItem.rightBarButtonItem?.customView = buttonForNaviBar
         roundedMode = !roundedMode
+    }
+    
+    func customizeButtonWith(image: UIImage) {
+        buttonForNaviBar.frame.size = CGSize.init(width: 10, height: 10)
+        buttonForNaviBar.setBackgroundImage(image.withRenderingMode(.alwaysTemplate), for: UIControlState.normal)
+        buttonForNaviBar.addTarget(self, action: #selector(modeButtonTapped(_:)), for: .touchUpInside)
     }
     
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 2
     }
-
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 8
@@ -145,22 +128,6 @@ class DKCollectionVC: UICollectionViewController {
     
     }
     */
-    
-    // MARK: Customize cell
-    
-//    func createRandomColor() -> (UIColor) {
-//        let rand1:CGFloat = ((CGFloat)(arc4random() % 256))/255
-//        let rand2:CGFloat = ((CGFloat)(arc4random() % 256))/255
-//        let rand3:CGFloat = ((CGFloat)(arc4random() % 256))/255
-//        
-//        let color = UIColor.init(red: rand1,
-//                                 green: rand2,
-//                                 blue: rand3,
-//                                 alpha: 1)
-//        return color
-//    }
-
-
 }
 
 // MARK: for rotate to all modes
@@ -193,6 +160,7 @@ extension UINavigationController {
             return super.supportedInterfaceOrientations
         }
     }}
+
 // MARK: UICollectionViewDelegateFlowLayout
 
 extension DKCollectionVC : UICollectionViewDelegateFlowLayout {
@@ -200,6 +168,8 @@ extension DKCollectionVC : UICollectionViewDelegateFlowLayout {
         let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
         let availableWidth = UIScreen.main.bounds.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow
+//        print("For cell (\(indexPath.section),\(indexPath.row) w = \(UIScreen.main.bounds.width), h = \(UIScreen.main.bounds.height)")
+        
         return CGSize(width: widthPerItem, height: widthPerItem)
     }
     

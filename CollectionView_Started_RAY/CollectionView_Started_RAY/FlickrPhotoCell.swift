@@ -12,6 +12,20 @@ class FlickrPhotoCell: UICollectionViewCell {
     
     
     @IBOutlet weak var ImageView: UIImageView!
-    //
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    // MARK: - Properties
+    override var isSelected: Bool {
+        didSet {
+            ImageView.layer.borderWidth = isSelected ? 10 : 0
+        }
+    }
+    
+    // MARK: - View Life Cycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        ImageView.layer.borderColor = themeColor.cgColor
+        isSelected = false
+        self.backgroundColor = UIColor.clear
+    }
 }

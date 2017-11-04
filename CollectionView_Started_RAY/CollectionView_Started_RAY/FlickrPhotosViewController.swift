@@ -15,14 +15,38 @@ final class FlickrPhotosViewController: UICollectionViewController {
     fileprivate var searches = [FlickrSearchResults]()
     fileprivate let flickr = Flickr()
     fileprivate let itemsPerRow: CGFloat = 3
-    
+    var largePhotoIndexPath: IndexPath? {
+        didSet {
+            //2
+            var indexPaths = [IndexPath]()
+            if let largePhotoIndexPath = largePhotoIndexPath {
+                indexPaths.append(largePhotoIndexPath)
+            }
+            if let oldValue = oldValue {
+                indexPaths.append(oldValue)
+            }
+            //3
+            collectionView?.performBatchUpdates({
+                self.collectionView?.reloadItems(at: indexPaths)
+            }) { completed in
+                //4
+                if let largePhotoIndexPath = self.largePhotoIndexPath {
+                    self.collectionView?.scrollToItem(
+                        at: largePhotoIndexPath,
+                        at: .centeredVertically,
+                        animated: true)
+                }
+            }
+        }
+    }
+
     
 }
 
 
 // MARK: - Private
 private extension FlickrPhotosViewController {
-    func photoForIndexPath(indexPath: IndexPath) -> FlickrPhoto {
+    func photoFor(indexPath: IndexPath) -> FlickrPhoto {
         return searches[(indexPath as NSIndexPath).section].searchResults[(indexPath as IndexPath).row]
     }
 }
@@ -67,15 +91,48 @@ extension FlickrPhotosViewController {
         return searches[section].searchResults.count
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView,
+                                 cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: reuseIdentifier, for: indexPath) as! FlickrPhotoCell
+        let flickrPhoto = photoFor(indexPath:indexPath)
         //1
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
-                                                      for: indexPath) as! FlickrPhotoCell
+        cell.activityIndicator.stopAnimating()
+        
         //2
-        let flickrPhoto = photoForIndexPath(indexPath: indexPath)
-        cell.backgroundColor = UIColor.clear
+        guard indexPath == largePhotoIndexPath else {
+            cell.ImageView.image = flickrPhoto.thumbnail
+            return cell
+        }
+        
         //3
+        guard flickrPhoto.largeImage == nil else {
+            cell.ImageView.image = flickrPhoto.largeImage
+            return cell
+        }
+        
+        //4
         cell.ImageView.image = flickrPhoto.thumbnail
+        cell.activityIndicator.startAnimating()
+        
+        //5
+        flickrPhoto.loadLargeImage { loadedFlickrPhoto, error in
+            
+            //6
+            cell.activityIndicator.stopAnimating()
+            
+            //7
+            guard loadedFlickrPhoto.largeImage != nil && error == nil else {
+                return
+            }
+            
+            //8
+            if let cell = collectionView.cellForItem(at: indexPath) as? FlickrPhotoCell,
+                indexPath == self.largePhotoIndexPath  {
+                cell.ImageView.image = loadedFlickrPhoto.largeImage
+            }
+        }
         
         return cell
     }
@@ -97,10 +154,29 @@ extension FlickrPhotosViewController {
     }
 }
 
+// MARK: - UICollectionViewDelegate
+extension FlickrPhotosViewController {
+    
+    override func collectionView(_ collectionView: UICollectionView,
+                                 shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        
+        largePhotoIndexPath = largePhotoIndexPath == indexPath ? nil : indexPath
+        return false
+    }
+}
+
 extension FlickrPhotosViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath == largePhotoIndexPath {
+            let flickrPhoto = photoFor(indexPath: indexPath)
+            var size = collectionView.bounds.size
+            size.height -= topLayoutGuide.length
+            size.height -= (sectionInsets.top + sectionInsets.right)
+            size.width -= (sectionInsets.left + sectionInsets.right)
+            return flickrPhoto.sizeToFillWidthOfSize(size)
+        }
         let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow
