@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Animation_groups" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="ghx-54-VqZ">
+                                <rect key="frame" x="107.5" y="213.5" width="160" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="E00-OI-FMU"/>
+                                    <constraint firstAttribute="height" constant="240" id="EQ9-Up-LQy"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humster" translatesAutoresizingMaskIntoConstraints="NO" id="bLu-uj-DBc">
+                                <rect key="frame" x="107.5" y="213.5" width="160" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="3De-db-uC8"/>
+                                    <constraint firstAttribute="height" constant="240" id="oTS-hl-CX1"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.79918231870000001" green="0.79918231870000001" blue="0.79918231870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bLu-uj-DBc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="15d-uO-yJV"/>
+                            <constraint firstItem="ghx-54-VqZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F0L-oB-sKH"/>
+                            <constraint firstItem="ghx-54-VqZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yqf-fp-RRT"/>
+                            <constraint firstItem="bLu-uj-DBc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z2j-iq-CSn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="card" destination="ghx-54-VqZ" id="ldR-UY-AAy"/>
+                        <outlet property="card2" destination="bLu-uj-DBc" id="SxW-fq-KsR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="45.42728635682159"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cat" width="320" height="480"/>
+        <image name="humster" width="320" height="480"/>
+    </resources>
+</document>
