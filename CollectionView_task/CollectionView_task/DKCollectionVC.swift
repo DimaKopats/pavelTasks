@@ -32,7 +32,7 @@ class DKCollectionVC: UICollectionViewController {
     }
     
     
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    override var supportedInterfaceOrientations:UICollectionViewLayoutAttributes UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.all
     }
 
