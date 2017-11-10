@@ -22,6 +22,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="100" height="68"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sBE-Zw-i96">
+                        <rect key="frame" x="0.0" y="68" width="100" height="32"/>
+                        <color key="backgroundColor" red="1" green="0.93716755129999996" blue="0.2191330376" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title for image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dH6-aE-SiW">
                         <rect key="frame" x="15" y="78" width="70" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -30,14 +34,17 @@
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="1" green="0.9371675513357608" blue="0.21913303758258595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="dH6-aE-SiW" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="7ez-hr-oXs"/>
                 <constraint firstItem="9CB-L0-rEP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ODE-ux-Wlr"/>
+                <constraint firstItem="sBE-Zw-i96" firstAttribute="top" secondItem="9CB-L0-rEP" secondAttribute="bottom" id="YSP-bg-NJx"/>
                 <constraint firstItem="dH6-aE-SiW" firstAttribute="top" secondItem="9CB-L0-rEP" secondAttribute="bottom" constant="10" id="bBt-S3-F7r"/>
                 <constraint firstItem="9CB-L0-rEP" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="fkV-up-oVp"/>
+                <constraint firstItem="sBE-Zw-i96" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ilq-fZ-y1b"/>
                 <constraint firstAttribute="bottom" secondItem="dH6-aE-SiW" secondAttribute="bottom" constant="10" id="lim-le-a5n"/>
+                <constraint firstAttribute="bottom" secondItem="sBE-Zw-i96" secondAttribute="bottom" id="qHd-Nw-kE8"/>
                 <constraint firstItem="9CB-L0-rEP" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="rNr-zB-1iN"/>
+                <constraint firstAttribute="trailing" secondItem="sBE-Zw-i96" secondAttribute="trailing" id="zrD-gP-DVO"/>
             </constraints>
             <size key="customSize" width="95" height="71"/>
             <connections>

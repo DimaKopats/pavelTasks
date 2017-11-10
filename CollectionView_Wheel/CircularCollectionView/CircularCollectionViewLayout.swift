@@ -68,26 +68,25 @@ class CircularCollectionViewLayout: UICollectionViewLayout {
     let centerX = collectionView!.contentOffset.x + (collectionView!.bounds.width / 2.0)
     let anchorPointY = ((itemSize.height / 2.0) + radius) / itemSize.height
     
-//    // 1
-//    let theta = atan2(collectionView!.bounds.width / 2.0,
-//                      radius + (itemSize.height / 2.0) - (collectionView!.bounds.height / 2.0))
-//    // 2
-//    var startIndex = 0
-//    var endIndex = collectionView!.numberOfItems(inSection: 0) - 1
-//    // 3
-//    if (angle < -theta) {
-//      startIndex = Int(floor((-theta - angle) / anglePerItem))
-//    }
-//    // 4
-//    endIndex = min(endIndex, Int(ceil((theta - angle) / anglePerItem)))
-//    // 5
-//    if (endIndex < startIndex) {
-//      endIndex = 0
-//      startIndex = 0
-//    }
+    // 1
+    let theta = atan2(collectionView!.bounds.width / 2.0,
+                      radius + (itemSize.height / 2.0) - (collectionView!.bounds.height / 2.0))
+    // 2
+    var startIndex = 0
+    var endIndex = collectionView!.numberOfItems(inSection: 0) - 1
+    // 3
+    if (angle < -theta) {
+      startIndex = Int(floor((-theta - angle) / anglePerItem))
+    }
+    // 4
+    endIndex = min(endIndex, Int(ceil((theta - angle) / anglePerItem)))
+    // на случай, если все ячейки выходят за пределы экрана при оч быстрой прокрутке
+    if (endIndex < startIndex) {
+      endIndex = 0
+      startIndex = 0
+    }
     
-    
-    attributesList = (0..<collectionView!.numberOfItems(inSection: 0)).map { (i)
+    attributesList = (startIndex...endIndex).map { (i)
       -> CircularCollectionViewLayoutAttributes in
       // 1
       let attributes = CircularCollectionViewLayoutAttributes(forCellWith: IndexPath(item: i, section: 0))
@@ -106,7 +105,8 @@ class CircularCollectionViewLayout: UICollectionViewLayout {
   }
 
   override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-      return attributesList[indexPath.row]
+    print("attributesList[\(indexPath.row)]")
+    return attributesList[indexPath.row]
   }
   
   override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {

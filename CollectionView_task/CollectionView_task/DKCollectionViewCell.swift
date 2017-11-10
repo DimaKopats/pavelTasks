@@ -12,10 +12,18 @@ class DKCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var cellImage: UIImageView!
-    
+    var circularMode = false
+
     override func awakeFromNib() {
         super.awakeFromNib()
         cellImage.backgroundColor = createRandomColor()
+        
+        contentView.layer.cornerRadius = 10
+        contentView.layer.borderColor = UIColor.black.cgColor
+        contentView.layer.borderWidth = 5
+        contentView.layer.shouldRasterize = true
+        contentView.layer.rasterizationScale = UIScreen.main.scale
+        contentView.clipsToBounds = true
     }
     
     // MARK: Customize cell
@@ -31,5 +39,15 @@ class DKCollectionViewCell: UICollectionViewCell {
                                  alpha: 1)
         return color
     }
+    
+    override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
+        super.apply(layoutAttributes)
+        guard let circularlayoutAttributes = layoutAttributes as? CircularWithoutRotateCollectionViewLayoutAttributes else {
+            self.layer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+            return
+        }
 
+        self.layer.anchorPoint = circularlayoutAttributes.anchorPoint
+        self.center.y += (circularlayoutAttributes.anchorPoint.y - 0.5) * self.bounds.height
+    }
 }

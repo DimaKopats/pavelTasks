@@ -109,13 +109,13 @@
 			isa = PBXGroup;
 			children = (
 				7B0AC7BB1AAEF90000885D4A /* AppDelegate.swift */,
-				77B260E21F2E73F7003A383F /* Assets */,
 				77995C7A1F40C92500AF30AF /* Layouts */,
 				77B260DC1F2E73F7003A383F /* Models */,
 				7B0AC7E11AAEF9CE00885D4A /* Storyboards & Xibs */,
 				7B0AC7B91AAEF90000885D4A /* Supporting Files */,
 				77B260E01F2E73F7003A383F /* View Controllers */,
 				77B260DE1F2E73F7003A383F /* Views */,
+				77B260E21F2E73F7003A383F /* Assets */,
 			);
 			path = Pinterest;
 			sourceTree = "<group>";

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B40BAFC1FB457CB0064A216 /* CircularCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B40BAFB1FB457CB0064A216 /* CircularCollectionViewLayout.swift */; };
+		1B40BAFE1FB49B240064A216 /* CircularWithoutRotateCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B40BAFD1FB49B240064A216 /* CircularWithoutRotateCollectionViewLayout.swift */; };
 		85E3FE3C1FAB0852001F5643 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E3FE3B1FAB0852001F5643 /* AppDelegate.swift */; };
 		85E3FE411FAB0852001F5643 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E3FE3F1FAB0852001F5643 /* Main.storyboard */; };
 		85E3FE431FAB0852001F5643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E3FE421FAB0852001F5643 /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B40BAFB1FB457CB0064A216 /* CircularCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularCollectionViewLayout.swift; sourceTree = "<group>"; };
+		1B40BAFD1FB49B240064A216 /* CircularWithoutRotateCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularWithoutRotateCollectionViewLayout.swift; sourceTree = "<group>"; };
 		85E3FE381FAB0852001F5643 /* CollectionView_task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionView_task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E3FE3B1FAB0852001F5643 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85E3FE401FAB0852001F5643 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,14 +62,16 @@
 		85E3FE3A1FAB0852001F5643 /* CollectionView_task */ = {
 			isa = PBXGroup;
 			children = (
-				85E3FE3B1FAB0852001F5643 /* AppDelegate.swift */,
 				85E3FE4D1FAB0B3F001F5643 /* DKCollectionVC.swift */,
+				1B40BAFD1FB49B240064A216 /* CircularWithoutRotateCollectionViewLayout.swift */,
 				85E3FE4F1FAB1813001F5643 /* DKCollectionViewCell.swift */,
+				85E3FE421FAB0852001F5643 /* Assets.xcassets */,
 				85E3FE501FAB1813001F5643 /* DKCollectionViewCell.xib */,
 				85E3FE3F1FAB0852001F5643 /* Main.storyboard */,
-				85E3FE421FAB0852001F5643 /* Assets.xcassets */,
 				85E3FE441FAB0852001F5643 /* LaunchScreen.storyboard */,
 				85E3FE471FAB0852001F5643 /* Info.plist */,
+				85E3FE3B1FAB0852001F5643 /* AppDelegate.swift */,
+				1B40BAFB1FB457CB0064A216 /* CircularCollectionViewLayout.swift */,
 			);
 			path = CollectionView_task;
 			sourceTree = "<group>";
@@ -97,7 +103,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Dzmitry Kopats";
 				TargetAttributes = {
 					85E3FE371FAB0852001F5643 = {
@@ -146,6 +152,8 @@
 				85E3FE4E1FAB0B3F001F5643 /* DKCollectionVC.swift in Sources */,
 				85E3FE3C1FAB0852001F5643 /* AppDelegate.swift in Sources */,
 				85E3FE511FAB1813001F5643 /* DKCollectionViewCell.swift in Sources */,
+				1B40BAFE1FB49B240064A216 /* CircularWithoutRotateCollectionViewLayout.swift in Sources */,
+				1B40BAFC1FB457CB0064A216 /* CircularCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +189,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -189,7 +199,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -232,7 +246,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -240,7 +256,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

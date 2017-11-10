@@ -14,9 +14,9 @@ class DKCollectionVC: UICollectionViewController {
     private let reuseIdentifier = "DKCell"
     fileprivate let itemsPerRow: CGFloat = 3
     fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
-    var roundedMode = false
+    var circularMode = false
     let squareLayout = UICollectionViewFlowLayout()
-    let roundedLayout = UICollectionViewLayout()
+    let circularLayout = CircularWithoutRotateCollectionViewLayout()
     let buttonForNaviBar = UIButton(type: .roundedRect)
     
     @IBOutlet var modeButton: UIBarButtonItem!
@@ -32,7 +32,7 @@ class DKCollectionVC: UICollectionViewController {
     }
     
     
-    override var supportedInterfaceOrientations:UICollectionViewLayoutAttributes UIInterfaceOrientationMask {
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.all
     }
 
@@ -58,20 +58,20 @@ class DKCollectionVC: UICollectionViewController {
 
     @IBAction func modeButtonTapped(_ sender: Any) {
         var imageForButton: UIImage
-        if roundedMode {
+        if circularMode {
             imageForButton = #imageLiteral(resourceName: "round")
             print("go to square mode")
             self.collectionView?.setCollectionViewLayout(self.squareLayout, animated: true)
         } else {
             imageForButton = #imageLiteral(resourceName: "square")
             print("go to rounded mode")
-            self.collectionView?.setCollectionViewLayout(self.roundedLayout, animated: true)
+            self.collectionView?.setCollectionViewLayout(self.circularLayout, animated: true)
         }
         
         imageForButton = imageForButton.withRenderingMode(.alwaysTemplate)
         buttonForNaviBar.setBackgroundImage(imageForButton, for: UIControlState.normal)
         self.navigationItem.rightBarButtonItem?.customView = buttonForNaviBar
-        roundedMode = !roundedMode
+        circularMode = !circularMode
     }
     
     func customizeButtonWith(image: UIImage) {
@@ -83,16 +83,15 @@ class DKCollectionVC: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return 10
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        
         return cell
     }
     
