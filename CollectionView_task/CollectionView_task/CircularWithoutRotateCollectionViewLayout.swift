@@ -10,8 +10,6 @@ import UIKit
 
 let horizontalIndent1: CGFloat = 0
 let verticalIndent1: CGFloat = 150
-let itemSizeHeight1: CGFloat = 100
-let itemSizeWidth1: CGFloat = 100
 let screenWidth1 = UIScreen.main.bounds.width
 
 class CircularWithoutRotateCollectionViewLayoutAttributes: UICollectionViewLayoutAttributes {
@@ -32,7 +30,9 @@ class CircularWithoutRotateCollectionViewLayoutAttributes: UICollectionViewLayou
 }
 
 class CircularWithoutRotateCollectionViewLayout: UICollectionViewLayout {
-    let itemSize = CGSize(width: itemSizeWidth1, height: itemSizeHeight1)
+//    let itemSizeHeight1 =  (UIScreen.main.bounds.width - horizontalIndent1*2) / 5
+    
+    let itemSize = CGSize(width: (UIScreen.main.bounds.width - horizontalIndent1*2) / 5, height: (UIScreen.main.bounds.width - horizontalIndent1*2) / 5)
     var attributesList = [CircularWithoutRotateCollectionViewLayoutAttributes]()
 
     var angleAtExtreme: CGFloat {
@@ -43,7 +43,7 @@ class CircularWithoutRotateCollectionViewLayout: UICollectionViewLayout {
         return angleAtExtreme * collectionView!.contentOffset.x / (collectionViewContentSize.width - collectionView!.bounds.width)
     }
     
-    var radius: CGFloat = screenWidth1/2 - itemSizeHeight1 - horizontalIndent1 {
+    var radius: CGFloat = screenWidth1/2 - (UIScreen.main.bounds.width - horizontalIndent1*2) / 5 - horizontalIndent1 {
         didSet {
             invalidateLayout()
         }

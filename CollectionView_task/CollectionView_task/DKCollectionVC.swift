@@ -37,8 +37,8 @@ class DKCollectionVC: UICollectionViewController {
     }
 
     override var shouldAutorotate: Bool {
-        self.collectionView?.setCollectionViewLayout(self.collectionViewLayout, animated: true)
-
+//        self.collectionView?.setCollectionViewLayout(self.collectionViewLayout, animated: true)
+        self.collectionViewLayout.invalidateLayout()
         print("shouldAutorotate")
         
         return true
@@ -67,7 +67,6 @@ class DKCollectionVC: UICollectionViewController {
             print("go to rounded mode")
             self.collectionView?.setCollectionViewLayout(self.circularLayout, animated: true)
         }
-        
         imageForButton = imageForButton.withRenderingMode(.alwaysTemplate)
         buttonForNaviBar.setBackgroundImage(imageForButton, for: UIControlState.normal)
         self.navigationItem.rightBarButtonItem?.customView = buttonForNaviBar
@@ -87,7 +86,7 @@ class DKCollectionVC: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 4
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -99,6 +98,61 @@ class DKCollectionVC: UICollectionViewController {
 
     // MARK: UICollectionViewDelegate
 
+    /*
+    override func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.contentView.backgroundColor = UIColor.blue
+        print("didHighlightItemAt")
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.contentView.backgroundColor = nil
+        print("didUnhighlightItemAt")
+    }
+ */
+    
+    /*
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.contentView.backgroundColor = UIColor.red
+        cell?.isSelected = true
+        print("didSelectItemAt")
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        print("didDeselectItemAt")
+    }
+ */
+    
+    
+    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+        if NSStringFromSelector(action).contains("copy"){
+            print("performAction for copy")
+        }
+        
+        if NSStringFromSelector(action).contains("paste") {
+            print("performAction for paste")
+        }
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView,
+                                 canPerformAction action: Selector,
+                                 forItemAt indexPath: IndexPath,
+                                 withSender sender: Any?) -> Bool {
+        print("\(NSStringFromSelector(action))")
+        // support only copy + paste
+        if NSStringFromSelector(action).contains("copy") ||  NSStringFromSelector(action).contains("paste") {
+            return true
+        }
+        return false
+    }
+ 
+    
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {

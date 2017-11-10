@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CollectionView_task/DKCollectionVC.swift"
-            timestampString = "531937233.890457"
+            timestampString = "532019391.386008"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
             landmarkName = "preferredInterfaceOrientationForPresentation"
             landmarkType = "24">
          </BreakpointContent>
