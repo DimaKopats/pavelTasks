@@ -43,7 +43,7 @@ class CollectionViewController: UICollectionViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

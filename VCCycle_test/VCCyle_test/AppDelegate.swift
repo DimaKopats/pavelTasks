@@ -17,32 +17,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+//        let redVC = ❤️
+//        let greenVC = 💚
+//        let yellowVC = 💛
+//        let blueVC = 💙
         
-//        self.window = UIWindow.init(frame: UIScreen.main.bounds)
-//        self.window?.backgroundColor = UIColor.white
-//        
-//        let viewController1 = ViewController()
-//        let viewController2 = ViewController()
-//        let viewController3 = ViewController()
-//        let viewController4 = ViewController()
-//        
-//        viewController1.color = .green
-//        viewController2.color = .red
-//        viewController3.color = .blue
-//        viewController4.color = .yellow
-//        
-//        viewController2.view.backgroundColor = .black
-//        
-//        let controllersStack: [UIViewController] = [viewController1, viewController2, viewController3, viewController4]
-//        
-//        
-//        
-//        
-//        let naviController = UINavigationController.init()
-//        naviController.setViewControllers(controllersStack, animated: true)
-//        self.window?.rootViewController = naviController
-//        self.window?.makeKeyAndVisible()
-//        
+        
+        
+        self.window = UIWindow.init(frame: UIScreen.main.bounds)
+        self.window?.backgroundColor = UIColor.white
+        
+        let viewController1 = ViewController()
+        let viewController2 = ViewController()
+        let viewController3 = ViewController()
+        let viewController4 = ViewController()
+        
+        viewController1.color = .green
+        viewController2.color = .red
+        viewController3.color = .blue
+        viewController4.color = .yellow
+        
+        viewController1.stringColor = "green"
+        viewController2.stringColor = "red"
+        viewController3.stringColor = "blue"
+        viewController4.stringColor = "yellow"
+        
+        viewController2.view.backgroundColor = .black
+        
+        let controllersStack: [UIViewController] = [viewController1, viewController2, viewController3, viewController4]
+        
+        
+        
+        
+        let naviController = UINavigationController.init()
+        naviController.setViewControllers(controllersStack, animated: true)
+        self.window?.rootViewController = naviController
+        self.window?.makeKeyAndVisible()
+//
         return true
     }
     
