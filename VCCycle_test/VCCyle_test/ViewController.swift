@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     }
     
     @objc func loadNextVC() {
-        // neet to go to nextVC
+        // need to go to nextVC
 //        let vc = ViewController()
 //        self.navigationController?.pushViewController(vc, animated: true)
         print("loadNextVC count = \(self.navigationController!.viewControllers.count)")
@@ -39,12 +39,12 @@ class ViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("viewWillDisappear")
+        print("\(stringColor!) - viewWillDisappear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print("viewDidDisappear")
+        print("\(stringColor!) - viewDidDisappear")
     }
     
     override func didReceiveMemoryWarning() {
@@ -54,14 +54,17 @@ class ViewController: UIViewController {
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        print("-viewWillLayoutSubviews")
+        print("\(stringColor!) - viewWillLayoutSubviews")
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        print("-viewDidLayoutSubviews")
+        print("\(stringColor!) - viewDidLayoutSubviews")
     }
-
+    
+    deinit {
+        print("\(stringColor!) - dinit")
+    }
     
 
 }

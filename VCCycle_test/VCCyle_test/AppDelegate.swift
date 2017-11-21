@@ -17,10 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-//        let redVC = ❤️
-//        let greenVC = 💚
-//        let yellowVC = 💛
-//        let blueVC = 💙
+        let redVC = "❤️"
+        let greenVC = "💚"
+        let yellowVC = "💛"
+        let blueVC = "💙"
         
         
         
@@ -37,10 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         viewController3.color = .blue
         viewController4.color = .yellow
         
-        viewController1.stringColor = "green"
-        viewController2.stringColor = "red"
-        viewController3.stringColor = "blue"
-        viewController4.stringColor = "yellow"
+        viewController1.stringColor = greenVC
+        viewController2.stringColor = redVC
+        viewController3.stringColor = blueVC
+        viewController4.stringColor = yellowVC
         
         viewController2.view.backgroundColor = .black
         

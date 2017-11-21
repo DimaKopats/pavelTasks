@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B485DDA1FC44FE200CBDB08 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B485DD91FC44FE200CBDB08 /* Parser.swift */; };
+		1B485DDC1FC45B2F00CBDB08 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B485DDB1FC45B2F00CBDB08 /* PostModel.swift */; };
+		1B485DE01FC46BBB00CBDB08 /* DKDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B485DDF1FC46BBB00CBDB08 /* DKDataLoader.swift */; };
+		1B485DE21FC4776B00CBDB08 /* DKDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B485DE11FC4776B00CBDB08 /* DKDataSource.swift */; };
+		1B5FBD6F1FC2DBF4008B2655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5FBD6E1FC2DBF4008B2655 /* AppDelegate.swift */; };
+		1B5FBD741FC2DBF4008B2655 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5FBD721FC2DBF4008B2655 /* Main.storyboard */; };
+		1B5FBD761FC2DBF4008B2655 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B5FBD751FC2DBF4008B2655 /* Assets.xcassets */; };
+		1B5FBD791FC2DBF4008B2655 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5FBD771FC2DBF4008B2655 /* LaunchScreen.storyboard */; };
+		1B5FBD801FC2EA11008B2655 /* VK_ios_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B5FBD811FC2EA11008B2655 /* VK_ios_sdk.framework */; };
+		1B5FBD8F1FC2F4F7008B2655 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5FBD8E1FC2F4F7008B2655 /* LoginViewController.swift */; };
+		1B5FBD911FC2F522008B2655 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5FBD901FC2F522008B2655 /* FeedViewController.swift */; };
+		1B5FBD941FC31A6A008B2655 /* DKTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5FBD921FC31A6A008B2655 /* DKTableViewCell.swift */; };
+		1B5FBD951FC31A6A008B2655 /* DKTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B5FBD931FC31A6A008B2655 /* DKTableViewCell.xib */; };
+		FF96495EA690CDBD3DC2611D /* Pods_VKReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A89664359084B1C155C552 /* Pods_VKReader.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1B485DD91FC44FE200CBDB08 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		1B485DDB1FC45B2F00CBDB08 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		1B485DDF1FC46BBB00CBDB08 /* DKDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKDataLoader.swift; sourceTree = "<group>"; };
+		1B485DE11FC4776B00CBDB08 /* DKDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKDataSource.swift; sourceTree = "<group>"; };
+		1B5FBD6B1FC2DBF4008B2655 /* VKReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B5FBD6E1FC2DBF4008B2655 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1B5FBD731FC2DBF4008B2655 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1B5FBD751FC2DBF4008B2655 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1B5FBD781FC2DBF4008B2655 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1B5FBD7A1FC2DBF4008B2655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B5FBD811FC2EA11008B2655 /* VK_ios_sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VK_ios_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B5FBD8E1FC2F4F7008B2655 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1B5FBD901FC2F522008B2655 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		1B5FBD921FC31A6A008B2655 /* DKTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKTableViewCell.swift; sourceTree = "<group>"; };
+		1B5FBD931FC31A6A008B2655 /* DKTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DKTableViewCell.xib; sourceTree = "<group>"; };
+		63A89664359084B1C155C552 /* Pods_VKReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D767614689F241F45FF8557 /* Pods-VKReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKReader/Pods-VKReader.debug.xcconfig"; sourceTree = "<group>"; };
+		CD9B8ED4FC86140F7913E4C9 /* Pods-VKReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKReader/Pods-VKReader.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B5FBD681FC2DBF4008B2655 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B5FBD801FC2EA11008B2655 /* VK_ios_sdk.framework in Frameworks */,
+				FF96495EA690CDBD3DC2611D /* Pods_VKReader.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A68A0761B2B992E7D7C3067 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B5FBD811FC2EA11008B2655 /* VK_ios_sdk.framework */,
+				63A89664359084B1C155C552 /* Pods_VKReader.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1B5FBD621FC2DBF4008B2655 = {
+			isa = PBXGroup;
+			children = (
+				1B5FBD6D1FC2DBF4008B2655 /* VKReader */,
+				1B5FBD6C1FC2DBF4008B2655 /* Products */,
+				A14CF84F66FAEF516018B25E /* Pods */,
+				0A68A0761B2B992E7D7C3067 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1B5FBD6C1FC2DBF4008B2655 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B5FBD6B1FC2DBF4008B2655 /* VKReader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B5FBD6D1FC2DBF4008B2655 /* VKReader */ = {
+			isa = PBXGroup;
+			children = (
+				1B485DD91FC44FE200CBDB08 /* Parser.swift */,
+				1B485DDB1FC45B2F00CBDB08 /* PostModel.swift */,
+				1B5FBD8E1FC2F4F7008B2655 /* LoginViewController.swift */,
+				1B485DE11FC4776B00CBDB08 /* DKDataSource.swift */,
+				1B5FBD901FC2F522008B2655 /* FeedViewController.swift */,
+				1B485DDF1FC46BBB00CBDB08 /* DKDataLoader.swift */,
+				1B5FBD921FC31A6A008B2655 /* DKTableViewCell.swift */,
+				1B5FBD931FC31A6A008B2655 /* DKTableViewCell.xib */,
+				1B5FBD6E1FC2DBF4008B2655 /* AppDelegate.swift */,
+				1B5FBD721FC2DBF4008B2655 /* Main.storyboard */,
+				1B5FBD751FC2DBF4008B2655 /* Assets.xcassets */,
+				1B5FBD771FC2DBF4008B2655 /* LaunchScreen.storyboard */,
+				1B5FBD7A1FC2DBF4008B2655 /* Info.plist */,
+			);
+			path = VKReader;
+			sourceTree = "<group>";
+		};
+		A14CF84F66FAEF516018B25E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D767614689F241F45FF8557 /* Pods-VKReader.debug.xcconfig */,
+				CD9B8ED4FC86140F7913E4C9 /* Pods-VKReader.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1B5FBD6A1FC2DBF4008B2655 /* VKReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B5FBD7D1FC2DBF4008B2655 /* Build configuration list for PBXNativeTarget "VKReader" */;
+			buildPhases = (
+				46357D0699B892D2F2A4C30C /* [CP] Check Pods Manifest.lock */,
+				1B5FBD671FC2DBF4008B2655 /* Sources */,
+				1B5FBD681FC2DBF4008B2655 /* Frameworks */,
+				1B5FBD691FC2DBF4008B2655 /* Resources */,
+				7AA132869927433146A6E5A7 /* [CP] Embed Pods Frameworks */,
+				B3561D13C47437760A47542F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VKReader;
+			productName = VKReader;
+			productReference = 1B5FBD6B1FC2DBF4008B2655 /* VKReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1B5FBD631FC2DBF4008B2655 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Dzmitry Kopats";
+				TargetAttributes = {
+					1B5FBD6A1FC2DBF4008B2655 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 1B5FBD661FC2DBF4008B2655 /* Build configuration list for PBXProject "VKReader" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1B5FBD621FC2DBF4008B2655;
+			productRefGroup = 1B5FBD6C1FC2DBF4008B2655 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1B5FBD6A1FC2DBF4008B2655 /* VKReader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B5FBD691FC2DBF4008B2655 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B5FBD791FC2DBF4008B2655 /* LaunchScreen.storyboard in Resources */,
+				1B5FBD761FC2DBF4008B2655 /* Assets.xcassets in Resources */,
+				1B5FBD951FC31A6A008B2655 /* DKTableViewCell.xib in Resources */,
+				1B5FBD741FC2DBF4008B2655 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		46357D0699B892D2F2A4C30C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VKReader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AA132869927433146A6E5A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VKReader/Pods-VKReader-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/VK-ios-sdk/VK_ios_sdk.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VK_ios_sdk.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKReader/Pods-VKReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3561D13C47437760A47542F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKReader/Pods-VKReader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B5FBD671FC2DBF4008B2655 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B5FBD8F1FC2F4F7008B2655 /* LoginViewController.swift in Sources */,
+				1B485DDC1FC45B2F00CBDB08 /* PostModel.swift in Sources */,
+				1B5FBD911FC2F522008B2655 /* FeedViewController.swift in Sources */,
+				1B485DDA1FC44FE200CBDB08 /* Parser.swift in Sources */,
+				1B485DE01FC46BBB00CBDB08 /* DKDataLoader.swift in Sources */,
+				1B5FBD941FC31A6A008B2655 /* DKTableViewCell.swift in Sources */,
+				1B5FBD6F1FC2DBF4008B2655 /* AppDelegate.swift in Sources */,
+				1B485DE21FC4776B00CBDB08 /* DKDataSource.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1B5FBD721FC2DBF4008B2655 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B5FBD731FC2DBF4008B2655 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1B5FBD771FC2DBF4008B2655 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B5FBD781FC2DBF4008B2655 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1B5FBD7B1FC2DBF4008B2655 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1B5FBD7C1FC2DBF4008B2655 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1B5FBD7E1FC2DBF4008B2655 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D767614689F241F45FF8557 /* Pods-VKReader.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = VKReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kopats.dzmitry.VKReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1B5FBD7F1FC2DBF4008B2655 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD9B8ED4FC86140F7913E4C9 /* Pods-VKReader.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = VKReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kopats.dzmitry.VKReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B5FBD661FC2DBF4008B2655 /* Build configuration list for PBXProject "VKReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B5FBD7B1FC2DBF4008B2655 /* Debug */,
+				1B5FBD7C1FC2DBF4008B2655 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B5FBD7D1FC2DBF4008B2655 /* Build configuration list for PBXNativeTarget "VKReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B5FBD7E1FC2DBF4008B2655 /* Debug */,
+				1B5FBD7F1FC2DBF4008B2655 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1B5FBD631FC2DBF4008B2655 /* Project object */;
+}

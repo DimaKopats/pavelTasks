@@ -1,0 +1,1138 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		004278E2057C1DF7585FC5D9E2C7D3E5 /* VKCaptchaView.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A11CB5C833A38419CECA31C1A2B16 /* VKCaptchaView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		011E629970C368AF0D033C9E929A05CB /* NSError+VKError.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F599AF2B1DB883B002486BC3CF91FD8 /* NSError+VKError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04C8A233F0AFD13A67F6F54CE122CF84 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E8AAFF77AEBFC58F56F943DDC1AFA8 /* SafariServices.framework */; };
+		07702FCFCD275FBE0AE5D9223740D625 /* VKApiConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 360B80D51591E8FFB4C17E7085948B19 /* VKApiConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07D46DE28CFE99C45607062DFF5B709A /* VKSharedTransitioningObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 520A405E121F00F4511A222AAD3C0E9A /* VKSharedTransitioningObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0865CD83BD6774C38234828C045CFFC3 /* Pods-VKReader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1533991EF5B3F6A1685219BA08670B91 /* Pods-VKReader-dummy.m */; };
+		0A7364493F500B5F1D0C88226EA9DAC7 /* VKSdkResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF185E091B163AA6C17CFF5097F15F43 /* VKSdkResources.bundle */; };
+		0E46C5DB40285241B5AD4C28F3CACF7D /* VKRequestsScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AE8976EA02DB2077B816DA30FD142B /* VKRequestsScheduler.m */; };
+		135EBB9CF3EE524A917E846D636C665B /* VKSharedTransitioningObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D286A01BD24D45E380FD78D4ED96F2 /* VKSharedTransitioningObject.m */; };
+		194C7D139E6739BEF9E1B30A0258D36B /* VKUploadPhotoBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 318DAA7187C8650359741EFB5A446ED4 /* VKUploadPhotoBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B4E3CEEA48B060E102CB9F3790168EC /* VKPhotoSize.h in Headers */ = {isa = PBXBuildFile; fileRef = FE531FF8720B2BC868BF5F9784B7AFD9 /* VKPhotoSize.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BF235B7670A1BCB091C52FF62D6F201 /* VKApiConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 546880807B11F6CC9EE035547906A819 /* VKApiConst.m */; };
+		1C623C4B995EA4971E4D2C4EA8AA10CF /* VKHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B436D891B5E68B4D9327F1ED43A79BA8 /* VKHTTPClient.m */; };
+		1ED27B956CE640FDCDE295A1199EE684 /* VKApiGroups.h in Headers */ = {isa = PBXBuildFile; fileRef = 66D7A1C7E56B9F2D29A0FFD49F57E827 /* VKApiGroups.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F333A6DD8387F0A1EFF217BC87EE524 /* VKUploadImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 20FD53070EE3980A83585B6F8A1672AF /* VKUploadImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21C6DC486E1D699EB7FD81F64CAD1834 /* VKApiDocs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2070FDB77A1A4BE7F36C9C685FDAFFCD /* VKApiDocs.m */; };
+		22AD91692C3198B298D04DF5C65E11F0 /* VK-ios-sdk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA9B4C5BE32074C5A1BC826BE70D796 /* VK-ios-sdk-dummy.m */; };
+		235C338A8F9E5B607B58B15482DFEA34 /* VKJSONOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = ADDCEA3C1003A5BAC04C5624BB31D212 /* VKJSONOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24427C68D6E42456A7183A0049C35DFC /* VKPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 80140FD785D0E4F1C3852FE7BB3C0D2C /* VKPhoto.m */; };
+		29EB2AA963895516D8009302A9B9F5FB /* VKApiWall.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DC6D468EE95806159A880B698EE41E /* VKApiWall.m */; };
+		2D3F1324C72D4E123DA4E1ECEC3EC6D3 /* VKApiDocs.h in Headers */ = {isa = PBXBuildFile; fileRef = 47E773AF398B79604D0371097A5604F2 /* VKApiDocs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D9073B62099B52C32CA9DACFE4B1E99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6E159100AE2299B65B067F762ADF04 /* UIKit.framework */; };
+		2F27090A4A8FDB7D9AC04B7EBB1BC6D8 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 88391C11BD97EB486CD346BBF7485AE9 /* NSString+MD5.m */; };
+		304983DA45379E46DC0F7CCFFE5D38AA /* VKAuthorizeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EE72CC7B034837E87C4975366AE69E /* VKAuthorizeController.m */; };
+		374DB713EB042ECD34C86366B857F550 /* VKAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E907FD70D5980A5A52583C6C79DEB5 /* VKAudio.m */; };
+		3833347FFD2F8F05069A3EAF62AD7DBC /* VKAuthorizeController.h in Headers */ = {isa = PBXBuildFile; fileRef = C4762D80337E735CE33B558043B2EC85 /* VKAuthorizeController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38B659E2FF33B254D0B7090D81E9617A /* VKBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FEBC3870D85AC5A4DE0F68E7AE49F1 /* VKBundle.m */; };
+		3B83603862724640287D88438315A831 /* VKObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EE33DF438FB073E4BE0BCC56EED302 /* VKObject.m */; };
+		3C2A42BCA5F3A7547A82D5DBDB918390 /* VKUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4812076ABF663CA1604F1CF20D6164CB /* VKUtil.m */; };
+		3C9A74F6721540DC8EBBA5DACCB6C1BA /* VKResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F75E6883DC822F5C7778E747491DE /* VKResponse.m */; };
+		3E5E173E1E8AF32EAD6995199C1C3A74 /* VKSdkVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 32102569DC2CEFE6134F84238FB1B54C /* VKSdkVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E795419B713DB84D1CF85C5BB52F298 /* VKUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 070E8D27B4D27C93D802731814B36D5F /* VKUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3FA300255A1A513389002E3BE32AA1CB /* VKDocs.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C6FD06C48AB08DE20972B4451BC8F6B /* VKDocs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40CCD03626667BF0765056BE9C51B79C /* VKJSONOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D15316E296BF48BAE03D5EF952F9D2 /* VKJSONOperation.m */; };
+		4605413A8A2007B8590D99D71885C00E /* VKApiObjectArray.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FD4A9A583D1D47F4F7CA1D63361146 /* VKApiObjectArray.m */; };
+		479A4A439BF0C49C06EAD98D38939CDF /* VKApiPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F33A17CC6614FA84BC4DC5DF25172EE /* VKApiPhotos.m */; };
+		4B2B779E83ACD47EC6D6A7DD026807AE /* VKAccessToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 71B3992335C2B94D5DB67560F643D1CE /* VKAccessToken.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C899E8617DFB59FE7B97807B28FA679 /* VKApiObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 67A65186326B28451A27A64120C0E34E /* VKApiObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D62DC30496D8298FC166709E90244EB /* VKBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 54F259D1749C39E86E62C1DF6ADE49A8 /* VKBundle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FF4C8DAE76BA188FFDA8016C594501E /* VKCaptchaViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB97CD4E57B7B7D6F6E7967756B3AAB /* VKCaptchaViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5041755F05487F794DF7DE174D4DA52E /* VKLikes.m in Sources */ = {isa = PBXBuildFile; fileRef = 36277CB94EE3FF796E29459F30520913 /* VKLikes.m */; };
+		50724450E848D9365463285E81B88C10 /* VKError.h in Headers */ = {isa = PBXBuildFile; fileRef = AADEB8950FD04756C7E7F8E244C0B9DA /* VKError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50F024D0FB88B19356F9CD61E4500217 /* VKUniversity.h in Headers */ = {isa = PBXBuildFile; fileRef = 4248FC02555D8109A1F445BC82285CF8 /* VKUniversity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5137A247BEE6295A376CFDEEC9510583 /* VKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C81A34B3CE2C8943BDF9A65FCA35C816 /* VKRequest.m */; };
+		51F7DA997D2B0CE8E29B19226E13F692 /* VKGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 69789D99A47C5DACBCE102C0E49687E4 /* VKGroup.m */; };
+		527D8A7AC666D9DF0D7E3DFABC5F7EB2 /* VKSchool.h in Headers */ = {isa = PBXBuildFile; fileRef = D2E601F7C1A55B81BCB8C37387BBDF5C /* VKSchool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		539DA48A6EC669D45CA1D2285948F71C /* VKPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = 15664E6B6D5A3976260524EB3A4FD89F /* VKPhoto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		551C42109AC5EFE24D9A57A7DA9B26DA /* VKBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7433506D3716A18650C021383BF1087C /* VKBatchRequest.m */; };
+		55221BB5A0E09ED001AE6AB398E9F89E /* VKHTTPOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = BBB66014B438EA95B4FD397C1B1042F8 /* VKHTTPOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5660506BCC139CFC2AFE143795751F4C /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D4CC0D0CC26BA182E80F32C09395E88C /* ru.lproj */; };
+		56A38D962F9A5F89A35ADB681296A790 /* VKApiUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 4078F9AFF5A922FC43348B43A04DDA3F /* VKApiUsers.m */; };
+		58BE7AAC188A891B5407B5F10D35F75E /* VKApiBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 322D95849A33123525AC81C606AA4E7A /* VKApiBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59BB278D74B7138CF534B0BEF4214D90 /* VKSchool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4797C23C6093409290BB2031814395D0 /* VKSchool.m */; };
+		5B99DE0BF9F843E2B724B0F1D51C0E5D /* NSError+VKError.m in Sources */ = {isa = PBXBuildFile; fileRef = 230CB3AEB5692B688BF895F205941BBA /* NSError+VKError.m */; };
+		61DF7280C30D0328906C76BC97154521 /* VKAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = F3D331356A166C0712355F4DA3A6B3CB /* VKAudio.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64EA2BF5D895430C5B5169AF1BAA8DC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73DECC8A53E2761D4785EF51FFF408F5 /* Foundation.framework */; };
+		6692592EE141545FC85C8936F69DC689 /* VK-ios-sdk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 75B742D6383B438A68DE2F5755CE8974 /* VK-ios-sdk-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E9226FB8FDBFE0956C8342B12749B8A /* VKUploadPhotoRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AADF4CA5D3DF8F03E4DE8A5C340D182 /* VKUploadPhotoRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71415893BC6366877ACA5EAD69F60F2E /* VKUploadWallPhotoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C382FB46AB7C8544E854F1680C985CA8 /* VKUploadWallPhotoRequest.m */; };
+		7178ADA2DC4F6095A13503A6EFBA8A8E /* VKSdk.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1DDC08C803BE3B03DFFE27D4ADE738 /* VKSdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74CEB0664747DE3EB2EA20AA7164ADAD /* VKApiUsers.h in Headers */ = {isa = PBXBuildFile; fileRef = D3FF60E225439D265D16A4B7E149D2FA /* VKApiUsers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77B7425BFF793658BE8BB0421996342A /* VKApiWall.h in Headers */ = {isa = PBXBuildFile; fileRef = FC9DABABC3C2BCB8C6343880F3FABB69 /* VKApiWall.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A999BE69F8F504B895C82216857C018 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73DECC8A53E2761D4785EF51FFF408F5 /* Foundation.framework */; };
+		7A9E31D56C4679B7E183FF2AD590D3CE /* VKActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C468BC05372617869B4A0D9CC74CC4B /* VKActivity.m */; };
+		7D576F5297C8F344479D111FD2C2794F /* VKPermissions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2132882A765A4B8F811131FF0404200B /* VKPermissions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F2602F0231C93B210E00BF165264FE7 /* VKUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 839A405A5CCFE8518B0E1E1DA7349660 /* VKUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F5BC69DC4FC50FF295B87C4D1E9F945 /* OrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F93ED65A3CDCA7E3EB7997244B395B3 /* OrderedDictionary.m */; };
+		8042641C43AEFE527B5A7B331C6512FF /* VKApiObjectArray.h in Headers */ = {isa = PBXBuildFile; fileRef = D7585A2332C3A2EDC9C6A07DC352EB72 /* VKApiObjectArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8097C8D2D661D5A8DA6D16056BB293E0 /* VKCounters.m in Sources */ = {isa = PBXBuildFile; fileRef = CF952094E9D126AE4A86642AC2289E88 /* VKCounters.m */; };
+		82492BD748CAF0667A99C34B1CEFE77C /* VKUploadWallPhotoRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 55C7D5424322F4297C5F718D48D43345 /* VKUploadWallPhotoRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82586D210BB21EF238BE71A8D8E1B912 /* VKPermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = B9180026A2C2BBA0A7DC22C3248BE2D9 /* VKPermissions.m */; };
+		870A6E35FBDDC78FD9D56B04848B1061 /* VKOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF827F220C55C59444AD80781D2D1F /* VKOperation.m */; };
+		8C0CE1D6BA3E70DB3B3DD8AF260ED28F /* VKApiBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F8C397EFF677FD3A322EC22CEC4366 /* VKApiBase.m */; };
+		8CB95630136FB9554831D4D073CFEA1D /* VKHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8909C1D1B1D1B7F519BABAD68860CFBC /* VKHTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		909D88308C13759E569CDDD684477557 /* VKRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = B9748BB45C0826618B2C98E83C0DE0B2 /* VKRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91729F0934DCC456C1B754E4A1C9426A /* VKApiGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F5137A3742210B0B67C36E13A56F /* VKApiGroups.m */; };
+		92045F254D2C66C7631A6E2995975E6D /* VKApiObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B350925E51DA4512079B57BBBFA72E /* VKApiObject.m */; };
+		99828E5ECBCA587D76AC5179C9709581 /* VKCaptchaView.m in Sources */ = {isa = PBXBuildFile; fileRef = B226F32C37A08ECFB1DD522CE61019B3 /* VKCaptchaView.m */; };
+		9A35F64530705E7C97279BA135D2B7C8 /* Pods-VKReader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 852D04E2A8AD49D636BF59CC267DA05C /* Pods-VKReader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A3B79B6D03B0B87C9D9E594B16CB0DC /* VKUploadMessagesPhotoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B7E8F6032BA63835AFFBC6D8A0F0AF /* VKUploadMessagesPhotoRequest.m */; };
+		9B4DDC25649306297FF43F96BC1EF0A5 /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5D47CD9C4209669679E151D28F82E9 /* NSString+MD5.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9BD21987A467D34E273A060ACAC49029 /* VKApiCaptcha.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BAA7DBB757954FA4FD48FBE62459FD /* VKApiCaptcha.m */; };
+		A0C103D55A18CC25AF1CDDC591A66C45 /* VKUniversity.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B1F1900C06ACD19D800AA7F192DAC0 /* VKUniversity.m */; };
+		A20C935E47DEED01F1CE6CDBEC14A9C9 /* VKShareDialogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AE12914A15D891E7D3441CDA5BF1F2 /* VKShareDialogController.m */; };
+		A32B33D0CDEF0791327BA106E3A22AB7 /* VKCaptchaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1407986E83F220C3FB0C5F7E9ADD6479 /* VKCaptchaViewController.m */; };
+		A6A54CDAB319B0F8BE574627683479A9 /* VKUploadPhotoBase.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAFAE076D1B28D3D2E4DDB9EADBE2C9 /* VKUploadPhotoBase.m */; };
+		A861E00D8A9482A0E6DC0A2C6DF96AD9 /* VKGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 01929CFC42138D133032BEE01C418AC1 /* VKGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA1119136C5F8F6A5CDBFA29626552F2 /* VKDocs.m in Sources */ = {isa = PBXBuildFile; fileRef = F03301EBCA6DD69E576510007FBF7095 /* VKDocs.m */; };
+		AC0DC411859FFC6830809020832BBF03 /* VKLikes.h in Headers */ = {isa = PBXBuildFile; fileRef = A3C69CE9C3731F4D025791FC7AA4B2CC /* VKLikes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD50F0C673BADD7104AF8B8933BBD65D /* VKActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = 0586917CC7C3A53E8C1519539CE9C798 /* VKActivity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD5BD674B6D45B33097DFDF4FD04517B /* VKImageParameters.h in Headers */ = {isa = PBXBuildFile; fileRef = B8F2370E1A6432E2A6A93BBCA6EB2037 /* VKImageParameters.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD7ABEB6BFE72D02F6931DC91BC1B390 /* VKObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A258F88165BDDD650544691D69506EB /* VKObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEE8911909C16B438724D36D281859DE /* VKUploadPhotoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB77ECCD60A8C097461B6CB24C880BB /* VKUploadPhotoRequest.m */; };
+		AF8263B0ED00D5416E0DA13859BF340C /* VKApiFriends.h in Headers */ = {isa = PBXBuildFile; fileRef = 5622ADF2F7205D85DE86D86B69269B23 /* VKApiFriends.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2213EA405620F4C3E36DB26723CEAE2 /* VKRequestsScheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = 96C394EF569F26BF9E00D379FC4BE433 /* VKRequestsScheduler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B47A4690A1E16D5B19C6B2E0774DBDBB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6097C9C724BA8850B8D51519AFBB0186 /* CoreGraphics.framework */; };
+		B9821EB0EBB904A2BA8D47D9E00E2E8D /* VKResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = FB98705292852A5DB93637A1EA860AB8 /* VKResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0BB3344347E3FFE90E8113DEDBE9334 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF27815F472138CDD68315313249A9C /* Security.framework */; };
+		C111ABE217CBF37ACB9271EDCEDE2DFB /* VKUploadMessagesPhotoRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E5A74575DC90C4C1177101BD9FBDD38 /* VKUploadMessagesPhotoRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD804A2FC5C7781B7D3616B48F39D62C /* VKOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = CA803B59978637A661447EA9B2CC6C98 /* VKOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D266C5DE83C9D1A5B84A45CB39EE6ED4 /* VKUploadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A2D019C52EA4ADA66BA35691A65E56 /* VKUploadImage.m */; };
+		D3D606EB81E684EB66152AB43CA3C0E4 /* VKHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 358B43FC8DA9831C694AD21DA0E0F36D /* VKHTTPOperation.m */; };
+		D4FDF81AB9E53D7FD99B5AF242084FB2 /* VKCounters.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DC9B78389F186002D4B862C5768BED /* VKCounters.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB63F1B0FD4B528634E7D2A6FF5F94FA /* SdkAssetCatalog.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFC5C3CDED10A66979D838C883A31877 /* SdkAssetCatalog.xcassets */; };
+		DFA161EB06CD129B8443E89223D81B85 /* VKImageParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 698C54DAC8353AB1328BCBC2F6BB860A /* VKImageParameters.m */; };
+		DFF6F9BDC9D1FC07028E00AC0913E88D /* VKAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = CDACCEFB7ED736E187565DA885800229 /* VKAccessToken.m */; };
+		E4AC82F8A5BAB18BE6279727B4387C9A /* VKShareDialogController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ECF484CB74DBD79D7E591BD1ACA8370 /* VKShareDialogController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4EE2E270F47A5A857E2657F586DCE8E /* VKSdk.m in Sources */ = {isa = PBXBuildFile; fileRef = D73FA61AC0013B0D02C725011273FD69 /* VKSdk.m */; };
+		E51593CD79B4C2D4A633AC108C5D6F9B /* VKAuthorizationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD80ECA3FE18DD52E4A468AD8092D42 /* VKAuthorizationResult.m */; };
+		E5BC61B47A65A24A28BA844BB199AAEF /* VKApiFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA8BD9EE506277E91EC940956A212FB /* VKApiFriends.m */; };
+		E90B06BB274CC62CD31712EB5220FFC4 /* OrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = A119B3CF3141A73823DFD031D8DFB45B /* OrderedDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB1132BF7BB663E29C534F1256531854 /* VKAuthorizationResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 780CEB85F6624F1CC88A4F66936F9AC6 /* VKAuthorizationResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDD9E143B81C40F5A1F2DED4A760B7F5 /* VKApiPhotos.h in Headers */ = {isa = PBXBuildFile; fileRef = 55746672CEEAD01A75F78BE12D15689F /* VKApiPhotos.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF3D0310758F80E638E5E1C7700D7D44 /* VKApi.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DD7CDF1A3F08A341A7AB3750407551 /* VKApi.m */; };
+		EFA287C5FAD4AF6F0F41E786753CC5C5 /* VKBatchRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 718FC12CB04FC7CE67DF2D75EE14A90F /* VKBatchRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0B5598B858D977D6A3920250E3928CB /* VKPhotoSize.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BD8A645D4FEF86E9A07E5C8D40114D /* VKPhotoSize.m */; };
+		F0F4072263B256C467BFFC5E8C930DF1 /* VKError.m in Sources */ = {isa = PBXBuildFile; fileRef = 0638E74C0F083A13F45583D49FB16CE7 /* VKError.m */; };
+		F5754B476293672AB2DCC06252A61ED9 /* VKApiCaptcha.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E9DC209975947601EB5364F80DE630A /* VKApiCaptcha.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6562946DE185C9C093A5049988BC73B /* VKRelative.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4FA864098352D20E52AF4996A02ECC /* VKRelative.m */; };
+		F8769DDB5D86CCE3CDC9C09BDABD92FF /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F800C4AAAE479E1F66671FE6EFD86A5C /* en.lproj */; };
+		F89140962C3DEE2EEE2571C8CB2C92C6 /* VKApiModels.h in Headers */ = {isa = PBXBuildFile; fileRef = C828E8F80F8DF336AF4EF2A4AFAC6F5C /* VKApiModels.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9019F393F160891FD58758D17E89F7E /* VKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C8AB2BBB04F939A9869D2472BEA9FC43 /* VKUser.m */; };
+		FB039CE81FDB2C3A6F5BF92101386BBE /* VKApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 12C726280B2D5621C07A7A1606D1B209 /* VKApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE3C144572B63E77E387A29815F464E4 /* VKRelative.h in Headers */ = {isa = PBXBuildFile; fileRef = 75F87E05F84DA0EFC8DE2A2224F372C5 /* VKRelative.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		828ED681C0BB1A9CA1689D25C4000DB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA728ADCC6A57EFF137FF7AD63437B65;
+			remoteInfo = "VK-ios-sdk-VKSdkResources";
+		};
+		9C7430809582C254D5CCCA84F8E4ECA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71AFA4F7CB936A0F6E28E7E576A57A84;
+			remoteInfo = "VK-ios-sdk";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01929CFC42138D133032BEE01C418AC1 /* VKGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKGroup.h; path = library/Source/API/models/VKGroup.h; sourceTree = "<group>"; };
+		0586917CC7C3A53E8C1519539CE9C798 /* VKActivity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKActivity.h; path = library/Source/Views/VKActivity.h; sourceTree = "<group>"; };
+		0638E74C0F083A13F45583D49FB16CE7 /* VKError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKError.m; path = library/Source/Core/VKError.m; sourceTree = "<group>"; };
+		070E8D27B4D27C93D802731814B36D5F /* VKUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKUtil.h; path = library/Source/Utils/VKUtil.h; sourceTree = "<group>"; };
+		0A258F88165BDDD650544691D69506EB /* VKObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKObject.h; path = library/Source/Core/VKObject.h; sourceTree = "<group>"; };
+		0A8F75E6883DC822F5C7778E747491DE /* VKResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKResponse.m; path = library/Source/Core/VKResponse.m; sourceTree = "<group>"; };
+		0EA8BD9EE506277E91EC940956A212FB /* VKApiFriends.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKApiFriends.m; path = library/Source/API/methods/VKApiFriends.m; sourceTree = "<group>"; };
+		0F33A17CC6614FA84BC4DC5DF25172EE /* VKApiPhotos.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKApiPhotos.m; path = library/Source/API/methods/VKApiPhotos.m; sourceTree = "<group>"; };
+		10A2D019C52EA4ADA66BA35691A65E56 /* VKUploadImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKUploadImage.m; path = library/Source/Image/VKUploadImage.m; sourceTree = "<group>"; };
+		12C726280B2D5621C07A7A1606D1B209 /* VKApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKApi.h; path = library/Source/API/VKApi.h; sourceTree = "<group>"; };
+		1407986E83F220C3FB0C5F7E9ADD6479 /* VKCaptchaViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKCaptchaViewController.m; path = library/Source/Views/VKCaptchaViewController.m; sourceTree = "<group>"; };
+		1533991EF5B3F6A1685219BA08670B91 /* Pods-VKReader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VKReader-dummy.m"; sourceTree = "<group>"; };
+		15664E6B6D5A3976260524EB3A4FD89F /* VKPhoto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKPhoto.h; path = library/Source/API/models/VKPhoto.h; sourceTree = "<group>"; };
+		17B350925E51DA4512079B57BBBFA72E /* VKApiObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKApiObject.m; path = library/Source/API/models/VKApiObject.m; sourceTree = "<group>"; };
+		2070FDB77A1A4BE7F36C9C685FDAFFCD /* VKApiDocs.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKApiDocs.m; path = library/Source/API/methods/VKApiDocs.m; sourceTree = "<group>"; };
+		20EA91B4CC95B4C10A5485E3A1FAA083 /* Pods-VKReader-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VKReader-acknowledgements.markdown"; sourceTree = "<group>"; };
+		20FD53070EE3980A83585B6F8A1672AF /* VKUploadImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKUploadImage.h; path = library/Source/Image/VKUploadImage.h; sourceTree = "<group>"; };
+		2132882A765A4B8F811131FF0404200B /* VKPermissions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKPermissions.h; path = library/Source/VKPermissions.h; sourceTree = "<group>"; };
+		230CB3AEB5692B688BF895F205941BBA /* NSError+VKError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+VKError.m"; path = "library/Source/Core/NSError+VKError.m"; sourceTree = "<group>"; };
+		23F8C397EFF677FD3A322EC22CEC4366 /* VKApiBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKApiBase.m; path = library/Source/API/methods/VKApiBase.m; sourceTree = "<group>"; };
+		25DC6D468EE95806159A880B698EE41E /* VKApiWall.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKApiWall.m; path = library/Source/API/methods/VKApiWall.m; sourceTree = "<group>"; };
+		2AADF4CA5D3DF8F03E4DE8A5C340D182 /* VKUploadPhotoRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKUploadPhotoRequest.h; path = library/Source/API/upload/VKUploadPhotoRequest.h; sourceTree = "<group>"; };
+		2F6E159100AE2299B65B067F762ADF04 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		318DAA7187C8650359741EFB5A446ED4 /* VKUploadPhotoBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKUploadPhotoBase.h; path = library/Source/API/upload/VKUploadPhotoBase.h; sourceTree = "<group>"; };
+		32102569DC2CEFE6134F84238FB1B54C /* VKSdkVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKSdkVersion.h; path = library/Source/VKSdkVersion.h; sourceTree = "<group>"; };
+		322D95849A33123525AC81C606AA4E7A /* VKApiBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKApiBase.h; path = library/Source/API/methods/VKApiBase.h; sourceTree = "<group>"; };
+		34AE12914A15D891E7D3441CDA5BF1F2 /* VKShareDialogController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKShareDialogController.m; path = library/Source/Views/VKShareDialogController.m; sourceTree = "<group>"; };
+		358B43FC8DA9831C694AD21DA0E0F36D /* VKHTTPOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKHTTPOperation.m; path = library/Source/Core/VKHTTPOperation.m; sourceTree = "<group>"; };
+		360B80D51591E8FFB4C17E7085948B19 /* VKApiConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKApiConst.h; path = library/Source/API/methods/VKApiConst.h; sourceTree = "<group>"; };
+		36277CB94EE3FF796E29459F30520913 /* VKLikes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKLikes.m; path = library/Source/API/models/VKLikes.m; sourceTree = "<group>"; };
+		376A11CB5C833A38419CECA31C1A2B16 /* VKCaptchaView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKCaptchaView.h; path = library/Source/Views/VKCaptchaView.h; sourceTree = "<group>"; };
+		3B5D47CD9C4209669679E151D28F82E9 /* NSString+MD5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MD5.h"; path = "library/Source/Utils/NSString+MD5.h"; sourceTree = "<group>"; };
+		3EF27815F472138CDD68315313249A9C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		4078F9AFF5A922FC43348B43A04DDA3F /* VKApiUsers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKApiUsers.m; path = library/Source/API/methods/VKApiUsers.m; sourceTree = "<group>"; };
+		4248FC02555D8109A1F445BC82285CF8 /* VKUniversity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKUniversity.h; path = library/Source/API/models/VKUniversity.h; sourceTree = "<group>"; };
+		4797C23C6093409290BB2031814395D0 /* VKSchool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKSchool.m; path = library/Source/API/models/VKSchool.m; sourceTree = "<group>"; };
+		47E773AF398B79604D0371097A5604F2 /* VKApiDocs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKApiDocs.h; path = library/Source/API/methods/VKApiDocs.h; sourceTree = "<group>"; };
+		4812076ABF663CA1604F1CF20D6164CB /* VKUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKUtil.m; path = library/Source/Utils/VKUtil.m; sourceTree = "<group>"; };
+		4E9DC209975947601EB5364F80DE630A /* VKApiCaptcha.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKApiCaptcha.h; path = library/Source/API/methods/VKApiCaptcha.h; sourceTree = "<group>"; };
+		4F599AF2B1DB883B002486BC3CF91FD8 /* NSError+VKError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+VKError.h"; path = "library/Source/Core/NSError+VKError.h"; sourceTree = "<group>"; };
+		520A405E121F00F4511A222AAD3C0E9A /* VKSharedTransitioningObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKSharedTransitioningObject.h; path = library/Source/Views/VKSharedTransitioningObject.h; sourceTree = "<group>"; };
+		546880807B11F6CC9EE035547906A819 /* VKApiConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKApiConst.m; path = library/Source/API/methods/VKApiConst.m; sourceTree = "<group>"; };
+		54F259D1749C39E86E62C1DF6ADE49A8 /* VKBundle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKBundle.h; path = library/Source/VKBundle.h; sourceTree = "<group>"; };
+		55746672CEEAD01A75F78BE12D15689F /* VKApiPhotos.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKApiPhotos.h; path = library/Source/API/methods/VKApiPhotos.h; sourceTree = "<group>"; };
+		55C7D5424322F4297C5F718D48D43345 /* VKUploadWallPhotoRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKUploadWallPhotoRequest.h; path = library/Source/API/upload/VKUploadWallPhotoRequest.h; sourceTree = "<group>"; };
+		5622ADF2F7205D85DE86D86B69269B23 /* VKApiFriends.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKApiFriends.h; path = library/Source/API/methods/VKApiFriends.h; sourceTree = "<group>"; };
+		56B7E8F6032BA63835AFFBC6D8A0F0AF /* VKUploadMessagesPhotoRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKUploadMessagesPhotoRequest.m; path = library/Source/API/upload/VKUploadMessagesPhotoRequest.m; sourceTree = "<group>"; };
+		58CB03A9B3AF58387CEAB5BA463D54A1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		590FD6B5E45045A83352107BF382356B /* VK-ios-sdk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "VK-ios-sdk.modulemap"; sourceTree = "<group>"; };
+		5C6FD06C48AB08DE20972B4451BC8F6B /* VKDocs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKDocs.h; path = library/Source/API/models/VKDocs.h; sourceTree = "<group>"; };
+		6097C9C724BA8850B8D51519AFBB0186 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		63D286A01BD24D45E380FD78D4ED96F2 /* VKSharedTransitioningObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKSharedTransitioningObject.m; path = library/Source/Views/VKSharedTransitioningObject.m; sourceTree = "<group>"; };
+		66D7A1C7E56B9F2D29A0FFD49F57E827 /* VKApiGroups.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKApiGroups.h; path = library/Source/API/methods/VKApiGroups.h; sourceTree = "<group>"; };
+		67A65186326B28451A27A64120C0E34E /* VKApiObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKApiObject.h; path = library/Source/API/models/VKApiObject.h; sourceTree = "<group>"; };
+		69789D99A47C5DACBCE102C0E49687E4 /* VKGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKGroup.m; path = library/Source/API/models/VKGroup.m; sourceTree = "<group>"; };
+		698C54DAC8353AB1328BCBC2F6BB860A /* VKImageParameters.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKImageParameters.m; path = library/Source/Image/VKImageParameters.m; sourceTree = "<group>"; };
+		6B636B67657A54909EA18D6409B4D8BD /* Pods_VKReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_VKReader.framework; path = "Pods-VKReader.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DAA0D1EFCEC1B6D4E272A7F284055A0 /* VK_ios_sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VK_ios_sdk.framework; path = "VK-ios-sdk.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E5A74575DC90C4C1177101BD9FBDD38 /* VKUploadMessagesPhotoRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKUploadMessagesPhotoRequest.h; path = library/Source/API/upload/VKUploadMessagesPhotoRequest.h; sourceTree = "<group>"; };
+		718FC12CB04FC7CE67DF2D75EE14A90F /* VKBatchRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKBatchRequest.h; path = library/Source/VKBatchRequest.h; sourceTree = "<group>"; };
+		71B3992335C2B94D5DB67560F643D1CE /* VKAccessToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKAccessToken.h; path = library/Source/VKAccessToken.h; sourceTree = "<group>"; };
+		73DECC8A53E2761D4785EF51FFF408F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7433506D3716A18650C021383BF1087C /* VKBatchRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKBatchRequest.m; path = library/Source/VKBatchRequest.m; sourceTree = "<group>"; };
+		75B742D6383B438A68DE2F5755CE8974 /* VK-ios-sdk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VK-ios-sdk-umbrella.h"; sourceTree = "<group>"; };
+		75D15316E296BF48BAE03D5EF952F9D2 /* VKJSONOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKJSONOperation.m; path = library/Source/Core/VKJSONOperation.m; sourceTree = "<group>"; };
+		75F87E05F84DA0EFC8DE2A2224F372C5 /* VKRelative.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKRelative.h; path = library/Source/API/models/VKRelative.h; sourceTree = "<group>"; };
+		780CEB85F6624F1CC88A4F66936F9AC6 /* VKAuthorizationResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKAuthorizationResult.h; path = library/Source/VKAuthorizationResult.h; sourceTree = "<group>"; };
+		792EFAF7824A9BCFC0F57D4D60277220 /* Pods-VKReader-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VKReader-frameworks.sh"; sourceTree = "<group>"; };
+		80140FD785D0E4F1C3852FE7BB3C0D2C /* VKPhoto.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKPhoto.m; path = library/Source/API/models/VKPhoto.m; sourceTree = "<group>"; };
+		839A405A5CCFE8518B0E1E1DA7349660 /* VKUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKUser.h; path = library/Source/API/models/VKUser.h; sourceTree = "<group>"; };
+		852D04E2A8AD49D636BF59CC267DA05C /* Pods-VKReader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VKReader-umbrella.h"; sourceTree = "<group>"; };
+		88391C11BD97EB486CD346BBF7485AE9 /* NSString+MD5.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MD5.m"; path = "library/Source/Utils/NSString+MD5.m"; sourceTree = "<group>"; };
+		88EE33DF438FB073E4BE0BCC56EED302 /* VKObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKObject.m; path = library/Source/Core/VKObject.m; sourceTree = "<group>"; };
+		8909C1D1B1D1B7F519BABAD68860CFBC /* VKHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKHTTPClient.h; path = library/Source/Core/VKHTTPClient.h; sourceTree = "<group>"; };
+		8CD80ECA3FE18DD52E4A468AD8092D42 /* VKAuthorizationResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKAuthorizationResult.m; path = library/Source/VKAuthorizationResult.m; sourceTree = "<group>"; };
+		8D4FA864098352D20E52AF4996A02ECC /* VKRelative.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKRelative.m; path = library/Source/API/models/VKRelative.m; sourceTree = "<group>"; };
+		8ECF484CB74DBD79D7E591BD1ACA8370 /* VKShareDialogController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKShareDialogController.h; path = library/Source/Views/VKShareDialogController.h; sourceTree = "<group>"; };
+		8EEF827F220C55C59444AD80781D2D1F /* VKOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKOperation.m; path = library/Source/Core/VKOperation.m; sourceTree = "<group>"; };
+		8F848A7BAD4A08A3D5FDA17E2080C5A7 /* Pods-VKReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VKReader.release.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		942AB36F55EBB3218830DA6CB1BB01D8 /* VK-ios-sdk.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "VK-ios-sdk.xcconfig"; sourceTree = "<group>"; };
+		96C394EF569F26BF9E00D379FC4BE433 /* VKRequestsScheduler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKRequestsScheduler.h; path = library/Source/Core/VKRequestsScheduler.h; sourceTree = "<group>"; };
+		9AB97CD4E57B7B7D6F6E7967756B3AAB /* VKCaptchaViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKCaptchaViewController.h; path = library/Source/Views/VKCaptchaViewController.h; sourceTree = "<group>"; };
+		9C468BC05372617869B4A0D9CC74CC4B /* VKActivity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKActivity.m; path = library/Source/Views/VKActivity.m; sourceTree = "<group>"; };
+		9F93ED65A3CDCA7E3EB7997244B395B3 /* OrderedDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OrderedDictionary.m; path = library/Source/Utils/OrderedDictionary.m; sourceTree = "<group>"; };
+		A119B3CF3141A73823DFD031D8DFB45B /* OrderedDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OrderedDictionary.h; path = library/Source/Utils/OrderedDictionary.h; sourceTree = "<group>"; };
+		A2E907FD70D5980A5A52583C6C79DEB5 /* VKAudio.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKAudio.m; path = library/Source/API/models/VKAudio.m; sourceTree = "<group>"; };
+		A3C69CE9C3731F4D025791FC7AA4B2CC /* VKLikes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKLikes.h; path = library/Source/API/models/VKLikes.h; sourceTree = "<group>"; };
+		AADEB8950FD04756C7E7F8E244C0B9DA /* VKError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKError.h; path = library/Source/Core/VKError.h; sourceTree = "<group>"; };
+		ADDCEA3C1003A5BAC04C5624BB31D212 /* VKJSONOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKJSONOperation.h; path = library/Source/Core/VKJSONOperation.h; sourceTree = "<group>"; };
+		AFAFAE076D1B28D3D2E4DDB9EADBE2C9 /* VKUploadPhotoBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKUploadPhotoBase.m; path = library/Source/API/upload/VKUploadPhotoBase.m; sourceTree = "<group>"; };
+		AFB656FD42CDA1A49B43712C9A647BA3 /* Pods-VKReader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-VKReader.modulemap"; sourceTree = "<group>"; };
+		B1C88D1AF7E95AD18FC8C92D97D8453B /* VK-ios-sdk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VK-ios-sdk-prefix.pch"; sourceTree = "<group>"; };
+		B1DC9B78389F186002D4B862C5768BED /* VKCounters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKCounters.h; path = library/Source/API/models/VKCounters.h; sourceTree = "<group>"; };
+		B226F32C37A08ECFB1DD522CE61019B3 /* VKCaptchaView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKCaptchaView.m; path = library/Source/Views/VKCaptchaView.m; sourceTree = "<group>"; };
+		B436D891B5E68B4D9327F1ED43A79BA8 /* VKHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKHTTPClient.m; path = library/Source/Core/VKHTTPClient.m; sourceTree = "<group>"; };
+		B4DD7CDF1A3F08A341A7AB3750407551 /* VKApi.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKApi.m; path = library/Source/API/VKApi.m; sourceTree = "<group>"; };
+		B5FD4A9A583D1D47F4F7CA1D63361146 /* VKApiObjectArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKApiObjectArray.m; path = library/Source/API/models/VKApiObjectArray.m; sourceTree = "<group>"; };
+		B7BD8A645D4FEF86E9A07E5C8D40114D /* VKPhotoSize.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKPhotoSize.m; path = library/Source/API/models/VKPhotoSize.m; sourceTree = "<group>"; };
+		B8BAA7DBB757954FA4FD48FBE62459FD /* VKApiCaptcha.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKApiCaptcha.m; path = library/Source/API/methods/VKApiCaptcha.m; sourceTree = "<group>"; };
+		B8F2370E1A6432E2A6A93BBCA6EB2037 /* VKImageParameters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKImageParameters.h; path = library/Source/Image/VKImageParameters.h; sourceTree = "<group>"; };
+		B9180026A2C2BBA0A7DC22C3248BE2D9 /* VKPermissions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKPermissions.m; path = library/Source/VKPermissions.m; sourceTree = "<group>"; };
+		B9748BB45C0826618B2C98E83C0DE0B2 /* VKRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKRequest.h; path = library/Source/Core/VKRequest.h; sourceTree = "<group>"; };
+		BBB66014B438EA95B4FD397C1B1042F8 /* VKHTTPOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKHTTPOperation.h; path = library/Source/Core/VKHTTPOperation.h; sourceTree = "<group>"; };
+		BF185E091B163AA6C17CFF5097F15F43 /* VKSdkResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = VKSdkResources.bundle; path = VKSdkResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2030AD88294AF844470F8D614AEF07D /* Pods-VKReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VKReader.debug.xcconfig"; sourceTree = "<group>"; };
+		C2AE8976EA02DB2077B816DA30FD142B /* VKRequestsScheduler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKRequestsScheduler.m; path = library/Source/Core/VKRequestsScheduler.m; sourceTree = "<group>"; };
+		C382FB46AB7C8544E854F1680C985CA8 /* VKUploadWallPhotoRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKUploadWallPhotoRequest.m; path = library/Source/API/upload/VKUploadWallPhotoRequest.m; sourceTree = "<group>"; };
+		C3B1F1900C06ACD19D800AA7F192DAC0 /* VKUniversity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKUniversity.m; path = library/Source/API/models/VKUniversity.m; sourceTree = "<group>"; };
+		C4762D80337E735CE33B558043B2EC85 /* VKAuthorizeController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKAuthorizeController.h; path = library/Source/Views/VKAuthorizeController.h; sourceTree = "<group>"; };
+		C5FEBC3870D85AC5A4DE0F68E7AE49F1 /* VKBundle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKBundle.m; path = library/Source/VKBundle.m; sourceTree = "<group>"; };
+		C73BE503BD9ECBCD20CC5E425A878428 /* Pods-VKReader-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VKReader-acknowledgements.plist"; sourceTree = "<group>"; };
+		C81A34B3CE2C8943BDF9A65FCA35C816 /* VKRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKRequest.m; path = library/Source/Core/VKRequest.m; sourceTree = "<group>"; };
+		C828E8F80F8DF336AF4EF2A4AFAC6F5C /* VKApiModels.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKApiModels.h; path = library/Source/API/methods/VKApiModels.h; sourceTree = "<group>"; };
+		C8AB2BBB04F939A9869D2472BEA9FC43 /* VKUser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKUser.m; path = library/Source/API/models/VKUser.m; sourceTree = "<group>"; };
+		CA803B59978637A661447EA9B2CC6C98 /* VKOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKOperation.h; path = library/Source/Core/VKOperation.h; sourceTree = "<group>"; };
+		CDACCEFB7ED736E187565DA885800229 /* VKAccessToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKAccessToken.m; path = library/Source/VKAccessToken.m; sourceTree = "<group>"; };
+		CF952094E9D126AE4A86642AC2289E88 /* VKCounters.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKCounters.m; path = library/Source/API/models/VKCounters.m; sourceTree = "<group>"; };
+		CFA9B4C5BE32074C5A1BC826BE70D796 /* VK-ios-sdk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VK-ios-sdk-dummy.m"; sourceTree = "<group>"; };
+		D1D206416CEDA98DE28C8BF4FDEFA6B5 /* ResourceBundle-VKSdkResources-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-VKSdkResources-Info.plist"; sourceTree = "<group>"; };
+		D1E7F5137A3742210B0B67C36E13A56F /* VKApiGroups.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKApiGroups.m; path = library/Source/API/methods/VKApiGroups.m; sourceTree = "<group>"; };
+		D2E601F7C1A55B81BCB8C37387BBDF5C /* VKSchool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKSchool.h; path = library/Source/API/models/VKSchool.h; sourceTree = "<group>"; };
+		D3FF60E225439D265D16A4B7E149D2FA /* VKApiUsers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKApiUsers.h; path = library/Source/API/methods/VKApiUsers.h; sourceTree = "<group>"; };
+		D4CC0D0CC26BA182E80F32C09395E88C /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ru.lproj; path = library/Resources/ru.lproj; sourceTree = "<group>"; };
+		D73FA61AC0013B0D02C725011273FD69 /* VKSdk.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKSdk.m; path = library/Source/VKSdk.m; sourceTree = "<group>"; };
+		D7585A2332C3A2EDC9C6A07DC352EB72 /* VKApiObjectArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKApiObjectArray.h; path = library/Source/API/models/VKApiObjectArray.h; sourceTree = "<group>"; };
+		DC1DDC08C803BE3B03DFFE27D4ADE738 /* VKSdk.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKSdk.h; path = library/Source/VKSdk.h; sourceTree = "<group>"; };
+		DCFD2E199B21200F8CD66E7651436C3C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC3035CE80A9B7343A6740AFD184C6AC /* Pods-VKReader-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VKReader-resources.sh"; sourceTree = "<group>"; };
+		EFC5C3CDED10A66979D838C883A31877 /* SdkAssetCatalog.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = SdkAssetCatalog.xcassets; path = library/Resources/SdkAssetCatalog.xcassets; sourceTree = "<group>"; };
+		F03301EBCA6DD69E576510007FBF7095 /* VKDocs.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKDocs.m; path = library/Source/API/models/VKDocs.m; sourceTree = "<group>"; };
+		F3D331356A166C0712355F4DA3A6B3CB /* VKAudio.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKAudio.h; path = library/Source/API/models/VKAudio.h; sourceTree = "<group>"; };
+		F800C4AAAE479E1F66671FE6EFD86A5C /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = library/Resources/en.lproj; sourceTree = "<group>"; };
+		F8EE72CC7B034837E87C4975366AE69E /* VKAuthorizeController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKAuthorizeController.m; path = library/Source/Views/VKAuthorizeController.m; sourceTree = "<group>"; };
+		F9E8AAFF77AEBFC58F56F943DDC1AFA8 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SafariServices.framework; sourceTree = DEVELOPER_DIR; };
+		FAB77ECCD60A8C097461B6CB24C880BB /* VKUploadPhotoRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VKUploadPhotoRequest.m; path = library/Source/API/upload/VKUploadPhotoRequest.m; sourceTree = "<group>"; };
+		FB98705292852A5DB93637A1EA860AB8 /* VKResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKResponse.h; path = library/Source/Core/VKResponse.h; sourceTree = "<group>"; };
+		FC9DABABC3C2BCB8C6343880F3FABB69 /* VKApiWall.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKApiWall.h; path = library/Source/API/methods/VKApiWall.h; sourceTree = "<group>"; };
+		FE531FF8720B2BC868BF5F9784B7AFD9 /* VKPhotoSize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VKPhotoSize.h; path = library/Source/API/models/VKPhotoSize.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F9DA3A481978B967200DC73F5BCE76B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64EA2BF5D895430C5B5169AF1BAA8DC8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B6389504DD00BC8B481F80543E24F06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF27E572623705F87DC40ACD7D6A962E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B47A4690A1E16D5B19C6B2E0774DBDBB /* CoreGraphics.framework in Frameworks */,
+				7A999BE69F8F504B895C82216857C018 /* Foundation.framework in Frameworks */,
+				04C8A233F0AFD13A67F6F54CE122CF84 /* SafariServices.framework in Frameworks */,
+				C0BB3344347E3FFE90E8113DEDBE9334 /* Security.framework in Frameworks */,
+				2D9073B62099B52C32CA9DACFE4B1E99 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		042087F6425C2F21DE8482BE2DFB2B7E /* Pods-VKReader */ = {
+			isa = PBXGroup;
+			children = (
+				DCFD2E199B21200F8CD66E7651436C3C /* Info.plist */,
+				AFB656FD42CDA1A49B43712C9A647BA3 /* Pods-VKReader.modulemap */,
+				20EA91B4CC95B4C10A5485E3A1FAA083 /* Pods-VKReader-acknowledgements.markdown */,
+				C73BE503BD9ECBCD20CC5E425A878428 /* Pods-VKReader-acknowledgements.plist */,
+				1533991EF5B3F6A1685219BA08670B91 /* Pods-VKReader-dummy.m */,
+				792EFAF7824A9BCFC0F57D4D60277220 /* Pods-VKReader-frameworks.sh */,
+				EC3035CE80A9B7343A6740AFD184C6AC /* Pods-VKReader-resources.sh */,
+				852D04E2A8AD49D636BF59CC267DA05C /* Pods-VKReader-umbrella.h */,
+				C2030AD88294AF844470F8D614AEF07D /* Pods-VKReader.debug.xcconfig */,
+				8F848A7BAD4A08A3D5FDA17E2080C5A7 /* Pods-VKReader.release.xcconfig */,
+			);
+			name = "Pods-VKReader";
+			path = "Target Support Files/Pods-VKReader";
+			sourceTree = "<group>";
+		};
+		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EE817AB8555DDC0C090EF88395E10AA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E44D842C7D81ACEFC90C4C85673E7E4 /* VK-ios-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				4F599AF2B1DB883B002486BC3CF91FD8 /* NSError+VKError.h */,
+				230CB3AEB5692B688BF895F205941BBA /* NSError+VKError.m */,
+				3B5D47CD9C4209669679E151D28F82E9 /* NSString+MD5.h */,
+				88391C11BD97EB486CD346BBF7485AE9 /* NSString+MD5.m */,
+				A119B3CF3141A73823DFD031D8DFB45B /* OrderedDictionary.h */,
+				9F93ED65A3CDCA7E3EB7997244B395B3 /* OrderedDictionary.m */,
+				71B3992335C2B94D5DB67560F643D1CE /* VKAccessToken.h */,
+				CDACCEFB7ED736E187565DA885800229 /* VKAccessToken.m */,
+				0586917CC7C3A53E8C1519539CE9C798 /* VKActivity.h */,
+				9C468BC05372617869B4A0D9CC74CC4B /* VKActivity.m */,
+				12C726280B2D5621C07A7A1606D1B209 /* VKApi.h */,
+				B4DD7CDF1A3F08A341A7AB3750407551 /* VKApi.m */,
+				322D95849A33123525AC81C606AA4E7A /* VKApiBase.h */,
+				23F8C397EFF677FD3A322EC22CEC4366 /* VKApiBase.m */,
+				4E9DC209975947601EB5364F80DE630A /* VKApiCaptcha.h */,
+				B8BAA7DBB757954FA4FD48FBE62459FD /* VKApiCaptcha.m */,
+				360B80D51591E8FFB4C17E7085948B19 /* VKApiConst.h */,
+				546880807B11F6CC9EE035547906A819 /* VKApiConst.m */,
+				47E773AF398B79604D0371097A5604F2 /* VKApiDocs.h */,
+				2070FDB77A1A4BE7F36C9C685FDAFFCD /* VKApiDocs.m */,
+				5622ADF2F7205D85DE86D86B69269B23 /* VKApiFriends.h */,
+				0EA8BD9EE506277E91EC940956A212FB /* VKApiFriends.m */,
+				66D7A1C7E56B9F2D29A0FFD49F57E827 /* VKApiGroups.h */,
+				D1E7F5137A3742210B0B67C36E13A56F /* VKApiGroups.m */,
+				C828E8F80F8DF336AF4EF2A4AFAC6F5C /* VKApiModels.h */,
+				67A65186326B28451A27A64120C0E34E /* VKApiObject.h */,
+				17B350925E51DA4512079B57BBBFA72E /* VKApiObject.m */,
+				D7585A2332C3A2EDC9C6A07DC352EB72 /* VKApiObjectArray.h */,
+				B5FD4A9A583D1D47F4F7CA1D63361146 /* VKApiObjectArray.m */,
+				55746672CEEAD01A75F78BE12D15689F /* VKApiPhotos.h */,
+				0F33A17CC6614FA84BC4DC5DF25172EE /* VKApiPhotos.m */,
+				D3FF60E225439D265D16A4B7E149D2FA /* VKApiUsers.h */,
+				4078F9AFF5A922FC43348B43A04DDA3F /* VKApiUsers.m */,
+				FC9DABABC3C2BCB8C6343880F3FABB69 /* VKApiWall.h */,
+				25DC6D468EE95806159A880B698EE41E /* VKApiWall.m */,
+				F3D331356A166C0712355F4DA3A6B3CB /* VKAudio.h */,
+				A2E907FD70D5980A5A52583C6C79DEB5 /* VKAudio.m */,
+				780CEB85F6624F1CC88A4F66936F9AC6 /* VKAuthorizationResult.h */,
+				8CD80ECA3FE18DD52E4A468AD8092D42 /* VKAuthorizationResult.m */,
+				C4762D80337E735CE33B558043B2EC85 /* VKAuthorizeController.h */,
+				F8EE72CC7B034837E87C4975366AE69E /* VKAuthorizeController.m */,
+				718FC12CB04FC7CE67DF2D75EE14A90F /* VKBatchRequest.h */,
+				7433506D3716A18650C021383BF1087C /* VKBatchRequest.m */,
+				54F259D1749C39E86E62C1DF6ADE49A8 /* VKBundle.h */,
+				C5FEBC3870D85AC5A4DE0F68E7AE49F1 /* VKBundle.m */,
+				376A11CB5C833A38419CECA31C1A2B16 /* VKCaptchaView.h */,
+				B226F32C37A08ECFB1DD522CE61019B3 /* VKCaptchaView.m */,
+				9AB97CD4E57B7B7D6F6E7967756B3AAB /* VKCaptchaViewController.h */,
+				1407986E83F220C3FB0C5F7E9ADD6479 /* VKCaptchaViewController.m */,
+				B1DC9B78389F186002D4B862C5768BED /* VKCounters.h */,
+				CF952094E9D126AE4A86642AC2289E88 /* VKCounters.m */,
+				5C6FD06C48AB08DE20972B4451BC8F6B /* VKDocs.h */,
+				F03301EBCA6DD69E576510007FBF7095 /* VKDocs.m */,
+				AADEB8950FD04756C7E7F8E244C0B9DA /* VKError.h */,
+				0638E74C0F083A13F45583D49FB16CE7 /* VKError.m */,
+				01929CFC42138D133032BEE01C418AC1 /* VKGroup.h */,
+				69789D99A47C5DACBCE102C0E49687E4 /* VKGroup.m */,
+				8909C1D1B1D1B7F519BABAD68860CFBC /* VKHTTPClient.h */,
+				B436D891B5E68B4D9327F1ED43A79BA8 /* VKHTTPClient.m */,
+				BBB66014B438EA95B4FD397C1B1042F8 /* VKHTTPOperation.h */,
+				358B43FC8DA9831C694AD21DA0E0F36D /* VKHTTPOperation.m */,
+				B8F2370E1A6432E2A6A93BBCA6EB2037 /* VKImageParameters.h */,
+				698C54DAC8353AB1328BCBC2F6BB860A /* VKImageParameters.m */,
+				ADDCEA3C1003A5BAC04C5624BB31D212 /* VKJSONOperation.h */,
+				75D15316E296BF48BAE03D5EF952F9D2 /* VKJSONOperation.m */,
+				A3C69CE9C3731F4D025791FC7AA4B2CC /* VKLikes.h */,
+				36277CB94EE3FF796E29459F30520913 /* VKLikes.m */,
+				0A258F88165BDDD650544691D69506EB /* VKObject.h */,
+				88EE33DF438FB073E4BE0BCC56EED302 /* VKObject.m */,
+				CA803B59978637A661447EA9B2CC6C98 /* VKOperation.h */,
+				8EEF827F220C55C59444AD80781D2D1F /* VKOperation.m */,
+				2132882A765A4B8F811131FF0404200B /* VKPermissions.h */,
+				B9180026A2C2BBA0A7DC22C3248BE2D9 /* VKPermissions.m */,
+				15664E6B6D5A3976260524EB3A4FD89F /* VKPhoto.h */,
+				80140FD785D0E4F1C3852FE7BB3C0D2C /* VKPhoto.m */,
+				FE531FF8720B2BC868BF5F9784B7AFD9 /* VKPhotoSize.h */,
+				B7BD8A645D4FEF86E9A07E5C8D40114D /* VKPhotoSize.m */,
+				75F87E05F84DA0EFC8DE2A2224F372C5 /* VKRelative.h */,
+				8D4FA864098352D20E52AF4996A02ECC /* VKRelative.m */,
+				B9748BB45C0826618B2C98E83C0DE0B2 /* VKRequest.h */,
+				C81A34B3CE2C8943BDF9A65FCA35C816 /* VKRequest.m */,
+				96C394EF569F26BF9E00D379FC4BE433 /* VKRequestsScheduler.h */,
+				C2AE8976EA02DB2077B816DA30FD142B /* VKRequestsScheduler.m */,
+				FB98705292852A5DB93637A1EA860AB8 /* VKResponse.h */,
+				0A8F75E6883DC822F5C7778E747491DE /* VKResponse.m */,
+				D2E601F7C1A55B81BCB8C37387BBDF5C /* VKSchool.h */,
+				4797C23C6093409290BB2031814395D0 /* VKSchool.m */,
+				DC1DDC08C803BE3B03DFFE27D4ADE738 /* VKSdk.h */,
+				D73FA61AC0013B0D02C725011273FD69 /* VKSdk.m */,
+				32102569DC2CEFE6134F84238FB1B54C /* VKSdkVersion.h */,
+				8ECF484CB74DBD79D7E591BD1ACA8370 /* VKShareDialogController.h */,
+				34AE12914A15D891E7D3441CDA5BF1F2 /* VKShareDialogController.m */,
+				520A405E121F00F4511A222AAD3C0E9A /* VKSharedTransitioningObject.h */,
+				63D286A01BD24D45E380FD78D4ED96F2 /* VKSharedTransitioningObject.m */,
+				4248FC02555D8109A1F445BC82285CF8 /* VKUniversity.h */,
+				C3B1F1900C06ACD19D800AA7F192DAC0 /* VKUniversity.m */,
+				20FD53070EE3980A83585B6F8A1672AF /* VKUploadImage.h */,
+				10A2D019C52EA4ADA66BA35691A65E56 /* VKUploadImage.m */,
+				6E5A74575DC90C4C1177101BD9FBDD38 /* VKUploadMessagesPhotoRequest.h */,
+				56B7E8F6032BA63835AFFBC6D8A0F0AF /* VKUploadMessagesPhotoRequest.m */,
+				318DAA7187C8650359741EFB5A446ED4 /* VKUploadPhotoBase.h */,
+				AFAFAE076D1B28D3D2E4DDB9EADBE2C9 /* VKUploadPhotoBase.m */,
+				2AADF4CA5D3DF8F03E4DE8A5C340D182 /* VKUploadPhotoRequest.h */,
+				FAB77ECCD60A8C097461B6CB24C880BB /* VKUploadPhotoRequest.m */,
+				55C7D5424322F4297C5F718D48D43345 /* VKUploadWallPhotoRequest.h */,
+				C382FB46AB7C8544E854F1680C985CA8 /* VKUploadWallPhotoRequest.m */,
+				839A405A5CCFE8518B0E1E1DA7349660 /* VKUser.h */,
+				C8AB2BBB04F939A9869D2472BEA9FC43 /* VKUser.m */,
+				070E8D27B4D27C93D802731814B36D5F /* VKUtil.h */,
+				4812076ABF663CA1604F1CF20D6164CB /* VKUtil.m */,
+				703C3785920D9C22465F784C0778E0A4 /* Resources */,
+				B7BDAEEC90BD243CF6A9181EE392C396 /* Support Files */,
+			);
+			name = "VK-ios-sdk";
+			path = "VK-ios-sdk";
+			sourceTree = "<group>";
+		};
+		6EE817AB8555DDC0C090EF88395E10AA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6097C9C724BA8850B8D51519AFBB0186 /* CoreGraphics.framework */,
+				73DECC8A53E2761D4785EF51FFF408F5 /* Foundation.framework */,
+				F9E8AAFF77AEBFC58F56F943DDC1AFA8 /* SafariServices.framework */,
+				3EF27815F472138CDD68315313249A9C /* Security.framework */,
+				2F6E159100AE2299B65B067F762ADF04 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		703C3785920D9C22465F784C0778E0A4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F800C4AAAE479E1F66671FE6EFD86A5C /* en.lproj */,
+				D4CC0D0CC26BA182E80F32C09395E88C /* ru.lproj */,
+				EFC5C3CDED10A66979D838C883A31877 /* SdkAssetCatalog.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
+				80AB099B7F42F6030B05B41B7CE7C79D /* Pods */,
+				FE235BB6F7D02B323986D7126D4DDD2C /* Products */,
+				FA037579031461BDF89410A513DBE082 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		80AB099B7F42F6030B05B41B7CE7C79D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E44D842C7D81ACEFC90C4C85673E7E4 /* VK-ios-sdk */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B7BDAEEC90BD243CF6A9181EE392C396 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				58CB03A9B3AF58387CEAB5BA463D54A1 /* Info.plist */,
+				D1D206416CEDA98DE28C8BF4FDEFA6B5 /* ResourceBundle-VKSdkResources-Info.plist */,
+				590FD6B5E45045A83352107BF382356B /* VK-ios-sdk.modulemap */,
+				942AB36F55EBB3218830DA6CB1BB01D8 /* VK-ios-sdk.xcconfig */,
+				CFA9B4C5BE32074C5A1BC826BE70D796 /* VK-ios-sdk-dummy.m */,
+				B1C88D1AF7E95AD18FC8C92D97D8453B /* VK-ios-sdk-prefix.pch */,
+				75B742D6383B438A68DE2F5755CE8974 /* VK-ios-sdk-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/VK-ios-sdk";
+			sourceTree = "<group>";
+		};
+		FA037579031461BDF89410A513DBE082 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				042087F6425C2F21DE8482BE2DFB2B7E /* Pods-VKReader */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FE235BB6F7D02B323986D7126D4DDD2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B636B67657A54909EA18D6409B4D8BD /* Pods_VKReader.framework */,
+				6DAA0D1EFCEC1B6D4E272A7F284055A0 /* VK_ios_sdk.framework */,
+				BF185E091B163AA6C17CFF5097F15F43 /* VKSdkResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5AC27E0FCCDB80D3A999FBAD615113B7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				011E629970C368AF0D033C9E929A05CB /* NSError+VKError.h in Headers */,
+				9B4DDC25649306297FF43F96BC1EF0A5 /* NSString+MD5.h in Headers */,
+				E90B06BB274CC62CD31712EB5220FFC4 /* OrderedDictionary.h in Headers */,
+				6692592EE141545FC85C8936F69DC689 /* VK-ios-sdk-umbrella.h in Headers */,
+				4B2B779E83ACD47EC6D6A7DD026807AE /* VKAccessToken.h in Headers */,
+				AD50F0C673BADD7104AF8B8933BBD65D /* VKActivity.h in Headers */,
+				FB039CE81FDB2C3A6F5BF92101386BBE /* VKApi.h in Headers */,
+				58BE7AAC188A891B5407B5F10D35F75E /* VKApiBase.h in Headers */,
+				F5754B476293672AB2DCC06252A61ED9 /* VKApiCaptcha.h in Headers */,
+				07702FCFCD275FBE0AE5D9223740D625 /* VKApiConst.h in Headers */,
+				2D3F1324C72D4E123DA4E1ECEC3EC6D3 /* VKApiDocs.h in Headers */,
+				AF8263B0ED00D5416E0DA13859BF340C /* VKApiFriends.h in Headers */,
+				1ED27B956CE640FDCDE295A1199EE684 /* VKApiGroups.h in Headers */,
+				F89140962C3DEE2EEE2571C8CB2C92C6 /* VKApiModels.h in Headers */,
+				4C899E8617DFB59FE7B97807B28FA679 /* VKApiObject.h in Headers */,
+				8042641C43AEFE527B5A7B331C6512FF /* VKApiObjectArray.h in Headers */,
+				EDD9E143B81C40F5A1F2DED4A760B7F5 /* VKApiPhotos.h in Headers */,
+				74CEB0664747DE3EB2EA20AA7164ADAD /* VKApiUsers.h in Headers */,
+				77B7425BFF793658BE8BB0421996342A /* VKApiWall.h in Headers */,
+				61DF7280C30D0328906C76BC97154521 /* VKAudio.h in Headers */,
+				EB1132BF7BB663E29C534F1256531854 /* VKAuthorizationResult.h in Headers */,
+				3833347FFD2F8F05069A3EAF62AD7DBC /* VKAuthorizeController.h in Headers */,
+				EFA287C5FAD4AF6F0F41E786753CC5C5 /* VKBatchRequest.h in Headers */,
+				4D62DC30496D8298FC166709E90244EB /* VKBundle.h in Headers */,
+				004278E2057C1DF7585FC5D9E2C7D3E5 /* VKCaptchaView.h in Headers */,
+				4FF4C8DAE76BA188FFDA8016C594501E /* VKCaptchaViewController.h in Headers */,
+				D4FDF81AB9E53D7FD99B5AF242084FB2 /* VKCounters.h in Headers */,
+				3FA300255A1A513389002E3BE32AA1CB /* VKDocs.h in Headers */,
+				50724450E848D9365463285E81B88C10 /* VKError.h in Headers */,
+				A861E00D8A9482A0E6DC0A2C6DF96AD9 /* VKGroup.h in Headers */,
+				8CB95630136FB9554831D4D073CFEA1D /* VKHTTPClient.h in Headers */,
+				55221BB5A0E09ED001AE6AB398E9F89E /* VKHTTPOperation.h in Headers */,
+				AD5BD674B6D45B33097DFDF4FD04517B /* VKImageParameters.h in Headers */,
+				235C338A8F9E5B607B58B15482DFEA34 /* VKJSONOperation.h in Headers */,
+				AC0DC411859FFC6830809020832BBF03 /* VKLikes.h in Headers */,
+				AD7ABEB6BFE72D02F6931DC91BC1B390 /* VKObject.h in Headers */,
+				CD804A2FC5C7781B7D3616B48F39D62C /* VKOperation.h in Headers */,
+				7D576F5297C8F344479D111FD2C2794F /* VKPermissions.h in Headers */,
+				539DA48A6EC669D45CA1D2285948F71C /* VKPhoto.h in Headers */,
+				1B4E3CEEA48B060E102CB9F3790168EC /* VKPhotoSize.h in Headers */,
+				FE3C144572B63E77E387A29815F464E4 /* VKRelative.h in Headers */,
+				909D88308C13759E569CDDD684477557 /* VKRequest.h in Headers */,
+				B2213EA405620F4C3E36DB26723CEAE2 /* VKRequestsScheduler.h in Headers */,
+				B9821EB0EBB904A2BA8D47D9E00E2E8D /* VKResponse.h in Headers */,
+				527D8A7AC666D9DF0D7E3DFABC5F7EB2 /* VKSchool.h in Headers */,
+				7178ADA2DC4F6095A13503A6EFBA8A8E /* VKSdk.h in Headers */,
+				3E5E173E1E8AF32EAD6995199C1C3A74 /* VKSdkVersion.h in Headers */,
+				E4AC82F8A5BAB18BE6279727B4387C9A /* VKShareDialogController.h in Headers */,
+				07D46DE28CFE99C45607062DFF5B709A /* VKSharedTransitioningObject.h in Headers */,
+				50F024D0FB88B19356F9CD61E4500217 /* VKUniversity.h in Headers */,
+				1F333A6DD8387F0A1EFF217BC87EE524 /* VKUploadImage.h in Headers */,
+				C111ABE217CBF37ACB9271EDCEDE2DFB /* VKUploadMessagesPhotoRequest.h in Headers */,
+				194C7D139E6739BEF9E1B30A0258D36B /* VKUploadPhotoBase.h in Headers */,
+				6E9226FB8FDBFE0956C8342B12749B8A /* VKUploadPhotoRequest.h in Headers */,
+				82492BD748CAF0667A99C34B1CEFE77C /* VKUploadWallPhotoRequest.h in Headers */,
+				7F2602F0231C93B210E00BF165264FE7 /* VKUser.h in Headers */,
+				3E795419B713DB84D1CF85C5BB52F298 /* VKUtil.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEF9E750E309B7EA343DD2818D8C6E2F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A35F64530705E7C97279BA135D2B7C8 /* Pods-VKReader-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		71AFA4F7CB936A0F6E28E7E576A57A84 /* VK-ios-sdk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA9189E77C923546CCFE2F1BC9D4A72E /* Build configuration list for PBXNativeTarget "VK-ios-sdk" */;
+			buildPhases = (
+				9631C927D9B71C5D9B0BB806AF720DE6 /* Sources */,
+				AF27E572623705F87DC40ACD7D6A962E /* Frameworks */,
+				6A5EB2C32AD7DB50D1F9EB94D07D2859 /* Resources */,
+				5AC27E0FCCDB80D3A999FBAD615113B7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA92B6E0AEB154EF8372D23348FD0FA4 /* PBXTargetDependency */,
+			);
+			name = "VK-ios-sdk";
+			productName = "VK-ios-sdk";
+			productReference = 6DAA0D1EFCEC1B6D4E272A7F284055A0 /* VK_ios_sdk.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DA728ADCC6A57EFF137FF7AD63437B65 /* VK-ios-sdk-VKSdkResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A70CC9F69A8AA26843F35FEA92ADB472 /* Build configuration list for PBXNativeTarget "VK-ios-sdk-VKSdkResources" */;
+			buildPhases = (
+				5ADC1E00BFF3907F6727BE844FF136D3 /* Sources */,
+				7B6389504DD00BC8B481F80543E24F06 /* Frameworks */,
+				CBC0D9D028364D28749676EDBFE9C6CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VK-ios-sdk-VKSdkResources";
+			productName = "VK-ios-sdk-VKSdkResources";
+			productReference = BF185E091B163AA6C17CFF5097F15F43 /* VKSdkResources.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		DAEB40CD19A74CC10C7A0D358DD67198 /* Pods-VKReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECBB9B4680CA54D3B66E5B6F0FB74208 /* Build configuration list for PBXNativeTarget "Pods-VKReader" */;
+			buildPhases = (
+				75FFBE0C6F85E7680AC801F86BC8A65B /* Sources */,
+				3F9DA3A481978B967200DC73F5BCE76B /* Frameworks */,
+				CEF9E750E309B7EA343DD2818D8C6E2F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63BEF8D0F712824185E51B9F9CAC3036 /* PBXTargetDependency */,
+			);
+			name = "Pods-VKReader";
+			productName = "Pods-VKReader";
+			productReference = 6B636B67657A54909EA18D6409B4D8BD /* Pods_VKReader.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = FE235BB6F7D02B323986D7126D4DDD2C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAEB40CD19A74CC10C7A0D358DD67198 /* Pods-VKReader */,
+				71AFA4F7CB936A0F6E28E7E576A57A84 /* VK-ios-sdk */,
+				DA728ADCC6A57EFF137FF7AD63437B65 /* VK-ios-sdk-VKSdkResources */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6A5EB2C32AD7DB50D1F9EB94D07D2859 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A7364493F500B5F1D0C88226EA9DAC7 /* VKSdkResources.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBC0D9D028364D28749676EDBFE9C6CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8769DDB5D86CCE3CDC9C09BDABD92FF /* en.lproj in Resources */,
+				5660506BCC139CFC2AFE143795751F4C /* ru.lproj in Resources */,
+				DB63F1B0FD4B528634E7D2A6FF5F94FA /* SdkAssetCatalog.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5ADC1E00BFF3907F6727BE844FF136D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75FFBE0C6F85E7680AC801F86BC8A65B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0865CD83BD6774C38234828C045CFFC3 /* Pods-VKReader-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9631C927D9B71C5D9B0BB806AF720DE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B99DE0BF9F843E2B724B0F1D51C0E5D /* NSError+VKError.m in Sources */,
+				2F27090A4A8FDB7D9AC04B7EBB1BC6D8 /* NSString+MD5.m in Sources */,
+				7F5BC69DC4FC50FF295B87C4D1E9F945 /* OrderedDictionary.m in Sources */,
+				22AD91692C3198B298D04DF5C65E11F0 /* VK-ios-sdk-dummy.m in Sources */,
+				DFF6F9BDC9D1FC07028E00AC0913E88D /* VKAccessToken.m in Sources */,
+				7A9E31D56C4679B7E183FF2AD590D3CE /* VKActivity.m in Sources */,
+				EF3D0310758F80E638E5E1C7700D7D44 /* VKApi.m in Sources */,
+				8C0CE1D6BA3E70DB3B3DD8AF260ED28F /* VKApiBase.m in Sources */,
+				9BD21987A467D34E273A060ACAC49029 /* VKApiCaptcha.m in Sources */,
+				1BF235B7670A1BCB091C52FF62D6F201 /* VKApiConst.m in Sources */,
+				21C6DC486E1D699EB7FD81F64CAD1834 /* VKApiDocs.m in Sources */,
+				E5BC61B47A65A24A28BA844BB199AAEF /* VKApiFriends.m in Sources */,
+				91729F0934DCC456C1B754E4A1C9426A /* VKApiGroups.m in Sources */,
+				92045F254D2C66C7631A6E2995975E6D /* VKApiObject.m in Sources */,
+				4605413A8A2007B8590D99D71885C00E /* VKApiObjectArray.m in Sources */,
+				479A4A439BF0C49C06EAD98D38939CDF /* VKApiPhotos.m in Sources */,
+				56A38D962F9A5F89A35ADB681296A790 /* VKApiUsers.m in Sources */,
+				29EB2AA963895516D8009302A9B9F5FB /* VKApiWall.m in Sources */,
+				374DB713EB042ECD34C86366B857F550 /* VKAudio.m in Sources */,
+				E51593CD79B4C2D4A633AC108C5D6F9B /* VKAuthorizationResult.m in Sources */,
+				304983DA45379E46DC0F7CCFFE5D38AA /* VKAuthorizeController.m in Sources */,
+				551C42109AC5EFE24D9A57A7DA9B26DA /* VKBatchRequest.m in Sources */,
+				38B659E2FF33B254D0B7090D81E9617A /* VKBundle.m in Sources */,
+				99828E5ECBCA587D76AC5179C9709581 /* VKCaptchaView.m in Sources */,
+				A32B33D0CDEF0791327BA106E3A22AB7 /* VKCaptchaViewController.m in Sources */,
+				8097C8D2D661D5A8DA6D16056BB293E0 /* VKCounters.m in Sources */,
+				AA1119136C5F8F6A5CDBFA29626552F2 /* VKDocs.m in Sources */,
+				F0F4072263B256C467BFFC5E8C930DF1 /* VKError.m in Sources */,
+				51F7DA997D2B0CE8E29B19226E13F692 /* VKGroup.m in Sources */,
+				1C623C4B995EA4971E4D2C4EA8AA10CF /* VKHTTPClient.m in Sources */,
+				D3D606EB81E684EB66152AB43CA3C0E4 /* VKHTTPOperation.m in Sources */,
+				DFA161EB06CD129B8443E89223D81B85 /* VKImageParameters.m in Sources */,
+				40CCD03626667BF0765056BE9C51B79C /* VKJSONOperation.m in Sources */,
+				5041755F05487F794DF7DE174D4DA52E /* VKLikes.m in Sources */,
+				3B83603862724640287D88438315A831 /* VKObject.m in Sources */,
+				870A6E35FBDDC78FD9D56B04848B1061 /* VKOperation.m in Sources */,
+				82586D210BB21EF238BE71A8D8E1B912 /* VKPermissions.m in Sources */,
+				24427C68D6E42456A7183A0049C35DFC /* VKPhoto.m in Sources */,
+				F0B5598B858D977D6A3920250E3928CB /* VKPhotoSize.m in Sources */,
+				F6562946DE185C9C093A5049988BC73B /* VKRelative.m in Sources */,
+				5137A247BEE6295A376CFDEEC9510583 /* VKRequest.m in Sources */,
+				0E46C5DB40285241B5AD4C28F3CACF7D /* VKRequestsScheduler.m in Sources */,
+				3C9A74F6721540DC8EBBA5DACCB6C1BA /* VKResponse.m in Sources */,
+				59BB278D74B7138CF534B0BEF4214D90 /* VKSchool.m in Sources */,
+				E4EE2E270F47A5A857E2657F586DCE8E /* VKSdk.m in Sources */,
+				A20C935E47DEED01F1CE6CDBEC14A9C9 /* VKShareDialogController.m in Sources */,
+				135EBB9CF3EE524A917E846D636C665B /* VKSharedTransitioningObject.m in Sources */,
+				A0C103D55A18CC25AF1CDDC591A66C45 /* VKUniversity.m in Sources */,
+				D266C5DE83C9D1A5B84A45CB39EE6ED4 /* VKUploadImage.m in Sources */,
+				9A3B79B6D03B0B87C9D9E594B16CB0DC /* VKUploadMessagesPhotoRequest.m in Sources */,
+				A6A54CDAB319B0F8BE574627683479A9 /* VKUploadPhotoBase.m in Sources */,
+				AEE8911909C16B438724D36D281859DE /* VKUploadPhotoRequest.m in Sources */,
+				71415893BC6366877ACA5EAD69F60F2E /* VKUploadWallPhotoRequest.m in Sources */,
+				F9019F393F160891FD58758D17E89F7E /* VKUser.m in Sources */,
+				3C2A42BCA5F3A7547A82D5DBDB918390 /* VKUtil.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63BEF8D0F712824185E51B9F9CAC3036 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VK-ios-sdk";
+			target = 71AFA4F7CB936A0F6E28E7E576A57A84 /* VK-ios-sdk */;
+			targetProxy = 9C7430809582C254D5CCCA84F8E4ECA7 /* PBXContainerItemProxy */;
+		};
+		CA92B6E0AEB154EF8372D23348FD0FA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VK-ios-sdk-VKSdkResources";
+			target = DA728ADCC6A57EFF137FF7AD63437B65 /* VK-ios-sdk-VKSdkResources */;
+			targetProxy = 828ED681C0BB1A9CA1689D25C4000DB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D23278938ADF334174C5BF2A4B6B1B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		3EB167859783E34753F2AA2BF0226DA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 942AB36F55EBB3218830DA6CB1BB01D8 /* VK-ios-sdk.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VK-ios-sdk/VK-ios-sdk-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VK-ios-sdk/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VK-ios-sdk/VK-ios-sdk.modulemap";
+				PRODUCT_NAME = VK_ios_sdk;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4ECCC46167F8ED0618E3595DC3160C62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 942AB36F55EBB3218830DA6CB1BB01D8 /* VK-ios-sdk.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/VK-ios-sdk";
+				INFOPLIST_FILE = "Target Support Files/VK-ios-sdk/ResourceBundle-VKSdkResources-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = VKSdkResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		995C3A53DEAA96B47E756185345E180D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B4FF1E835847FF97B48D728277C77F1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2030AD88294AF844470F8D614AEF07D /* Pods-VKReader.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-VKReader/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VKReader/Pods-VKReader.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_VKReader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BE833E4AD3DA9D0E25DB83DB92DAA980 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F848A7BAD4A08A3D5FDA17E2080C5A7 /* Pods-VKReader.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-VKReader/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VKReader/Pods-VKReader.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_VKReader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CB8AE793A8C73E48DC865C4804CE47D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 942AB36F55EBB3218830DA6CB1BB01D8 /* VK-ios-sdk.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/VK-ios-sdk/VK-ios-sdk-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VK-ios-sdk/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VK-ios-sdk/VK-ios-sdk.modulemap";
+				PRODUCT_NAME = VK_ios_sdk;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CF70B56FFD1F9664F01EDD7C0BB21303 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 942AB36F55EBB3218830DA6CB1BB01D8 /* VK-ios-sdk.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/VK-ios-sdk";
+				INFOPLIST_FILE = "Target Support Files/VK-ios-sdk/ResourceBundle-VKSdkResources-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = VKSdkResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				995C3A53DEAA96B47E756185345E180D /* Debug */,
+				1D23278938ADF334174C5BF2A4B6B1B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A70CC9F69A8AA26843F35FEA92ADB472 /* Build configuration list for PBXNativeTarget "VK-ios-sdk-VKSdkResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4ECCC46167F8ED0618E3595DC3160C62 /* Debug */,
+				CF70B56FFD1F9664F01EDD7C0BB21303 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA9189E77C923546CCFE2F1BC9D4A72E /* Build configuration list for PBXNativeTarget "VK-ios-sdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB8AE793A8C73E48DC865C4804CE47D8 /* Debug */,
+				3EB167859783E34753F2AA2BF0226DA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECBB9B4680CA54D3B66E5B6F0FB74208 /* Build configuration list for PBXNativeTarget "Pods-VKReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4FF1E835847FF97B48D728277C77F1F /* Debug */,
+				BE833E4AD3DA9D0E25DB83DB92DAA980 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

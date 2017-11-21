@@ -1,0 +1,6 @@
+framework module Pods_VKReader {
+  umbrella header "Pods-VKReader-umbrella.h"
+
+  export *
+  module * { export * }
+}
