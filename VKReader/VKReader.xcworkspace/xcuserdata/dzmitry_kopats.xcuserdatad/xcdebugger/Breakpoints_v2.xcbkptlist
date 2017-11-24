@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VKReader/DKTableViewCell.swift"
-            timestampString = "532972883.479041"
+            timestampString = "533147045.265366"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "awakeFromNib()"
             landmarkType = "7">
          </BreakpointContent>

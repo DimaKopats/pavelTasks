@@ -21,9 +21,12 @@ class FeedViewController: UITableViewController {
         self.view.backgroundColor = UIColor.lightGray
         tableView.register(UINib(nibName: "DKTableViewCell", bundle: nil) , forCellReuseIdentifier: reuseIdentifier)
         print("FeedViewController - viewDidLoad")
-        let leftButton = UIBarButtonItem.init(barButtonSystemItem: .play, target: self, action: #selector(FeedViewController.leftButtonTap))
+        let leftButton = UIBarButtonItem.init(barButtonSystemItem: .refresh, target: self, action: #selector(FeedViewController.leftButtonTap))
         self.navigationItem.leftBarButtonItem = leftButton
-        self.dataSource.startDownloading()
+        self.dataSource.startDownloading {
+            print("reloadData")
+            self.tableView.reloadData()
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -38,22 +41,6 @@ class FeedViewController: UITableViewController {
     @objc func leftButtonTap() {
         print("do smth")
         
-        let request: VKRequest = VKRequest(method: "newsfeed.get", parameters: ["count":1])
-        request.execute(resultBlock: { (response) in
-            print(response!.json)
-            
-//            let books = response!.json as! Dictionary <String, AnyObject>
-//            let newBooks = books["items"] as! NSArray
-//            for book in newBooks {
-//                let lastName = book["last_name"]
-//            }
-            
-            
-        }) { (error) in
-            print("error")
-        }
-        
-        print("do smth - finish")
     }
 
     // MARK: - Table view data source
@@ -63,15 +50,17 @@ class FeedViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        print("numberOfRows = \(self.dataSource.models.count)")
+        return self.dataSource.models.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-//        cell.backgroundColor = UIColor.cyan
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! DKTableViewCell
+        if dataSource.models.count > indexPath.row {
+            cell.groupTitle.text = dataSource.models[indexPath.row].group.groupTitle
+            cell.postTitle.text = dataSource.models[indexPath.row].post.postTitle
+        }
         return cell
     }
     

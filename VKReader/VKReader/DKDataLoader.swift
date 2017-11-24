@@ -22,27 +22,41 @@ class DKDataLoader {
         print("without a token does not make sense")
     }
     
-    func getData(completionHandler:@escaping (_ postModels: [PostModel], _ error:Bool) -> ()) {
-        let queryString = "https://api.vk.com/method/newsfeed.get?count=1&access_token=\(self.token)"
-        let url = URL(string: queryString)
-        let request = URLRequest(url: url!)
-        
-        var parsedPosts = [PostModel]()
+    func getData(completionHandler:@escaping (_ models: [Model], _ error:Bool) -> ()) {
+        let url = URLBuilder.createURL(token: self.token, countPosts: 20)
+        let request = URLRequest(url: url)
         
         let task = session.dataTask(with: request) { (data, response, error) in
+            // данный блок стартанет когда придет ответ от сервера
             DispatchQueue.global(qos: .userInitiated).async {
-                if ((data) != nil) {
-                    parsedPosts = self.parser.parse(data: data!)
+                print("before parsing")
+                var parsedPosts = [PostModel]()
+                var parsedGroups = [GroupModel]()
+                var models = [Model]()
+                if let notNilData = data {
+                    parsedPosts = self.parser.parsePostsFrom(data: notNilData)
+                    parsedGroups = self.parser.parseGroupsFrom(data: notNilData)
+
+                    for post in parsedPosts {
+                        for group in parsedGroups {
+                            if post.sourceID == group.id {
+                                let model = Model(post: post, group: group)
+                                models.append(model)
+                            }
+                        }
+                    }
                 }
+                
+                print("after parsing")
                 var error = false
-                if (parsedPosts.count == 0) {
+                if (parsedPosts.isEmpty || parsedGroups.isEmpty) {
+                    print("result parsing = nothing")
                     error = true
                 }
-                completionHandler(parsedPosts, error)
+                print("before call completionHandler")
+                completionHandler(models, error)
             }
         }
         task.resume()
-        
-        // return parsedPosts?
     }
 }

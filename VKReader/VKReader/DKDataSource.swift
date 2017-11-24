@@ -9,7 +9,7 @@
 import UIKit
 
 class DKDataSource: NSObject {
-    var postModels = [PostModel]()
+    var models = [Model]()
     let loader: DKDataLoader
     let accessToken: String?
     
@@ -22,12 +22,14 @@ class DKDataSource: NSObject {
             self.loader = DKDataLoader()
         }
     }
-    
-    func startDownloading() {
+    func startDownloading(completionHandler:@escaping () -> ()) {
         print("startDownloading")
-        loader.getData { (postModels: [PostModel], error: Bool) in
-            self.postModels.append(contentsOf: postModels)
+        loader.getData{ (models: [Model], error: Bool) in
+            //вызовется после обработки результата и унас есть массив моделей на этот момент
+            print("when call completionHandler")
+            self.models.append(contentsOf: models)
             DispatchQueue.main.async {
+                completionHandler()
                 // update dataSource
 //                self.delegate.updateDataSource(error: error)
             }
