@@ -24,11 +24,11 @@ class Parser: NSObject {
                 // each item = dictionary with parameters
                 if let post = createPostModelFrom(dictionary: item) {
                     // if model correct ->  append to array
-                    print("model with id = \(post.postID) added to array")
                     parsedPosts.append(post)
                 }
             }
         }
+        print("parsedPosts.count = \(parsedPosts.count)/20")
         return parsedPosts
     }
     
@@ -67,6 +67,7 @@ class Parser: NSObject {
 //                print("postType = post")
                 return createPostFrom(dictionary: dataDictionary)
             case "wall_photo":
+                print("postType = wall_photo")
 //                print("postType = wall_photo")
                 return createWallPhotoFrom(dictionary: dataDictionary)
             case "video":
@@ -138,8 +139,8 @@ class Parser: NSObject {
     }
     
     func createCorrect(text: String) -> String {
-        let almostCorretText = (text as NSString).replacingOccurrences(of: "<br> <br>", with: "<br>")
-        let correctText = (almostCorretText as NSString).replacingOccurrences(of: "<br>", with: "\n")
+        let almostCorretText = text.replacingOccurrences(of: "<br> <br>", with: "<br>")
+        let correctText = almostCorretText.replacingOccurrences(of: "<br>", with: "\n")
         return correctText
     }
     

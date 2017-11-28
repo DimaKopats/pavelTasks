@@ -40,16 +40,13 @@ class LoginViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
     }
     
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
-        print("---start---vkSdkAccessAuthorizationFinishedWithResult")
         guard result.token != nil else {
             print("Failure😐")
             return
         }
         print("Success🙂! ")
-        print("token  = \(result.token.accessToken)")
         UserDefaults.standard.set(result.token.accessToken, forKey: "token")
         // https://api.vk.com/method/newsfeed.get?count=1&access_token=0c7c1227198ef4ae0e38e4372d2a95e0db81efdf9ed5eadeb6c297ee1608d4726774831877c37d391d57d
-        print("---end---vkSdkAccessAuthorizationFinishedWithResult")
     }
     
     // optional
@@ -85,6 +82,4 @@ class LoginViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
         self.navigationController?.pushViewController(FeedViewController(), animated: true)
         print("---vkSdkDidDismissViewController")
     }
-    
-    
 }

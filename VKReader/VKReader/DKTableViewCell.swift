@@ -21,7 +21,7 @@ class DKTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 //        bigPhoto.frame.size = CGSize(width: 200, height: 100)
-        bigPhoto.backgroundColor = UIColor.lightGray
+        bigPhoto.backgroundColor = UIColor.black
         groupLogo.backgroundColor = UIColor.cyan
     }
 
@@ -29,5 +29,7 @@ class DKTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
-    
+    override func prepareForReuse() {
+//        print("prepareForReuse")
+    }
 }

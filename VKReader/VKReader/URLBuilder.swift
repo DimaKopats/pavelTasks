@@ -10,7 +10,7 @@ import UIKit
 
 class URLBuilder: NSObject {
     class func createURL(token: String, countPosts: Int) -> URL {
-        let queryString = "https://api.vk.com/method/newsfeed.get?count=\(countPosts)&access_token=\(token)"
+        let queryString = "https://api.vk.com/method/newsfeed.get?count=\(countPosts)&filters=post&access_token=\(token)"
         let url = URL(string: queryString)!
         return url
     }

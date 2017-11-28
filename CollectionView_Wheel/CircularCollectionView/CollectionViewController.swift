@@ -29,16 +29,14 @@ extension CollectionViewController {
   
   // MARK: UICollectionViewDataSource
   
-  override func collectionView(_ collectionView: UICollectionView,
-    numberOfItemsInSection section: Int) -> Int {
-      return images.count
+  override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return images.count
   }
   
-  override func collectionView(_ collectionView: UICollectionView,
-    cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CircularCollectionViewCell
-      cell.imageName = images[indexPath.row]
-      return cell
+  override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CircularCollectionViewCell
+    cell.imageName = images[indexPath.row]
+    return cell
   }
   
 }
