@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B46B1381FC6FA8B00A9E166 /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B46B1371FC6FA8B00A9E166 /* GroupModel.swift */; };
 		1B46B13A1FC6FAAB00A9E166 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B46B1391FC6FAAB00A9E166 /* Model.swift */; };
+		1B4755021FCEF7F8006D4DD1 /* PostPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4755011FCEF7F8006D4DD1 /* PostPhotoModel.swift */; };
 		1B485DDA1FC44FE200CBDB08 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B485DD91FC44FE200CBDB08 /* Parser.swift */; };
 		1B485DDC1FC45B2F00CBDB08 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B485DDB1FC45B2F00CBDB08 /* PostModel.swift */; };
 		1B485DE01FC46BBB00CBDB08 /* DKDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B485DDF1FC46BBB00CBDB08 /* DKDataLoader.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		1B46B1371FC6FA8B00A9E166 /* GroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
 		1B46B1391FC6FAAB00A9E166 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		1B4755011FCEF7F8006D4DD1 /* PostPhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPhotoModel.swift; sourceTree = "<group>"; };
 		1B485DD91FC44FE200CBDB08 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		1B485DDB1FC45B2F00CBDB08 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		1B485DDF1FC46BBB00CBDB08 /* DKDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKDataLoader.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				1B485DD91FC44FE200CBDB08 /* Parser.swift */,
 				1B485DDB1FC45B2F00CBDB08 /* PostModel.swift */,
+				1B4755011FCEF7F8006D4DD1 /* PostPhotoModel.swift */,
 				1B46B1391FC6FAAB00A9E166 /* Model.swift */,
 				1B46B1371FC6FA8B00A9E166 /* GroupModel.swift */,
 				1B4F7D281FC8480A007A60B0 /* URLBuilder.swift */,
@@ -252,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B4755021FCEF7F8006D4DD1 /* PostPhotoModel.swift in Sources */,
 				1B5FBD8F1FC2F4F7008B2655 /* LoginViewController.swift in Sources */,
 				1B485DDC1FC45B2F00CBDB08 /* PostModel.swift in Sources */,
 				1B46B1381FC6FA8B00A9E166 /* GroupModel.swift in Sources */,

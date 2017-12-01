@@ -64,12 +64,11 @@ class Parser: NSObject {
         if let postType = dataDictionary["type"] as? String {
             switch postType {
             case "post":
-//                print("postType = post")
+                //                print("postType = post")
                 return createPostFrom(dictionary: dataDictionary)
             case "wall_photo":
                 print("postType = wall_photo")
-//                print("postType = wall_photo")
-                return createWallPhotoFrom(dictionary: dataDictionary)
+//                return createWallPhotoFrom(dictionary: dataDictionary)
             case "video":
                 print("postType = video")
             // logic for video
@@ -91,14 +90,14 @@ class Parser: NSObject {
     }
     
     func createPostFrom(dictionary: [String: Any]) -> PostModel? {
-        var photoArray = [String]()
+        var photoArray = [PostPhotoModel]()
         
         if let attachments = dictionary["attachments"] as? Array<Any> {
             for attachment in attachments {
                 if let photoDictionary = attachment as? Dictionary<String, Any>,
                     let innerPhotoDictionary = photoDictionary["photo"] as? Dictionary<String, Any>,
-                    let photoUrl = createPhotoURLfrom(dictionary: innerPhotoDictionary) {
-                    photoArray.append(photoUrl)
+                    let photoModel = createPhotoModelfrom(dictionary: innerPhotoDictionary) {
+                    photoArray.append(photoModel)
                 }
             }
         }
@@ -118,25 +117,25 @@ class Parser: NSObject {
         return nil
     }
     
-    func createWallPhotoFrom(dictionary: [String: Any]) -> PostModel? {
-        var photoArray = [String]()
-        if let photos = dictionary["photos"] as? Array<Any> {
-            for photo in photos {
-                if let photoDictionary = photo as? Dictionary<String, Any>,
-                    let photoUrl = createPhotoURLfrom(dictionary: photoDictionary) {
-                    photoArray.append(photoUrl)
-                }
-            }
-        }
-        
-        
-        if let date = dictionary["date"] as? Int,
-            let sourceID = dictionary["source_id"] as? Int {
-            let model = PostModel(sourceID: -sourceID, date: date, title: "", images: photoArray, id: 0)
-            return model
-        }
-        return nil
-    }
+//    func createWallPhotoFrom(dictionary: [String: Any]) -> PostModel? {
+//        var photoArray = [PostModel]()
+//        if let photos = dictionary["photos"] as? Array<Any> {
+//            for photo in photos {
+//                if let photoDictionary = photo as? Dictionary<String, Any>,
+//                    let photoUrl = createPhotoModelfrom(dictionary: photoDictionary) {
+//                    photoArray.append(photoUrl)
+//                }
+//            }
+//        }
+//
+//
+//        if let date = dictionary["date"] as? Int,
+//            let sourceID = dictionary["source_id"] as? Int {
+//            let model = PostModel(sourceID: -sourceID, date: date, title: "", images: photoArray, id: 0)
+//            return model
+//        }
+//        return nil
+//    }
     
     func createCorrect(text: String) -> String {
         let almostCorretText = text.replacingOccurrences(of: "<br> <br>", with: "<br>")
@@ -149,26 +148,21 @@ class Parser: NSObject {
         return nil
     }
     
-    func createPhotoURLfrom(dictionary: Dictionary<String,Any>) -> String? {
+    func createPhotoModelfrom(dictionary: Dictionary<String,Any>) -> PostPhotoModel? {
+        
         if let bigPhotoURL = dictionary["src_big"] as? String {
             //                            print("big photo = \(bigPhotoURL)")
-            return bigPhotoURL
+            return PostPhotoModel(url: bigPhotoURL)
         } else if let mediumPhotoURL = dictionary["src"] as? String  {
-            //                            print("medium photo = \(mediumPhotoURL)")
-            return mediumPhotoURL
+            print("medium photo = \(mediumPhotoURL)")
+            return PostPhotoModel(url: mediumPhotoURL)
         } else if let smallPhoroURL = dictionary["src_small"] as? String {
-            //                            print("small photo = \(smallPhoroURL)")
-            return smallPhoroURL
+            print("small photo = \(smallPhoroURL)")
+            return PostPhotoModel(url: smallPhoroURL)
         }
         return nil
     }
     
-    func getDateFromString(string: String) -> Date? {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"  //incorrect time
-        return formatter.date(from: string)
-        
-    }
 }
 
 

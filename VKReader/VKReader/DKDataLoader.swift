@@ -23,11 +23,11 @@ class DKDataLoader {
     }
     
     func getData(completionHandler:@escaping (_ models: [Model], _ error:Bool) -> ()) {
-        let url = URLBuilder.createURL(token: self.token, countPosts: 20)
+        let url = URLBuilder.createURLFeed(token: self.token, countPosts: 20)
         let request = URLRequest(url: url)
         
         let task = session.dataTask(with: request) { (data, response, error) in
-            // данный блок стартанет когда придет ответ от сервера
+            // данный блок стартyет когда придет ответ от сервера
             DispatchQueue.global(qos: .userInitiated).async {
                 print("before parsing")
                 var parsedPosts = [PostModel]()

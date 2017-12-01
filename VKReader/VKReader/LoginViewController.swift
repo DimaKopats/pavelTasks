@@ -27,7 +27,6 @@ class LoginViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
     
     @IBAction func loginButtonTap(_ sender: Any) {
         print("loginButtonTap")
-//        VKSdk.authorize([VK_PER_MESSAGES, VK_PER_GROUPS], with: .disableSafariController)
         VKSdk.authorize([VK_PER_WALL, VK_PER_FRIENDS])
     }
     
