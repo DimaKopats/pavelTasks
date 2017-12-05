@@ -11,3 +11,10 @@ import UIKit
 class ChildClass: RootClass {
 
 }
+
+extension RootClass {
+    func someExtensionAnotherFileFunc() {
+        // have access to only public property
+        self.somePublicProp = 2
+    }
+}

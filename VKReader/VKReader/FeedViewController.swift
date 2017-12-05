@@ -20,6 +20,7 @@ class FeedViewController: UITableViewController {
         super.viewDidLoad()
         print("FeedViewController - viewDidLoad")
         
+        dataSource.delegate = self
         self.view.backgroundColor = UIColor.lightGray
         tableView.register(UINib(nibName: "DKTableViewCell", bundle: nil) , forCellReuseIdentifier: reuseIdentifier)
         
@@ -62,6 +63,12 @@ class FeedViewController: UITableViewController {
         if dataSource.models.count > indexPath.row {
             cell.initWith(model: dataSource.models[indexPath.row])
         }
+        
+        if dataSource.models.count == indexPath.row + 5 {
+            self.dataSource.startDownloading {
+                print("startDownloading more items")
+            }
+        }
         return cell
     }
     
@@ -76,4 +83,15 @@ class FeedViewController: UITableViewController {
     
 }
 
+
+extension FeedViewController: UpdateDataSourceProtocol {
+    func updateDataSource(error: Bool) {
+        print("updateDataSource")
+        if error {
+            print(error)
+        } else {
+            self.tableView.reloadData()
+        }
+    }
+}
 

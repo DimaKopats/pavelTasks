@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DKTableViewCell: UITableViewCell, URLSessionDelegate {
+class DKTableViewCell: UITableViewCell {
     
     let imageWidth = UIScreen.main.bounds.size.width - 40
     var postID = 0
@@ -26,22 +26,25 @@ class DKTableViewCell: UITableViewCell, URLSessionDelegate {
         let token = UserDefaults.standard.string(forKey: "token")
         let url = URLBuilder.createURLRepost(token: token!, sourceID: self.sourceID, postId: self.postID)
         let request = URLRequest(url: url)
-        let queue = OperationQueue()
-        queue.name = "repost"
-        queue.qualityOfService = .background
-        let session = URLSession(configuration:.background(withIdentifier: "back"), delegate:self, delegateQueue:queue)
-
-        let task = session.dataTask(with: request)
-        print("repost after 5 sec")
-        sleep(5)
-        task.resume()
-        print("repost done, ID = \(self.postID)")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+        let task = appDelegate.backgroundSession!.dataTask(with: request)
+        
+        DispatchQueue.global(qos: .background).async {
+            print("repost after 5 sec")
+            sleep(5)
+            print("repost done, ID = \(self.postID)")
+            task.resume()
+        }
     }
     
     // URLSessionDelegate
-    func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession) {
-        print("urlSessionDidFinishEvents")
-    }
+//    func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession) {
+//        print("urlSessionDidFinishEvents")
+//    }
+//    func urlSession(_ session: URLSession, didBecomeInvalidWithError error: Error?) {
+//        print("didBecomeInvalidWithError")
+//    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

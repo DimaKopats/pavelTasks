@@ -50,10 +50,20 @@ class Parser: NSObject {
         return parsedGroups
     }
     
+    func parseNextFrom(data: Data) -> String {
+        let json = try? JSONSerialization.jsonObject(with: data, options: [])
+        if let incomingDictionary = json as? [String: Any],
+            let responseDictionary = incomingDictionary["response"] as? [String: Any],
+            let next_from = responseDictionary["next_from"] as? String {
+            return next_from
+        }
+        return ""
+    }
+    
     func createGroupModel(fromDictionary groupDictionary: [String: Any]) -> GroupModel? {
         if let name = groupDictionary["name"] as? String,
-            let photo = groupDictionary["photo"] as? String,
-            let id = groupDictionary["gid"] as? Int {
+            let photo = groupDictionary["photo_50"] as? String,
+            let id = groupDictionary["id"] as? Int {
             let groupModel = GroupModel(logoUrl: photo, title: name, id: id)
             return groupModel
         }
@@ -150,15 +160,15 @@ class Parser: NSObject {
     
     func createPhotoModelfrom(dictionary: Dictionary<String,Any>) -> PostPhotoModel? {
         
-        if let bigPhotoURL = dictionary["src_big"] as? String {
-            //                            print("big photo = \(bigPhotoURL)")
-            return PostPhotoModel(url: bigPhotoURL)
-        } else if let mediumPhotoURL = dictionary["src"] as? String  {
-            print("medium photo = \(mediumPhotoURL)")
-            return PostPhotoModel(url: mediumPhotoURL)
-        } else if let smallPhoroURL = dictionary["src_small"] as? String {
-            print("small photo = \(smallPhoroURL)")
-            return PostPhotoModel(url: smallPhoroURL)
+        if let photo_807 = dictionary["photo_807"] as? String {
+            //                            print("photo_807 = \(photo_807)")
+            return PostPhotoModel(url: photo_807)
+        } else if let photo_604 = dictionary["photo_604"] as? String  {
+            print("photo_604 = \(photo_604)")
+            return PostPhotoModel(url: photo_604)
+        } else if let photo_130 = dictionary["photo_130"] as? String {
+            print("photo_130 = \(photo_130)")
+            return PostPhotoModel(url: photo_130)
         }
         return nil
     }

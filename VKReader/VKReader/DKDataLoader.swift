@@ -12,6 +12,7 @@ class DKDataLoader {
     let parser = Parser()
     let token: String
     let session = URLSession(configuration: .default)
+    var next_from: String?
     
     init(usingToken token: String) {
         self.token = token
@@ -22,8 +23,8 @@ class DKDataLoader {
         print("without a token does not make sense")
     }
     
-    func getData(completionHandler:@escaping (_ models: [Model], _ error:Bool) -> ()) {
-        let url = URLBuilder.createURLFeed(token: self.token, countPosts: 20)
+    func getData(completionHandler: @escaping  (_ models: [Model], _ error:Bool) -> ()) {
+        let url = URLBuilder.createURLFeed(token: self.token, countPosts: 20, after: next_from)
         let request = URLRequest(url: url)
         
         let task = session.dataTask(with: request) { (data, response, error) in
@@ -34,9 +35,9 @@ class DKDataLoader {
                 var parsedGroups = [GroupModel]()
                 var models = [Model]()
                 if let notNilData = data {
+                    self.next_from = self.parser.parseNextFrom(data: notNilData)
                     parsedPosts = self.parser.parsePostsFrom(data: notNilData)
                     parsedGroups = self.parser.parseGroupsFrom(data: notNilData)
-
                     for post in parsedPosts {
                         for group in parsedGroups {
                             if post.sourceID == group.id {
