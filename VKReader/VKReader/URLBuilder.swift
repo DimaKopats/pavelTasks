@@ -18,6 +18,7 @@ class URLBuilder: NSObject {
         }
         let queryString = "https://api.vk.com/method/newsfeed.get?count=\(countPosts)&filters=post\(additionalParameter)&access_token=\(token)&v=5.69"
         print(queryString)
+        
         let url = URL(string: queryString)!
         return url
     }
