@@ -56,7 +56,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ayz-2H-SEo" userLabel="BottomStackView">
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ayz-2H-SEo" userLabel="BottomStackView">
                         <rect key="frame" x="16" y="161.33333333333334" width="288" height="60.666666666666657"/>
                         <color key="backgroundColor" red="0.44405691959999999" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </stackView>

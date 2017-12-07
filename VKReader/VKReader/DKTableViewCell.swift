@@ -58,12 +58,34 @@ class DKTableViewCell: UITableViewCell {
         self.postTime.text = convert(timeInterval: model.post.postDate)
         self.postTitle.text = model.post.postTitle
         self.groupLogo.image = imageFrom(urlString: model.group.groupLogoURL)
-        if !model.post.postImages.isEmpty {
-            let imageModel = model.post.postImages[0]
-            bigPhoto.image =  getPostImageFrom(model: imageModel)
-        } else {
+        
+        if model.post.postImages.isEmpty {
             bigPhoto.image = #imageLiteral(resourceName: "placeholder")
+            return
         }
+        
+        let imageModel = model.post.postImages[0]
+        bigPhoto.image =  getPostImageFrom(model: imageModel)
+        
+        if model.post.postImages.count == 1 {
+            return
+        }
+        
+        var index = 1
+        let array = model.post.postImages.suffix(from: 1).prefix(3)
+        
+        while index < model.post.postImages.count && index < 4 {
+            let imageView = UIImageView()
+            let image = getPostImageFrom(model: model.post.postImages[index])
+            let aspectRatio = image.size.height/image.size.width
+            imageView.heightAnchor.constraint(equalToConstant: 105.0).isActive = true
+            imageView.widthAnchor.constraint(equalToConstant: 105.0/aspectRatio).isActive = true
+            imageView.contentMode = .scaleAspectFit
+            imageView.image = image
+            self.verticalStackView.addArrangedSubview(imageView)
+            index += 1
+        }
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -72,7 +94,11 @@ class DKTableViewCell: UITableViewCell {
     }
     override func prepareForReuse() {
         self.imageView?.image = nil
-//        print("prepareForReuse")
+        let subviews = verticalStackView.arrangedSubviews
+        for view in subviews {
+            verticalStackView.removeArrangedSubview(view)
+            view.removeFromSuperview()
+        }
     }
     
     func convert(timeInterval: Int) -> String {
@@ -119,7 +145,7 @@ class DKTableViewCell: UITableViewCell {
         }
     }
     
-    // dave image to local storage
+    // save image to local storage
     func saveImage(image: UIImage, name: String) -> Bool {
         guard let data = UIImageJPEGRepresentation(image, 1) ?? UIImagePNGRepresentation(image) else {
             return false

@@ -22,17 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
         print("handleEventsForBackgroundURLSession")
+        backgroundSession!.getTasksWithCompletionHandler { (dataTasks, uploadTasks, downloadTasks) -> Void in
+            print("we have our task?")
+        }
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
-        //        self.window = UIWindow.init(frame: UIScreen.main.bounds)
-        //        self.window?.backgroundColor = UIColor.white
-        //
-        //        let naviController = UINavigationController.init(rootViewController: LoginViewController())
-        //        self.window?.rootViewController = naviController
-        //        self.window?.makeKeyAndVisible()
-        
         let queue = OperationQueue()
         queue.name = "repost"
         queue.qualityOfService = .background
@@ -47,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
+        print("applicationDidEnterBackground")
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
@@ -63,7 +59,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         self.backgroundSession?.invalidateAndCancel()
     }
-
-
+    
 }
 
