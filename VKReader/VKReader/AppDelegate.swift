@@ -28,9 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let queue = OperationQueue()
-        queue.name = "repost"
-        queue.qualityOfService = .background
+//        let queue = OperationQueue()
+//        queue.name = "repost"
+//        queue.qualityOfService = .background
         self.backgroundSession = URLSession.init(configuration: .background(withIdentifier: "com.dzmitry.background"))
         
         return true
