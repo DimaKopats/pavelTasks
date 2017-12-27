@@ -4,23 +4,19 @@ import UIKit
 
 //"1️⃣2️⃣3️⃣4️⃣5️⃣"
 
-
-protocol testProtocol {
-    func testFunc()
+class Person {
+    var residence: Residence?
 }
 
-extension testProtocol {
-    func testFunc() {
-        print("testFunc")
-    }
+class Residence {
+    var numberOfRooms = 1
 }
 
-class classA: testProtocol {
-    func testFunc() {
-        print("my implementation")
-    }
+let john = Person()
+
+if let roomCount = john.residence?.numberOfRooms {
+    print("John's residence has \(roomCount) room(s).")
+} else {
+    print("Unable to retrieve the number of rooms.")
 }
-
-let objA = classA()
-objA.testFunc()
-
+let roomCount = john.residence?.numberOfRooms
