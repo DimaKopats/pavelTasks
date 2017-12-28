@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B28679A1FE7D24D00862A61 /* VKReaderDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B2867981FE7D24D00862A61 /* VKReaderDataModel.xcdatamodeld */; };
+		1B28679A1FE7D24D00862A61 /* VKReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B2867981FE7D24D00862A61 /* VKReader.xcdatamodeld */; };
 		1B411EA01FE28D2E00490E7E /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B411E9F1FE28D2E00490E7E /* PhotoManager.swift */; };
 		1B411EA21FE28D8900490E7E /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B411EA11FE28D8900490E7E /* DataSource.swift */; };
 		1B411EA41FE28DAF00490E7E /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B411EA31FE28DAF00490E7E /* DataLoader.swift */; };
 		1B411EA61FE29E2D00490E7E /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B411EA51FE29E2D00490E7E /* PhotoModel.swift */; };
+		1B41D14D1FF51B1D002EAE8E /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B41D14C1FF51B1D002EAE8E /* Reachability.swift */; };
 		1B46B1381FC6FA8B00A9E166 /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B46B1371FC6FA8B00A9E166 /* GroupModel.swift */; };
 		1B46B13A1FC6FAAB00A9E166 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B46B1391FC6FAAB00A9E166 /* Model.swift */; };
 		1B46FB231FE425E400C66197 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B46FB221FE425E400C66197 /* ContentModel.swift */; };
@@ -37,6 +38,7 @@
 		1B411EA11FE28D8900490E7E /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		1B411EA31FE28DAF00490E7E /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		1B411EA51FE29E2D00490E7E /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
+		1B41D14C1FF51B1D002EAE8E /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		1B46B1371FC6FA8B00A9E166 /* GroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
 		1B46B1391FC6FAAB00A9E166 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		1B46FB221FE425E400C66197 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
@@ -114,7 +116,7 @@
 				1B6142F31FEBF5D000B74E07 /* TokenManager.swift */,
 				1B5D139B1FD5915E00BCABD2 /* UpdateDataSourceProtocol.swift */,
 				1B4F7D281FC8480A007A60B0 /* URLBuilder.swift */,
-				1B2867981FE7D24D00862A61 /* VKReaderDataModel.xcdatamodeld */,
+				1B2867981FE7D24D00862A61 /* VKReader.xcdatamodeld */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -140,6 +142,7 @@
 		1B5FBD6D1FC2DBF4008B2655 /* VKReader */ = {
 			isa = PBXGroup;
 			children = (
+				1B41D14C1FF51B1D002EAE8E /* Reachability.swift */,
 				1B5FBD6E1FC2DBF4008B2655 /* AppDelegate.swift */,
 				1B411EA71FE29E6600490E7E /* Model */,
 				1B411EA91FE29E7C00490E7E /* Data */,
@@ -297,6 +300,7 @@
 				1B411EA61FE29E2D00490E7E /* PhotoModel.swift in Sources */,
 				1B411EA21FE28D8900490E7E /* DataSource.swift in Sources */,
 				1B5FBD8F1FC2F4F7008B2655 /* LoginViewController.swift in Sources */,
+				1B41D14D1FF51B1D002EAE8E /* Reachability.swift in Sources */,
 				1B46B1381FC6FA8B00A9E166 /* GroupModel.swift in Sources */,
 				1B4F7D291FC8480A007A60B0 /* URLBuilder.swift in Sources */,
 				1B5FBD911FC2F522008B2655 /* FeedViewController.swift in Sources */,
@@ -305,7 +309,7 @@
 				1B46B13A1FC6FAAB00A9E166 /* Model.swift in Sources */,
 				1B411EA41FE28DAF00490E7E /* DataLoader.swift in Sources */,
 				1B5FBD941FC31A6A008B2655 /* DKTableViewCell.swift in Sources */,
-				1B28679A1FE7D24D00862A61 /* VKReaderDataModel.xcdatamodeld in Sources */,
+				1B28679A1FE7D24D00862A61 /* VKReader.xcdatamodeld in Sources */,
 				1B5FBD6F1FC2DBF4008B2655 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,13 +501,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		1B2867981FE7D24D00862A61 /* VKReaderDataModel.xcdatamodeld */ = {
+		1B2867981FE7D24D00862A61 /* VKReader.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				1B2867991FE7D24D00862A61 /* VKReaderDataModel.xcdatamodel */,
 			);
 			currentVersion = 1B2867991FE7D24D00862A61 /* VKReaderDataModel.xcdatamodel */;
-			path = VKReaderDataModel.xcdatamodeld;
+			path = VKReader.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

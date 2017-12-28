@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ContentEntity" representedClassName="ContentEntity" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="postTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -10,20 +10,19 @@
     <entity name="GroupEntity" representedClassName="GroupEntity" syncable="YES" codeGenerationType="class">
         <attribute name="groupTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="logo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoModelEntity" syncable="YES"/>
     </entity>
     <entity name="ModelEntity" representedClassName="ModelEntity" syncable="YES" codeGenerationType="class">
+        <relationship name="content" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ContentEntity" syncable="YES"/>
         <relationship name="group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GroupEntity" syncable="YES"/>
-        <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ContentEntity" syncable="YES"/>
     </entity>
     <entity name="PhotoModelEntity" representedClassName="PhotoModelEntity" syncable="YES" codeGenerationType="class">
         <attribute name="localName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="PhotoModelEntity" positionX="-63" positionY="24" width="128" height="73"/>
         <element name="ContentEntity" positionX="-279" positionY="-108" width="117" height="118"/>
-        <element name="GroupEntity" positionX="-281" positionY="54" width="128" height="88"/>
-        <element name="ModelEntity" positionX="-515" positionY="-37" width="128" height="73"/>
+        <element name="GroupEntity" positionX="-281" positionY="54" width="128" height="75"/>
+        <element name="ModelEntity" positionX="-515" positionY="-37" width="128" height="75"/>
+        <element name="PhotoModelEntity" positionX="-63" positionY="24" width="128" height="73"/>
     </elements>
 </model>

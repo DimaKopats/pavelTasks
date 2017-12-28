@@ -26,8 +26,14 @@ class LoginViewController: UIViewController, VKSdkDelegate, VKSdkUIDelegate {
     }
     
     @IBAction func loginButtonTap(_ sender: Any) {
-        print("loginButtonTap")
-        VKSdk.authorize([VK_PER_WALL, VK_PER_FRIENDS])
+        if Reachability.isConnectedToNetwork() {
+            VKSdk.authorize([VK_PER_WALL, VK_PER_FRIENDS])
+            print("Internet connection OK")
+        } else {
+            self.navigationController?.pushViewController(FeedViewController(), animated: true)
+            // load from core data
+            print("Internet connection FAILED")
+        }
     }
     
     // MARK: _______________

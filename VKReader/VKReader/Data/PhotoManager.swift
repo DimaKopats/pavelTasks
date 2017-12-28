@@ -61,7 +61,7 @@ class PhotoManager {
         do {
             try data.write(to: directory.appendingPathComponent(name))
         } catch {
-            print(error.localizedDescription)
+            print("error = \(error.localizedDescription)")
             print("trouble with save photo (write)")
         }
     }
