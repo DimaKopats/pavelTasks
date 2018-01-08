@@ -19,6 +19,15 @@ class PhotoManager {
             directory.deleteLastPathComponent()
             directory.deleteLastPathComponent()
             directory.appendPathComponent("test")
+//        print("path = \(directory.path)")
+        if !FileManager().fileExists(atPath: directory.path) {
+            print("we need to create test directory")
+            do {
+                try FileManager.default.createDirectory(atPath: directory.path, withIntermediateDirectories: true, attributes: nil)
+            } catch let error as NSError {
+                NSLog("Unable to create directory \(error.debugDescription)")
+            }
+        }
     }
     
     // download from internet using URLSession
@@ -36,9 +45,9 @@ class PhotoManager {
     
     // download from internet wihtout URLSession
     func loadImageUsing(photoModel: PhotoModel) -> UIImage {
-        if let imgURL = photoModel.url,
-            let imageData = try? Data.init(contentsOf: imgURL) {
-            print("load image from internet \(imgURL)")
+        if Reachability.isConnectedToNetwork(),
+            let imageData = try? Data.init(contentsOf: photoModel.url) {
+            print("load image from internet \(photoModel.url)")
             var image = UIImage.init(data: imageData)
             let scale = image!.size.width/imageWidth
             image = UIImage.init(data: imageData, scale: scale)

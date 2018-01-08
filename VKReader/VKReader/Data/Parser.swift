@@ -86,7 +86,8 @@ class Parser: NSObject {
     
     func createGroupModel(fromDictionary groupDictionary: [String: Any]) -> GroupModel? {
         if let name = groupDictionary["name"] as? String,
-            let logoUrl = groupDictionary["photo_50"] as? String,
+            let logoStringUrl = groupDictionary["photo_50"] as? String,
+            let logoUrl = URL.init(string: logoStringUrl),
             let id = groupDictionary["id"] as? Int {
             let logo = PhotoModel.init(url: logoUrl)
             let groupModel = GroupModel(logo: logo, title: name, id: id)
@@ -159,12 +160,19 @@ class Parser: NSObject {
     }
     
     func createPhotoModelfrom(dictionary: Dictionary<String,Any>) -> PhotoModel? {
+        let imageUrl: URL?
         if let photo_807 = dictionary["photo_807"] as? String {
-            return PhotoModel(url: photo_807)
+            imageUrl = URL(string: photo_807)
         } else if let photo_604 = dictionary["photo_604"] as? String  {
-            return PhotoModel(url: photo_604)
+            imageUrl = URL(string: photo_604)
         } else if let photo_130 = dictionary["photo_130"] as? String {
-            return PhotoModel(url: photo_130)
+            imageUrl = URL(string: photo_130)
+        } else {
+            imageUrl = URL.init(string: "")
+            return nil
+        }
+        if let url = imageUrl {
+            return PhotoModel(url: url)
         }
         return nil
     }

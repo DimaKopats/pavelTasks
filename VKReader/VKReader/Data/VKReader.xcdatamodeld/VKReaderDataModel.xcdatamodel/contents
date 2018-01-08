@@ -5,24 +5,29 @@
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="postTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="images" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoModelEntity" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PhotoModelEntity" inverseName="contentEntity" inverseEntity="PhotoModelEntity" syncable="YES"/>
+        <relationship name="modelEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ModelEntity" inverseName="content" inverseEntity="ModelEntity" syncable="YES"/>
     </entity>
     <entity name="GroupEntity" representedClassName="GroupEntity" syncable="YES" codeGenerationType="class">
         <attribute name="groupTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="logo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoModelEntity" inverseName="groupEntity" inverseEntity="PhotoModelEntity" syncable="YES"/>
+        <relationship name="modelEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ModelEntity" inverseName="group" inverseEntity="ModelEntity" syncable="YES"/>
     </entity>
     <entity name="ModelEntity" representedClassName="ModelEntity" syncable="YES" codeGenerationType="class">
-        <relationship name="content" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ContentEntity" syncable="YES"/>
-        <relationship name="group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GroupEntity" syncable="YES"/>
+        <relationship name="content" maxCount="1" deletionRule="Nullify" destinationEntity="ContentEntity" inverseName="modelEntity" inverseEntity="ContentEntity" syncable="YES"/>
+        <relationship name="group" maxCount="1" deletionRule="Nullify" destinationEntity="GroupEntity" inverseName="modelEntity" inverseEntity="GroupEntity" syncable="YES"/>
     </entity>
     <entity name="PhotoModelEntity" representedClassName="PhotoModelEntity" syncable="YES" codeGenerationType="class">
         <attribute name="localName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="URI" syncable="YES"/>
+        <relationship name="contentEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ContentEntity" inverseName="images" inverseEntity="ContentEntity" syncable="YES"/>
+        <relationship name="groupEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GroupEntity" inverseName="logo" inverseEntity="GroupEntity" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ContentEntity" positionX="-279" positionY="-108" width="117" height="118"/>
-        <element name="GroupEntity" positionX="-281" positionY="54" width="128" height="75"/>
-        <element name="ModelEntity" positionX="-515" positionY="-37" width="128" height="75"/>
-        <element name="PhotoModelEntity" positionX="-63" positionY="24" width="128" height="73"/>
+        <element name="ContentEntity" positionX="-342" positionY="-151" width="117" height="133"/>
+        <element name="GroupEntity" positionX="-342" positionY="63" width="128" height="103"/>
+        <element name="ModelEntity" positionX="-515" positionY="-37" width="128" height="73"/>
+        <element name="PhotoModelEntity" positionX="-173" positionY="-67" width="128" height="103"/>
     </elements>
 </model>

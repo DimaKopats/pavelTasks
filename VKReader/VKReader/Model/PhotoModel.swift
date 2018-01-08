@@ -9,12 +9,13 @@
 import UIKit
 
 class PhotoModel {
-    let url: URL?
+    let url: URL
     let localName: String
     
-    init(url: String) {
-        self.url = URL.init(string: url)
-        localName = String.init(describing: url.split(separator: "/").last!)
+    init(url: URL) {
+        self.url = url
+        localName = url.lastPathComponent
+//        localName = String.init(describing: url.split(separator: "/").last!)
     }
 }
 

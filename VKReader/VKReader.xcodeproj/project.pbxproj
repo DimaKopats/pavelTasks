@@ -29,6 +29,7 @@
 		1B5FBD941FC31A6A008B2655 /* DKTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5FBD921FC31A6A008B2655 /* DKTableViewCell.swift */; };
 		1B5FBD951FC31A6A008B2655 /* DKTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B5FBD931FC31A6A008B2655 /* DKTableViewCell.xib */; };
 		1B6142F41FEBF5D000B74E07 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6142F31FEBF5D000B74E07 /* TokenManager.swift */; };
+		1B867F9A1FFF8AA10008AA10 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B867F991FFF8AA10008AA10 /* CoreDataManager.swift */; };
 		FF96495EA690CDBD3DC2611D /* Pods_VKReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A89664359084B1C155C552 /* Pods_VKReader.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		1B5FBD921FC31A6A008B2655 /* DKTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKTableViewCell.swift; sourceTree = "<group>"; };
 		1B5FBD931FC31A6A008B2655 /* DKTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DKTableViewCell.xib; sourceTree = "<group>"; };
 		1B6142F31FEBF5D000B74E07 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		1B867F991FFF8AA10008AA10 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		63A89664359084B1C155C552 /* Pods_VKReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D767614689F241F45FF8557 /* Pods-VKReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKReader/Pods-VKReader.debug.xcconfig"; sourceTree = "<group>"; };
 		CD9B8ED4FC86140F7913E4C9 /* Pods-VKReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKReader/Pods-VKReader.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		1B411EA91FE29E7C00490E7E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				1B867F991FFF8AA10008AA10 /* CoreDataManager.swift */,
 				1B411EA11FE28D8900490E7E /* DataSource.swift */,
 				1B411EA31FE28DAF00490E7E /* DataLoader.swift */,
 				1B485DD91FC44FE200CBDB08 /* Parser.swift */,
@@ -300,6 +303,7 @@
 				1B411EA61FE29E2D00490E7E /* PhotoModel.swift in Sources */,
 				1B411EA21FE28D8900490E7E /* DataSource.swift in Sources */,
 				1B5FBD8F1FC2F4F7008B2655 /* LoginViewController.swift in Sources */,
+				1B867F9A1FFF8AA10008AA10 /* CoreDataManager.swift in Sources */,
 				1B41D14D1FF51B1D002EAE8E /* Reachability.swift in Sources */,
 				1B46B1381FC6FA8B00A9E166 /* GroupModel.swift in Sources */,
 				1B4F7D291FC8480A007A60B0 /* URLBuilder.swift in Sources */,

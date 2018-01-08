@@ -20,3 +20,7 @@ if let roomCount = john.residence?.numberOfRooms {
     print("Unable to retrieve the number of rooms.")
 }
 let roomCount = john.residence?.numberOfRooms
+
+let url = URL.init(string: "https://habrahabr.ru/post/345270/")
+url?.lastPathComponent
+
