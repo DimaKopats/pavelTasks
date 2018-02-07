@@ -81,8 +81,8 @@ class ViewController: UIViewController {
         let deleteButton = UIButton(type: .roundedRect)
         deleteButton.setTitle("Delete", for: .normal)
         deleteButton.addTarget(self, action: #selector(ViewController.deleteStackView), for: .touchUpInside)
-        stack.addArrangedSubview(dateLabel)
         stack.addArrangedSubview(numberLabel)
+        stack.addArrangedSubview(dateLabel)
         stack.addArrangedSubview(deleteButton)
         
         return stack

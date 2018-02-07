@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B499E422029E32800A3E8D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B499E412029E32800A3E8D4 /* AppDelegate.swift */; };
+		1B499E442029E32800A3E8D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B499E432029E32800A3E8D4 /* ViewController.swift */; };
+		1B499E492029E32800A3E8D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B499E482029E32800A3E8D4 /* Assets.xcassets */; };
+		1B499E4C2029E32800A3E8D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B499E4A2029E32800A3E8D4 /* LaunchScreen.storyboard */; };
+		1B499E8E2029E46700A3E8D4 /* IHGRatesCellButtonCash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B499E822029E46600A3E8D4 /* IHGRatesCellButtonCash.swift */; };
+		1B499E8F2029E46700A3E8D4 /* IHGRatesCellButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B499E832029E46600A3E8D4 /* IHGRatesCellButtonItem.swift */; };
+		1B499E902029E46700A3E8D4 /* IHGRatesCellButtonPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B499E842029E46600A3E8D4 /* IHGRatesCellButtonPoints.swift */; };
+		1B499E912029E46700A3E8D4 /* IHGRatesCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B499E852029E46600A3E8D4 /* IHGRatesCellButton.swift */; };
+		1B499E922029E46700A3E8D4 /* IHGRatesCellButtonPointsAndCash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B499E862029E46600A3E8D4 /* IHGRatesCellButtonPointsAndCash.swift */; };
+		1B499E932029E46700A3E8D4 /* IHGRatesCellButtonMemberDiscount.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B499E872029E46600A3E8D4 /* IHGRatesCellButtonMemberDiscount.xib */; };
+		1B499E942029E46700A3E8D4 /* IHGRatesCellButtonPoints.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B499E882029E46700A3E8D4 /* IHGRatesCellButtonPoints.xib */; };
+		1B499E952029E46700A3E8D4 /* IHGRatesCellButtonFree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B499E892029E46700A3E8D4 /* IHGRatesCellButtonFree.swift */; };
+		1B499E962029E46700A3E8D4 /* IHGRatesCellButtonPointsAndCash.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B499E8A2029E46700A3E8D4 /* IHGRatesCellButtonPointsAndCash.xib */; };
+		1B499E972029E46700A3E8D4 /* IHGRatesCellButtonMemberDiscount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B499E8B2029E46700A3E8D4 /* IHGRatesCellButtonMemberDiscount.swift */; };
+		1B499E982029E46700A3E8D4 /* IHGRatesCellButtonFree.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B499E8C2029E46700A3E8D4 /* IHGRatesCellButtonFree.xib */; };
+		1B499E992029E46700A3E8D4 /* IHGRatesCellButtonCash.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B499E8D2029E46700A3E8D4 /* IHGRatesCellButtonCash.xib */; };
+		1B499E9D2029EA1300A3E8D4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B499E9B2029EA1300A3E8D4 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1B499E3E2029E32800A3E8D4 /* RateButtonsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RateButtonsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B499E412029E32800A3E8D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1B499E432029E32800A3E8D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1B499E482029E32800A3E8D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1B499E4B2029E32800A3E8D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1B499E4D2029E32800A3E8D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B499E822029E46600A3E8D4 /* IHGRatesCellButtonCash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHGRatesCellButtonCash.swift; sourceTree = "<group>"; };
+		1B499E832029E46600A3E8D4 /* IHGRatesCellButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHGRatesCellButtonItem.swift; sourceTree = "<group>"; };
+		1B499E842029E46600A3E8D4 /* IHGRatesCellButtonPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHGRatesCellButtonPoints.swift; sourceTree = "<group>"; };
+		1B499E852029E46600A3E8D4 /* IHGRatesCellButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHGRatesCellButton.swift; sourceTree = "<group>"; };
+		1B499E862029E46600A3E8D4 /* IHGRatesCellButtonPointsAndCash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHGRatesCellButtonPointsAndCash.swift; sourceTree = "<group>"; };
+		1B499E872029E46600A3E8D4 /* IHGRatesCellButtonMemberDiscount.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IHGRatesCellButtonMemberDiscount.xib; sourceTree = "<group>"; };
+		1B499E882029E46700A3E8D4 /* IHGRatesCellButtonPoints.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IHGRatesCellButtonPoints.xib; sourceTree = "<group>"; };
+		1B499E892029E46700A3E8D4 /* IHGRatesCellButtonFree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHGRatesCellButtonFree.swift; sourceTree = "<group>"; };
+		1B499E8A2029E46700A3E8D4 /* IHGRatesCellButtonPointsAndCash.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IHGRatesCellButtonPointsAndCash.xib; sourceTree = "<group>"; };
+		1B499E8B2029E46700A3E8D4 /* IHGRatesCellButtonMemberDiscount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHGRatesCellButtonMemberDiscount.swift; sourceTree = "<group>"; };
+		1B499E8C2029E46700A3E8D4 /* IHGRatesCellButtonFree.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IHGRatesCellButtonFree.xib; sourceTree = "<group>"; };
+		1B499E8D2029E46700A3E8D4 /* IHGRatesCellButtonCash.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IHGRatesCellButtonCash.xib; sourceTree = "<group>"; };
+		1B499E9B2029EA1300A3E8D4 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B499E3B2029E32800A3E8D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B499E352029E32800A3E8D4 = {
+			isa = PBXGroup;
+			children = (
+				1B499E402029E32800A3E8D4 /* RateButtonsTest */,
+				1B499E3F2029E32800A3E8D4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1B499E3F2029E32800A3E8D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B499E3E2029E32800A3E8D4 /* RateButtonsTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B499E402029E32800A3E8D4 /* RateButtonsTest */ = {
+			isa = PBXGroup;
+			children = (
+				1B499E812029E45500A3E8D4 /* But */,
+				1B499E412029E32800A3E8D4 /* AppDelegate.swift */,
+				1B499E9B2029EA1300A3E8D4 /* ViewController.xib */,
+				1B499E432029E32800A3E8D4 /* ViewController.swift */,
+				1B499E482029E32800A3E8D4 /* Assets.xcassets */,
+				1B499E4A2029E32800A3E8D4 /* LaunchScreen.storyboard */,
+				1B499E4D2029E32800A3E8D4 /* Info.plist */,
+			);
+			path = RateButtonsTest;
+			sourceTree = "<group>";
+		};
+		1B499E812029E45500A3E8D4 /* But */ = {
+			isa = PBXGroup;
+			children = (
+				1B499E832029E46600A3E8D4 /* IHGRatesCellButtonItem.swift */,
+				1B499E852029E46600A3E8D4 /* IHGRatesCellButton.swift */,
+				1B499E822029E46600A3E8D4 /* IHGRatesCellButtonCash.swift */,
+				1B499E8D2029E46700A3E8D4 /* IHGRatesCellButtonCash.xib */,
+				1B499E892029E46700A3E8D4 /* IHGRatesCellButtonFree.swift */,
+				1B499E8C2029E46700A3E8D4 /* IHGRatesCellButtonFree.xib */,
+				1B499E8B2029E46700A3E8D4 /* IHGRatesCellButtonMemberDiscount.swift */,
+				1B499E872029E46600A3E8D4 /* IHGRatesCellButtonMemberDiscount.xib */,
+				1B499E842029E46600A3E8D4 /* IHGRatesCellButtonPoints.swift */,
+				1B499E882029E46700A3E8D4 /* IHGRatesCellButtonPoints.xib */,
+				1B499E862029E46600A3E8D4 /* IHGRatesCellButtonPointsAndCash.swift */,
+				1B499E8A2029E46700A3E8D4 /* IHGRatesCellButtonPointsAndCash.xib */,
+			);
+			path = But;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1B499E3D2029E32800A3E8D4 /* RateButtonsTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B499E502029E32800A3E8D4 /* Build configuration list for PBXNativeTarget "RateButtonsTest" */;
+			buildPhases = (
+				1B499E3A2029E32800A3E8D4 /* Sources */,
+				1B499E3B2029E32800A3E8D4 /* Frameworks */,
+				1B499E3C2029E32800A3E8D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RateButtonsTest;
+			productName = RateButtonsTest;
+			productReference = 1B499E3E2029E32800A3E8D4 /* RateButtonsTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1B499E362029E32800A3E8D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Dzmitry Kopats";
+				TargetAttributes = {
+					1B499E3D2029E32800A3E8D4 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1B499E392029E32800A3E8D4 /* Build configuration list for PBXProject "RateButtonsTest" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1B499E352029E32800A3E8D4;
+			productRefGroup = 1B499E3F2029E32800A3E8D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1B499E3D2029E32800A3E8D4 /* RateButtonsTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B499E3C2029E32800A3E8D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B499E982029E46700A3E8D4 /* IHGRatesCellButtonFree.xib in Resources */,
+				1B499E9D2029EA1300A3E8D4 /* ViewController.xib in Resources */,
+				1B499E4C2029E32800A3E8D4 /* LaunchScreen.storyboard in Resources */,
+				1B499E932029E46700A3E8D4 /* IHGRatesCellButtonMemberDiscount.xib in Resources */,
+				1B499E942029E46700A3E8D4 /* IHGRatesCellButtonPoints.xib in Resources */,
+				1B499E492029E32800A3E8D4 /* Assets.xcassets in Resources */,
+				1B499E992029E46700A3E8D4 /* IHGRatesCellButtonCash.xib in Resources */,
+				1B499E962029E46700A3E8D4 /* IHGRatesCellButtonPointsAndCash.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B499E3A2029E32800A3E8D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B499E8E2029E46700A3E8D4 /* IHGRatesCellButtonCash.swift in Sources */,
+				1B499E922029E46700A3E8D4 /* IHGRatesCellButtonPointsAndCash.swift in Sources */,
+				1B499E972029E46700A3E8D4 /* IHGRatesCellButtonMemberDiscount.swift in Sources */,
+				1B499E902029E46700A3E8D4 /* IHGRatesCellButtonPoints.swift in Sources */,
+				1B499E912029E46700A3E8D4 /* IHGRatesCellButton.swift in Sources */,
+				1B499E952029E46700A3E8D4 /* IHGRatesCellButtonFree.swift in Sources */,
+				1B499E8F2029E46700A3E8D4 /* IHGRatesCellButtonItem.swift in Sources */,
+				1B499E442029E32800A3E8D4 /* ViewController.swift in Sources */,
+				1B499E422029E32800A3E8D4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1B499E4A2029E32800A3E8D4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B499E4B2029E32800A3E8D4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1B499E4E2029E32800A3E8D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1B499E4F2029E32800A3E8D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1B499E512029E32800A3E8D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RateButtonsTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kopats.dzmitry.RateButtonsTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1B499E522029E32800A3E8D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RateButtonsTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kopats.dzmitry.RateButtonsTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B499E392029E32800A3E8D4 /* Build configuration list for PBXProject "RateButtonsTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B499E4E2029E32800A3E8D4 /* Debug */,
+				1B499E4F2029E32800A3E8D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B499E502029E32800A3E8D4 /* Build configuration list for PBXNativeTarget "RateButtonsTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B499E512029E32800A3E8D4 /* Debug */,
+				1B499E522029E32800A3E8D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1B499E362029E32800A3E8D4 /* Project object */;
+}
