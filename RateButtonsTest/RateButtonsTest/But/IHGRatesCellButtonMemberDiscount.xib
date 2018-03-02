@@ -20,6 +20,7 @@
                 <outlet property="currencyLabel" destination="itS-cA-9QT" id="9On-qy-gG7"/>
                 <outlet property="mainView" destination="Apw-iq-hoC" id="Rqh-zn-sNT"/>
                 <outlet property="topBorderLabel" destination="5dU-KV-ZEO" id="mbS-KC-Hwz"/>
+                <outlet property="topLabelView" destination="0DP-lo-iA8" id="36s-o4-Z9M"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -33,25 +34,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Apw-iq-hoC" userLabel="mainView">
                             <rect key="frame" x="0.0" y="5" width="244" height="44"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0DP-lo-iA8" userLabel="topLabelView">
-                                    <rect key="frame" x="80.5" y="-7" width="83" height="14"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RATE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dU-KV-ZEO">
-                                            <rect key="frame" x="10" y="0.0" width="63" height="14"/>
-                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <constraints>
-                                        <constraint firstItem="5dU-KV-ZEO" firstAttribute="leading" secondItem="0DP-lo-iA8" secondAttribute="leading" constant="10" id="Jel-e4-3j6"/>
-                                        <constraint firstAttribute="trailing" secondItem="5dU-KV-ZEO" secondAttribute="trailing" constant="10" id="WoO-KG-LRx"/>
-                                        <constraint firstItem="5dU-KV-ZEO" firstAttribute="top" secondItem="0DP-lo-iA8" secondAttribute="top" id="kzo-x0-sK8"/>
-                                        <constraint firstAttribute="bottom" secondItem="5dU-KV-ZEO" secondAttribute="bottom" id="tmT-j6-hIj"/>
-                                    </constraints>
-                                </view>
-                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QkR-ir-Y6b">
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QkR-ir-Y6b">
                                     <rect key="frame" x="87.5" y="10.5" width="69" height="24"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="315" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNx-Yk-hHR">
@@ -61,48 +44,66 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itS-cA-9QT">
-                                            <rect key="frame" x="39.5" y="0.0" width="29.5" height="24"/>
+                                            <rect key="frame" x="39.5" y="5.5" width="29.5" height="17"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                             <color key="textColor" red="0.85098039219999999" green="0.41176470590000003" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </stackView>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h50-5q-TE5" userLabel="bottomLabelView">
-                                    <rect key="frame" x="54.5" y="37.5" width="136.5" height="14"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" MEMBER DISCOUNT " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z35-we-kcG">
-                                            <rect key="frame" x="10" y="0.0" width="116.5" height="13.5"/>
-                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="z35-we-kcG" secondAttribute="bottom" id="4Ic-Pc-4K8"/>
-                                        <constraint firstItem="z35-we-kcG" firstAttribute="leading" secondItem="h50-5q-TE5" secondAttribute="leading" constant="10" id="CDO-Er-Pf5"/>
-                                        <constraint firstItem="z35-we-kcG" firstAttribute="top" secondItem="h50-5q-TE5" secondAttribute="top" id="pKo-Z4-h2p"/>
-                                        <constraint firstAttribute="trailing" secondItem="z35-we-kcG" secondAttribute="trailing" constant="10" id="qr5-3e-F5h"/>
-                                    </constraints>
-                                </view>
                             </subviews>
                             <color key="backgroundColor" red="0.93333333330000001" green="0.98039215690000003" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="8Yp-UA-xzR"/>
-                                <constraint firstItem="z35-we-kcG" firstAttribute="centerY" secondItem="Apw-iq-hoC" secondAttribute="bottom" id="LSx-9Q-YgM"/>
-                                <constraint firstItem="0DP-lo-iA8" firstAttribute="centerX" secondItem="Apw-iq-hoC" secondAttribute="centerX" id="NuY-Gf-HXm"/>
-                                <constraint firstItem="h50-5q-TE5" firstAttribute="centerX" secondItem="Apw-iq-hoC" secondAttribute="centerX" id="cfv-Me-OOO"/>
                                 <constraint firstItem="QkR-ir-Y6b" firstAttribute="centerY" secondItem="Apw-iq-hoC" secondAttribute="centerY" id="cuf-5H-wiX"/>
                                 <constraint firstItem="QkR-ir-Y6b" firstAttribute="centerX" secondItem="Apw-iq-hoC" secondAttribute="centerX" id="lbx-dm-skI"/>
-                                <constraint firstAttribute="top" secondItem="0DP-lo-iA8" secondAttribute="centerY" id="rQN-rW-NpS"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h50-5q-TE5" userLabel="bottomLabelView">
+                            <rect key="frame" x="53" y="42" width="136.5" height="14"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" MEMBER DISCOUNT " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z35-we-kcG">
+                                    <rect key="frame" x="10" y="0.0" width="116.5" height="13.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="z35-we-kcG" secondAttribute="bottom" id="4Ic-Pc-4K8"/>
+                                <constraint firstItem="z35-we-kcG" firstAttribute="leading" secondItem="h50-5q-TE5" secondAttribute="leading" constant="10" id="CDO-Er-Pf5"/>
+                                <constraint firstItem="z35-we-kcG" firstAttribute="top" secondItem="h50-5q-TE5" secondAttribute="top" id="pKo-Z4-h2p"/>
+                                <constraint firstAttribute="trailing" secondItem="z35-we-kcG" secondAttribute="trailing" constant="10" id="qr5-3e-F5h"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0DP-lo-iA8" userLabel="topLabelView">
+                            <rect key="frame" x="80" y="-2" width="83" height="14"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RATE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dU-KV-ZEO">
+                                    <rect key="frame" x="10" y="0.0" width="63" height="14"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="5dU-KV-ZEO" firstAttribute="leading" secondItem="0DP-lo-iA8" secondAttribute="leading" constant="10" id="Jel-e4-3j6"/>
+                                <constraint firstAttribute="trailing" secondItem="5dU-KV-ZEO" secondAttribute="trailing" constant="10" id="WoO-KG-LRx"/>
+                                <constraint firstItem="5dU-KV-ZEO" firstAttribute="top" secondItem="0DP-lo-iA8" secondAttribute="top" id="kzo-x0-sK8"/>
+                                <constraint firstAttribute="bottom" secondItem="5dU-KV-ZEO" secondAttribute="bottom" id="tmT-j6-hIj"/>
                             </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="0DP-lo-iA8" firstAttribute="centerY" secondItem="Apw-iq-hoC" secondAttribute="top" id="DBq-QC-t3r"/>
                         <constraint firstItem="Apw-iq-hoC" firstAttribute="top" secondItem="89u-55-rFT" secondAttribute="top" constant="5" id="KlZ-Sq-4vn"/>
+                        <constraint firstItem="0DP-lo-iA8" firstAttribute="centerX" secondItem="89u-55-rFT" secondAttribute="centerX" id="Wt2-EM-j6y"/>
+                        <constraint firstItem="h50-5q-TE5" firstAttribute="centerX" secondItem="89u-55-rFT" secondAttribute="centerX" id="fYj-TN-G7L"/>
                         <constraint firstAttribute="trailing" secondItem="Apw-iq-hoC" secondAttribute="trailing" id="grZ-YQ-HZy"/>
+                        <constraint firstItem="h50-5q-TE5" firstAttribute="centerY" secondItem="Apw-iq-hoC" secondAttribute="bottom" id="iWG-07-hMb"/>
                         <constraint firstItem="Apw-iq-hoC" firstAttribute="leading" secondItem="89u-55-rFT" secondAttribute="leading" id="x9n-Rq-IxI"/>
                     </constraints>
                 </view>

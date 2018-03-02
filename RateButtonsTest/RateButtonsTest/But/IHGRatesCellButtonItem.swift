@@ -19,6 +19,7 @@ enum IHGRatesCellButtonType: Int {
 class IHGRatesCellButtonItem {
     let type: IHGRatesCellButtonType
     let primaryBrandColor: UIColor
+    let points: String
     let cash: String
     let currency: String
     
@@ -27,5 +28,7 @@ class IHGRatesCellButtonItem {
         self.primaryBrandColor = color
         self.cash = cash
         self.currency = currency
+        // FIXME: load points from request
+        self.points = "50,000"
     }
 }

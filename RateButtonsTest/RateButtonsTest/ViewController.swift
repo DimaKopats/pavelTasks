@@ -9,16 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var buttonPoints: IHGRatesCellButtonPoints!
-    @IBOutlet weak var buttonPointAndCash: IHGRatesCellButtonPointsAndCash!
+    @IBOutlet weak var buttonPoints:         IHGRatesCellButtonPoints!
+    @IBOutlet weak var buttonPointAndCash:   IHGRatesCellButtonPointsAndCash!
     @IBOutlet weak var buttonMemberDiscount: IHGRatesCellButtonMemberDiscount!
-    @IBOutlet weak var buttonCash: IHGRatesCellButtonCash!
-    @IBOutlet weak var buttonFree: IHGRatesCellButtonFree!
+    @IBOutlet weak var buttonCash:           IHGRatesCellButtonCash!
+    @IBOutlet weak var buttonFree:           IHGRatesCellButtonFree!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.buttonFree.configureWith(item: IHGRatesCellButtonItem(type: .free, color: UIColor.blue, cash: "100", currency: "USD"))
-        self.buttonMemberDiscount.configureWith(item: IHGRatesCellButtonItem(type: .free, color: UIColor.blue, cash: "100", currency: "USD"))
+        let brandColor = UIColor.blue
+        let usdCount = "100"
+        let currency = "USD"
+        let item = IHGRatesCellButtonItem(type: .free, color: brandColor, cash: usdCount, currency: currency)
+        self.buttonFree.configureWith(item: item)
+        self.buttonMemberDiscount.configureWith(item: item)
+        self.buttonPoints.configureWith(item: item)
+        self.buttonPointAndCash.configureWith(item: item)
+        self.buttonCash.configureWith(item: item)
     }
 
     override func didReceiveMemoryWarning() {

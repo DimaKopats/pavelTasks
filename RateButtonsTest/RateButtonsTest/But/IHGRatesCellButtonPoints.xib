@@ -10,14 +10,56 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IHGRatesCellButtonPoints" customModule="RateButtonsTest" customModuleProvider="target">
+            <connections>
+                <outlet property="basicView" destination="Skz-t9-EI7" id="f9V-08-CVH"/>
+                <outlet property="pointsLabel" destination="4l6-MC-nE2" id="tJR-qo-FAc"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Skz-t9-EI7" userLabel="basicView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gCP-7K-DR8">
+                            <rect key="frame" x="141.5" y="1.5" width="92.5" height="41"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50,000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4l6-MC-nE2" userLabel="pointsLabel">
+                                    <rect key="frame" x="0.0" y="0.0" width="92.5" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="points or less" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qey-5s-xfN">
+                                    <rect key="frame" x="0.0" y="24" width="92.5" height="17"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="gCP-7K-DR8" firstAttribute="centerX" secondItem="Skz-t9-EI7" secondAttribute="centerX" id="9YK-7k-WUE"/>
+                        <constraint firstItem="gCP-7K-DR8" firstAttribute="centerY" secondItem="Skz-t9-EI7" secondAttribute="centerY" id="JLZ-pm-3bD"/>
+                        <constraint firstAttribute="height" constant="44" id="mCS-vZ-uOl"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Skz-t9-EI7" secondAttribute="bottom" id="BsD-XH-VCp"/>
+                <constraint firstItem="Skz-t9-EI7" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="H1C-6P-oWU"/>
+                <constraint firstItem="Skz-t9-EI7" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="cfd-2C-gJ3"/>
+                <constraint firstItem="Skz-t9-EI7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="duK-Td-i10"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="25.5" y="52.5"/>
+            <point key="canvasLocation" x="25.5" y="-236"/>
         </view>
     </objects>
 </document>

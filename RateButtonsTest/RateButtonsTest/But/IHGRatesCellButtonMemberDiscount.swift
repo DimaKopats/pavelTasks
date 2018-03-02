@@ -16,6 +16,9 @@ class IHGRatesCellButtonMemberDiscount: IHGRatesCellButton {
     @IBOutlet weak var cashLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var additionalInfoLabel: UILabel!
+    @IBOutlet weak var topLabelView: UIView!
+    
+    
     
     override func configureWith(item: IHGRatesCellButtonItem) {
         self.mainView.layer.borderWidth = 1

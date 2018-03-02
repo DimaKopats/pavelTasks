@@ -1,4 +1,4 @@
-// источник - статья на хабре про многопоточность
+// источник - https://habrahabr.ru/post/320152/
 
 import UIKit
 import PlaygroundSupport
@@ -15,11 +15,12 @@ view.addSubview(eiffelImage)
 PlaygroundPage.current.liveView = view
 let imageURL = URL(string: "http://www.planetware.com/photos-large/F/france-paris-eiffel-tower.jpg")!
 
+
 // загрузка классическим способом
-func fetchImage() {
+func download(imageUrl: URL) {
     let queue = DispatchQueue.global(qos: .utility)
     queue.async {
-        if let data = try? Data(contentsOf: imageURL) {
+        if let data = try? Data(contentsOf: imageUrl) {
             DispatchQueue.main.async {
                 eiffelImage.image = UIImage(data: data)
                 print("Show image data")
@@ -28,7 +29,23 @@ func fetchImage() {
         }
     }
 }
-//fetchImage()
+download(imageUrl: imageURL)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // загрузка с помощью асинхронной функции URLSession
 func fetchImage1() {
@@ -95,4 +112,5 @@ func fetchImage3() {
     }
 }
 
-fetchImage3()
+//fetchImage3()
+

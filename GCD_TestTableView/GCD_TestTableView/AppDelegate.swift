@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  SwizzlingTest
+//  GCD_TestTableView
 //
-//  Created by Dzmitry Kopats on 2/2/18.
+//  Created by Dzmitry Kopats on 2/21/18.
 //  Copyright © 2018 Dzmitry Kopats. All rights reserved.
 //
 
@@ -13,21 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    
-    override init() {
-        super.init()
-        if let printHello = class_getInstanceMethod(ViewController.self, #selector(ViewController.printHello)),
-            let printSomething = class_getInstanceMethod(ViewController.self, #selector(ViewController.printSomething)) {
-            method_exchangeImplementations(printHello, printSomething)
-            print("swiz ok")
-        }
-    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         //                self.window?.backgroundColor = UIColor.white
         
-        let firstVC = ViewController()
+        let firstVC = ImageTableViewController()
         let naviController = UINavigationController.init(rootViewController: firstVC)
         
         self.window?.rootViewController = naviController

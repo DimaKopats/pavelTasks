@@ -8,6 +8,18 @@
 
 import UIKit
 
-class IHGRatesCellButtonCash: UIView {
+class IHGRatesCellButtonCash: IHGRatesCellButton {
+    @IBOutlet weak var basicView: UIView!
+    @IBOutlet weak var cashLabel: UILabel!
+    @IBOutlet weak var currencyLabel: UILabel!
     
+    
+    override func configureWith(item: IHGRatesCellButtonItem) {
+        self.basicView.layer.borderColor = item.primaryBrandColor.cgColor
+        self.basicView.layer.borderWidth = 1
+        self.cashLabel.textColor = item.primaryBrandColor
+        self.cashLabel.text = item.cash
+        self.currencyLabel.textColor = item.primaryBrandColor
+        self.currencyLabel.text = item.currency
+    }
 }

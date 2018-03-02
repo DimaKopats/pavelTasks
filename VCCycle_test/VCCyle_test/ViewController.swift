@@ -22,8 +22,10 @@ class ViewController: UIViewController {
     
     @objc func loadNextVC() {
         // need to go to nextVC
-//        let vc = ViewController()
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = ViewController()
+        vc.color = .magenta
+        vc.stringColor = "💜"
+        self.navigationController?.pushViewController(vc, animated: true)
         print("loadNextVC count = \(self.navigationController!.viewControllers.count)")
     }
     

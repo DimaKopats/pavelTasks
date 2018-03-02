@@ -9,17 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
-        if let printHello = class_getInstanceMethod(ViewController.self, #selector(ViewController.printHello)),
-            let printSomething = class_getInstanceMethod(ViewController.self, #selector(ViewController.printSomething)) {
-            method_exchangeImplementations(printHello, printSomething)
-            print("swiz ok")
-        }
-        
     }
-    
+        
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

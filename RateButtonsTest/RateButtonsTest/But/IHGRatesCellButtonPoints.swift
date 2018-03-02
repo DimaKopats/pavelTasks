@@ -8,6 +8,15 @@
 
 import UIKit
 
-class IHGRatesCellButtonPoints: UIView {
+class IHGRatesCellButtonPoints: IHGRatesCellButton {
+    @IBOutlet weak var basicView: UIView!
+    @IBOutlet weak var pointsLabel: UILabel!
+    
+    override func configureWith(item: IHGRatesCellButtonItem) {
+        self.basicView.layer.borderColor = item.primaryBrandColor.cgColor
+        self.basicView.layer.borderWidth = 1
+        self.pointsLabel.textColor = item.primaryBrandColor
+        self.pointsLabel.text = item.points
+    }
     
 }
