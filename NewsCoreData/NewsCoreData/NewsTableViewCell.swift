@@ -26,7 +26,7 @@ class NewsTableViewCell: UITableViewCell {
     }
     
     func configureWith(post: NewsPost) {
-        viewCount.text = "0"
+        viewCount.text = String(post.viewCount)
         title.text = post.title
         date.text = post.date.toString()
         previewText.text = post.previewText //" 12345678 934873847583 346346346 34636346346346 fgdufgudfhguhd dfgidfiogjidfjg dfgdfgdlong text for preview text from that news"

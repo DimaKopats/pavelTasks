@@ -9,6 +9,7 @@
 import UIKit
 
 struct NewsPost {
+    let viewCount: Int
     let title: String
     let date: Date
     let previewText: String

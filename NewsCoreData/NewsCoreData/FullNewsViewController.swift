@@ -59,7 +59,10 @@ class FullNewsViewController: UIViewController {
             
             shortNews.forEach { (post) in
                 if let id = post.value(forKey: Constants.keyForId) as? Int, id == postId {
-                    viewCountLabel.text = String(post.value(forKey: Constants.keyForViewCount) as? Int ?? 1)
+                    if let viewCount = post.value(forKey: Constants.keyForViewCount) as? Int {
+                        viewCountLabel.text = String(viewCount + 1)
+                        post.setValue(viewCount + 1, forKey: Constants.keyForViewCount)
+                    }
                 }
             }
             
@@ -68,6 +71,7 @@ class FullNewsViewController: UIViewController {
             } catch let error as NSError {
                 print("Could not save. \(error), \(error.userInfo)")
             }
+            
             
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")

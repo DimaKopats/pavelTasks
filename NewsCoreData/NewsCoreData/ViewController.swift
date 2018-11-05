@@ -48,9 +48,11 @@ class ViewController: UIViewController {
         
         do {
             news = try managedContext.fetch(fetchRequest)
+            tableView.reloadData()
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
+        
     }
 }
 
@@ -72,7 +74,6 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let fullController = FullNewsViewController.init(nibName: "FullNewsViewController", bundle: nil)
-//        navigationController?.present(fullController, animated: true)
         navigationController?.pushViewController(fullController, animated: true)
         
         if let post = getNewsPostFor(row: indexPath.row) {
@@ -104,7 +105,8 @@ private extension ViewController {
             dateFormatter.dateFormat = "dd.MM.yyyy"
             let convertedDate = dateFormatter.date(from: date) ?? Date()
             
-            let newsPost = NewsPost(title: title,
+            let newsPost = NewsPost(viewCount: 0,
+                                    title: title,
                                     date: convertedDate,
                                     previewText: previewText,
                                     fullText: fullText,
@@ -156,26 +158,27 @@ private extension ViewController {
             return
         }
         
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let shortPostEntity = NSEntityDescription.entity(forEntityName: Constants.keyForShortPost, in: managedContext)!
-        let fullPostEntity = NSEntityDescription.entity(forEntityName: Constants.keyForFullPost, in: managedContext)!
-        
-        let shortPost = NSManagedObject(entity: shortPostEntity, insertInto: managedContext)
-        shortPost.setValue(post.date, forKey: Constants.keyForDate)
-        shortPost.setValue(post.id, forKey: Constants.keyForId)
-        shortPost.setValue(post.previewText, forKey: Constants.keyForPreviewText)
-        shortPost.setValue(post.title, forKey: Constants.keyForTitle)
-        shortPost.setValue(0, forKeyPath: Constants.keyForViewCount)
-        
-        let fullPost = NSManagedObject(entity: fullPostEntity, insertInto: managedContext)
-        fullPost.setValue(post.id, forKey: Constants.keyForId)
-        fullPost.setValue(post.fullText, forKey: Constants.keyForText)
-        
-        do {
-            try managedContext.save()
-            news.append(shortPost)
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
+        appDelegate.persistentContainer.performBackgroundTask {[weak self] (context) in
+            let shortPostEntity = NSEntityDescription.entity(forEntityName: Constants.keyForShortPost, in: context)!
+            let fullPostEntity = NSEntityDescription.entity(forEntityName: Constants.keyForFullPost, in: context)!
+            
+            let shortPost = NSManagedObject(entity: shortPostEntity, insertInto: context)
+            shortPost.setValue(post.date, forKey: Constants.keyForDate)
+            shortPost.setValue(post.id, forKey: Constants.keyForId)
+            shortPost.setValue(post.previewText, forKey: Constants.keyForPreviewText)
+            shortPost.setValue(post.title, forKey: Constants.keyForTitle)
+            shortPost.setValue(0, forKeyPath: Constants.keyForViewCount)
+            
+            let fullPost = NSManagedObject(entity: fullPostEntity, insertInto: context)
+            fullPost.setValue(post.id, forKey: Constants.keyForId)
+            fullPost.setValue(post.fullText, forKey: Constants.keyForText)
+            
+            do {
+                try context.save()
+                self?.news.append(shortPost)
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+            }
         }
     }
     
@@ -187,7 +190,8 @@ private extension ViewController {
         let previewText = post.value(forKeyPath: Constants.keyForPreviewText) as? String ?? ""
         let date = post.value(forKeyPath: Constants.keyForDate) as? Date ?? Date()
         let id = post.value(forKeyPath: Constants.keyForId) as? Int ?? 0
-        let newsPost = NewsPost(title: title, date: date, previewText: previewText, fullText: "", id: id)
+        let viewCount = post.value(forKeyPath: Constants.keyForViewCount) as? Int ?? 0
+        let newsPost = NewsPost(viewCount: viewCount, title: title, date: date, previewText: previewText, fullText: "", id: id)
         
         return newsPost
     }
