@@ -9,20 +9,21 @@ import Darwin
 import CoreData
 import UIKit
 
-class ViewController: UIViewController {
+
+struct Constants {
+    static let identifier = "NewsTableViewCell"
     
-    private struct Constants {
-        static let identifier = "NewsTableViewCell"
-        
-        static let keyForShortPost = "ShortPost"
-        static let keyForFullPost = "FullPost"
-        static let keyForTitle = "title"
-        static let keyForId = "id"
-        static let keyForText = "text"
-        static let keyForPreviewText = "PreviewText"
-        static let keyForViewCount = "viewCount"
-        static let keyForDate = "Date"
-    }
+    static let keyForShortPost = "ShortPost"
+    static let keyForFullPost = "FullPost"
+    static let keyForTitle = "title"
+    static let keyForId = "id"
+    static let keyForText = "text"
+    static let keyForPreviewText = "PreviewText"
+    static let keyForViewCount = "viewCount"
+    static let keyForDate = "Date"
+}
+
+class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -70,8 +71,9 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let fullController = FullNewsViewController() //.init(nibName: "FullNewsViewController", bundle: .main)
-        navigationController?.present(fullController, animated: true)
+        let fullController = FullNewsViewController.init(nibName: "FullNewsViewController", bundle: nil)
+//        navigationController?.present(fullController, animated: true)
+        navigationController?.pushViewController(fullController, animated: true)
         
         if let post = getNewsPostFor(row: indexPath.row) {
             fullController.configure(post: post)
@@ -163,6 +165,7 @@ private extension ViewController {
         shortPost.setValue(post.id, forKey: Constants.keyForId)
         shortPost.setValue(post.previewText, forKey: Constants.keyForPreviewText)
         shortPost.setValue(post.title, forKey: Constants.keyForTitle)
+        shortPost.setValue(0, forKeyPath: Constants.keyForViewCount)
         
         let fullPost = NSManagedObject(entity: fullPostEntity, insertInto: managedContext)
         fullPost.setValue(post.id, forKey: Constants.keyForId)

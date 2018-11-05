@@ -14,7 +14,7 @@
         <relationship name="relationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FullPost" inverseName="relationship1" inverseEntity="FullPost" syncable="YES"/>
     </entity>
     <elements>
-        <element name="FullPost" positionX="-216" positionY="9" width="117" height="88"/>
+        <element name="FullPost" positionX="-216" positionY="9" width="117" height="90"/>
         <element name="ShortPost" positionX="-36" positionY="9" width="128" height="133"/>
     </elements>
 </model>

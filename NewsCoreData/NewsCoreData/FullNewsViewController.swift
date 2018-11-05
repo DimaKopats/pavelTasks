@@ -6,6 +6,7 @@
 //  Copyright © 2018 Kopats, Dzmitry(AWF). All rights reserved.
 //
 
+import CoreData
 import UIKit
 
 class FullNewsViewController: UIViewController {
@@ -27,10 +28,12 @@ class FullNewsViewController: UIViewController {
     }
     
     func configure(post: NewsPost) {
-        viewCountLabel.text = "0"
+        loadViewIfNeeded()
+        
         dateLabel.text = post.date.toString()
         titleLabel.text = post.title
-        fullTextLabel.text = post.fullText
+        
+        configureWith(postId: post.id)
     }
     
     
@@ -38,14 +41,38 @@ class FullNewsViewController: UIViewController {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
-        // get post from date using postID
-//        let managedContext = appDelegate.persistentContainer.viewContext
-//        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Constants.keyForShortPost)
-//
-//        do {
-//            news = try managedContext.fetch(fetchRequest)
-//        } catch let error as NSError {
-//            print("Could not save. \(error), \(error.userInfo)")
-//        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequestShortPosts = NSFetchRequest<NSManagedObject>(entityName: Constants.keyForShortPost)
+        let fetchRequestFullPosts = NSFetchRequest<NSManagedObject>(entityName: Constants.keyForFullPost)
+
+        do {
+            let shortNews = try managedContext.fetch(fetchRequestShortPosts)
+            let fullNews = try managedContext.fetch(fetchRequestFullPosts)
+            
+            fullNews.forEach { (post) in
+                if let id = post.value(forKey: Constants.keyForId) as? Int, id == postId {
+                    fullTextLabel.text = post.value(forKey: Constants.keyForText) as? String
+
+                }
+            }
+            
+            shortNews.forEach { (post) in
+                if let id = post.value(forKey: Constants.keyForId) as? Int, id == postId {
+                    viewCountLabel.text = String(post.value(forKey: Constants.keyForViewCount) as? Int ?? 1)
+                }
+            }
+            
+            do {
+                try managedContext.save()
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+            }
+            
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        
+        
     }
 }
