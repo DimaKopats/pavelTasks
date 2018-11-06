@@ -63,7 +63,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.identifier, for: indexPath) as! NewsTableViewCell
-        if let post = getNewsPostFor(row: indexPath.row) {
+        if let post = getShortPostFor(row: indexPath.row) {
             cell.configureWith(post: post)
         }
         return cell
@@ -76,8 +76,9 @@ extension ViewController: UITableViewDelegate {
         let fullController = FullNewsViewController.init(nibName: "FullNewsViewController", bundle: nil)
         navigationController?.pushViewController(fullController, animated: true)
         
-        if let post = getNewsPostFor(row: indexPath.row) {
-            fullController.configure(post: post)
+        if let post = getShortPostFor(row: indexPath.row) {
+//            fullController.configure(post: post)
+            fullController.configureWith(id: post.id)
         }
     }
 }
@@ -159,19 +160,15 @@ private extension ViewController {
         }
         
         appDelegate.persistentContainer.performBackgroundTask {[weak self] (context) in
-            let shortPostEntity = NSEntityDescription.entity(forEntityName: Constants.keyForShortPost, in: context)!
-            let fullPostEntity = NSEntityDescription.entity(forEntityName: Constants.keyForFullPost, in: context)!
             
-            let shortPost = NSManagedObject(entity: shortPostEntity, insertInto: context)
-            shortPost.setValue(post.date, forKey: Constants.keyForDate)
-            shortPost.setValue(post.id, forKey: Constants.keyForId)
-            shortPost.setValue(post.previewText, forKey: Constants.keyForPreviewText)
-            shortPost.setValue(post.title, forKey: Constants.keyForTitle)
-            shortPost.setValue(0, forKeyPath: Constants.keyForViewCount)
-            
-            let fullPost = NSManagedObject(entity: fullPostEntity, insertInto: context)
-            fullPost.setValue(post.id, forKey: Constants.keyForId)
-            fullPost.setValue(post.fullText, forKey: Constants.keyForText)
+            let shortPost = NSEntityDescription.insertNewObject(forEntityName: Constants.keyForShortPost, into: context) as! ShortPost
+            shortPost.date = post.date
+            shortPost.id = Int16(post.id)
+            shortPost.previewText = post.previewText
+            shortPost.title = post.title
+            shortPost.viewCount = 0
+            shortPost.fullPost?.text = post.fullText
+            shortPost.fullPost?.id = Int16(post.id)
             
             do {
                 try context.save()
@@ -182,26 +179,11 @@ private extension ViewController {
         }
     }
     
-    func getNewsPostFor(row: Int) -> NewsPost? {
+    func getShortPostFor(row: Int) -> ShortPost? {
         guard row < news.count else { return nil }
         
-        let post = news[row]
-        let title = post.value(forKeyPath: Constants.keyForTitle) as? String ?? ""
-        let previewText = post.value(forKeyPath: Constants.keyForPreviewText) as? String ?? ""
-        let date = post.value(forKeyPath: Constants.keyForDate) as? Date ?? Date()
-        let id = post.value(forKeyPath: Constants.keyForId) as? Int ?? 0
-        let viewCount = post.value(forKeyPath: Constants.keyForViewCount) as? Int ?? 0
-        let newsPost = NewsPost(viewCount: viewCount, title: title, date: date, previewText: previewText, fullText: "", id: id)
-        
-        return newsPost
-    }
-    
-    func getPostIdFor(row: Int) -> Int? {
-        guard row < news.count else { return nil }
-        
-        let post = news[row]
-        let id = post.value(forKeyPath: Constants.keyForId) as? Int
-        return id
+        let post = news[row] as? ShortPost
+        return post
     }
 }
 

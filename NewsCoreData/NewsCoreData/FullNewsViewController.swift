@@ -21,48 +21,74 @@ class FullNewsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func configure(post: ShortPost) {
+        //        loadViewIfNeeded()
+        //
+        //        dateLabel.text = post.date?.toString()
+        //        titleLabel.text = post.title
+        //
+        //        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+        //            return
+        //        }
+        //
+        //        let managedContext = appDelegate.persistentContainer.viewContext
+        //        let fetchRequestShortPosts = NSFetchRequest<NSManagedObject>(entityName: Constants.keyForShortPost)
+        //        let fetchRequestFullPosts = NSFetchRequest<NSManagedObject>(entityName: Constants.keyForFullPost)
+        //
+        //        do {
+        //            let shortNews = try managedContext.fetch(fetchRequestShortPosts)
+        //            let fullNews = try managedContext.fetch(fetchRequestFullPosts)
+        //
+        //            fullNews.forEach { (post) in
+        //                if let id = post.value(forKey: Constants.keyForId) as? Int, id == postId {
+        //                    fullTextLabel.text = post.value(forKey: Constants.keyForText) as? String
+        //
+        //                }
+        //            }
+        //
+        //            shortNews.forEach { (post) in
+        //                if let id = post.value(forKey: Constants.keyForId) as? Int, id == postId {
+        //                    if let viewCount = post.value(forKey: Constants.keyForViewCount) as? Int {
+        //                        viewCountLabel.text = String(viewCount + 1)
+        //                        post.setValue(viewCount + 1, forKey: Constants.keyForViewCount)
+        //                    }
+        //                }
+        //            }
+        //
+        //            do {
+        //                try managedContext.save()
+        //            } catch let error as NSError {
+        //                print("Could not save. \(error), \(error.userInfo)")
+        //            }
+        //
+        //
+        //        } catch let error as NSError {
+        //            print("Could not save. \(error), \(error.userInfo)")
+        //        }
     }
     
-    func configure(post: NewsPost) {
+    func configureWith(id: Int16) {
         loadViewIfNeeded()
         
-        dateLabel.text = post.date.toString()
-        titleLabel.text = post.title
-        
-        configureWith(postId: post.id)
-    }
-    
-    
-    func configureWith(postId: Int) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
         
         let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequestShortPosts = NSFetchRequest<NSManagedObject>(entityName: Constants.keyForShortPost)
-        let fetchRequestFullPosts = NSFetchRequest<NSManagedObject>(entityName: Constants.keyForFullPost)
+        let fetchRequest = NSFetchRequest<ShortPost>(entityName: Constants.keyForShortPost)
+        fetchRequest.predicate = NSPredicate(format: "id == %d", id)
 
         do {
-            let shortNews = try managedContext.fetch(fetchRequestShortPosts)
-            let fullNews = try managedContext.fetch(fetchRequestFullPosts)
-            
-            fullNews.forEach { (post) in
-                if let id = post.value(forKey: Constants.keyForId) as? Int, id == postId {
-                    fullTextLabel.text = post.value(forKey: Constants.keyForText) as? String
-
-                }
-            }
+            let shortNews = try managedContext.fetch(fetchRequest)
             
             shortNews.forEach { (post) in
-                if let id = post.value(forKey: Constants.keyForId) as? Int, id == postId {
-                    if let viewCount = post.value(forKey: Constants.keyForViewCount) as? Int {
-                        viewCountLabel.text = String(viewCount + 1)
-                        post.setValue(viewCount + 1, forKey: Constants.keyForViewCount)
-                    }
+                if id == post.id {
+                    viewCountLabel.text = String(post.viewCount + 1)
+                    post.viewCount = post.viewCount + 1
+                    fullTextLabel.text = post.fullPost?.text
+                    dateLabel.text = post.date?.toString()
+                    titleLabel.text = post.title
                 }
             }
             
@@ -72,11 +98,10 @@ class FullNewsViewController: UIViewController {
                 print("Could not save. \(error), \(error.userInfo)")
             }
             
-            
         } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
+            print("Fetch fail. \(error), \(error.userInfo)")
         }
         
-        
     }
+    
 }
