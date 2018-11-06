@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Constants.keyForShortPost)
-        
+        // Use Fetch Result Controller
         do {
             news = try managedContext.fetch(fetchRequest)
             tableView.reloadData()
