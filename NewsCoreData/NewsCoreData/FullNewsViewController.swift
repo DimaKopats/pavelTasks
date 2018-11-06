@@ -76,19 +76,21 @@ class FullNewsViewController: UIViewController {
         }
         
         let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<ShortPost>(entityName: Constants.keyForShortPost)
+        let fetchRequest = NSFetchRequest<FullPost>(entityName: Constants.keyForFullPost)
         fetchRequest.predicate = NSPredicate(format: "id == %d", id)
-
+        
         do {
-            let shortNews = try managedContext.fetch(fetchRequest)
-            
-            shortNews.forEach { (post) in
+            let fullNews = try managedContext.fetch(fetchRequest)
+            fullNews.forEach { (post) in
                 if id == post.id {
-                    viewCountLabel.text = String(post.viewCount + 1)
-                    post.viewCount = post.viewCount + 1
-                    fullTextLabel.text = post.fullPost?.text
-                    dateLabel.text = post.date?.toString()
-                    titleLabel.text = post.title
+                    if let currentViewCount = post.shortPost?.viewCount {
+                        viewCountLabel.text = String(currentViewCount + 1)
+                        post.shortPost?.viewCount = currentViewCount + 1
+                    }
+                    
+                    fullTextLabel.text = post.text
+                    dateLabel.text = post.shortPost?.date?.toString()
+                    titleLabel.text = post.shortPost?.title
                 }
             }
             

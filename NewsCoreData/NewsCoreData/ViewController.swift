@@ -76,9 +76,9 @@ extension ViewController: UITableViewDelegate {
         let fullController = FullNewsViewController.init(nibName: "FullNewsViewController", bundle: nil)
         navigationController?.pushViewController(fullController, animated: true)
         
-        if let post = getShortPostFor(row: indexPath.row) {
+        if let post = getShortPostFor(row: indexPath.row), let id = post.fullPost?.id {
 //            fullController.configure(post: post)
-            fullController.configureWith(id: post.id)
+            fullController.configureWith(id: id)
         }
     }
 }
@@ -163,16 +163,19 @@ private extension ViewController {
             
             let shortPost = NSEntityDescription.insertNewObject(forEntityName: Constants.keyForShortPost, into: context) as! ShortPost
             shortPost.date = post.date
-            shortPost.id = Int16(post.id)
             shortPost.previewText = post.previewText
             shortPost.title = post.title
             shortPost.viewCount = 0
-            shortPost.fullPost?.text = post.fullText
-            shortPost.fullPost?.id = Int16(post.id)
+            
+            let fullPost = NSEntityDescription.insertNewObject(forEntityName: Constants.keyForFullPost, into: context) as! FullPost
+            fullPost.text = post.fullText
+            fullPost.id = Int16(post.id)
+            shortPost.fullPost = fullPost
             
             do {
                 try context.save()
                 self?.news.append(shortPost)
+                self?.tableView.reloadData()
             } catch let error as NSError {
                 print("Could not save. \(error), \(error.userInfo)")
             }
