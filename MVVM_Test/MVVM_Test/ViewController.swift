@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         coordinatorModel = ViewControllerCoordinatorModel(coordinatorDidUpdateAppearanceModelBlock: { (model) in
             self.appearanceModel = model
         })
