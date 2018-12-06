@@ -33,41 +33,32 @@ class AnimationVC: UIViewController {
         circle1.addSubview(ball)
         
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(AnimationVC.sampleTapGestureTapped(recognizer:)))
-        self.view.addGestureRecognizer(tapGR)
+        view.addGestureRecognizer(tapGR)
     }
     
     func sampleTapGestureTapped(recognizer: UITapGestureRecognizer) {
-        var tapPoint = recognizer.location(in: self.view)
-        let animationDuration: CFTimeInterval = 5 // animation diration in seconds
-        tapPoint = self.check(tapPoint: tapPoint, indentFromBoard: animator.cornerRadius + 1)
+        var tapPoint = recognizer.location(in: view)
+        let animationDuration = Constants.animationDuration
+        tapPoint = updated(tapPoint: tapPoint, using: animator.cornerRadius + 1)
         
-        print("tapPoint == \(tapPoint)")
-//        print("self.circle2.layer.presentation()?.frame.origin == \(self.circle2.layer.presentation()?.frame.origin ?? CGPoint(x: 0, y: 0))")
-        if self.view.hitTest(tapPoint, with: nil) == self.circle2 {
-            print("tap inside circle2-------------------------")
-        } else {
-            print("tap outside circle2")
-            self.circle2.frame.origin = (self.circle2.layer.presentation()?.frame.origin)!
-            if let presentationColor = self.circle2.layer.presentation()?.backgroundColor {
-//                self.circle2.backgroundColor = UIColor(cgColor: presentationColor)
-            }
-            
-            self.circle1.frame.origin = (self.circle1.layer.presentation()?.frame.origin)!
-//            self.circle2.layer.removeAllAnimations()
-//            print("animations = \(self.circle2.layer.animationKeys())")
-        }
+        self.circle1.frame.origin = (self.circle1.layer.presentation()?.frame.origin)!
+        self.circle2.frame.origin = (self.circle2.layer.presentation()?.frame.origin)!
+        // need to fix updating color if we stop animation
+        //            if let presentationColor = self.circle2.layer.presentation()?.backgroundColor {
+        ////                self.circle2.backgroundColor = UIColor(cgColor: presentationColor)
+        //            }
+        
         // moving circle with zigZag
-        moveWithHorizontalZigZag(circle: self.circle2,
+        moveWithHorizontalZigZag(circle: circle2,
                                  finishPoint: tapPoint,
-                                 animationDuration: animationDuration,
-                                 cornerRadius: animator.cornerRadius)
+                                 animationDuration: animationDuration)
         // moving ball circle linear
         moveInLine(circle: circle1,
                    finishPoint: tapPoint,
                    animationDuration: animationDuration)
     }
     
-    func check(tapPoint: CGPoint, indentFromBoard: CGFloat) -> CGPoint {
+    func updated(tapPoint: CGPoint, using indentFromBoard: CGFloat) -> CGPoint {
         var resultPoint = tapPoint
         let screenBounds = UIScreen.main.bounds
         
@@ -87,9 +78,9 @@ class AnimationVC: UIViewController {
     }
 
     // moving view + horizontal ZigZag
-    func moveWithHorizontalZigZag(circle: UIView, finishPoint: CGPoint, animationDuration: CFTimeInterval, cornerRadius: CGFloat) {
+    func moveWithHorizontalZigZag(circle: UIView, finishPoint: CGPoint, animationDuration: CFTimeInterval) {
         let startPoint = circle.center
-        let indent = cornerRadius + 1
+        let indent = animator.cornerRadius + 1
         let screenBounds = UIScreen.main.bounds
         circle.backgroundColor = randomColor
         randomColor = animator.createRandomColor()
@@ -155,8 +146,6 @@ class AnimationVC: UIViewController {
         colorAnimation.fromValue = circle.backgroundColor
         colorAnimation.toValue = randomColor
         colorAnimation.duration = animationDuration
-//        colorAnimation.isRemovedOnCompletion = false
-//        colorAnimation.fillMode = kCAFillModeForwards
         
         let animationGroup = CAAnimationGroup()
         animationGroup.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)
@@ -168,8 +157,6 @@ class AnimationVC: UIViewController {
         circle.layer.add(animationGroup, forKey: "movingHorizontalZigZag")
         
         circle.layer.position = CGPoint.init(x: finishPoint.x, y: finishPoint.y)
-//        circle.layer.backgroundColor = randomColor
-//        circle.backgroundColor = UIColor(cgColor: randomColor)
     }
     
     // moving view linear
@@ -181,11 +168,9 @@ class AnimationVC: UIViewController {
         // rotation
         let rotationAnimation = CABasicAnimation()
         
-                rotationAnimation.keyPath = "transform.rotation"
-                rotationAnimation.toValue = CGFloat(.pi * 6.0)
-                rotationAnimation.duration = animationDuration
-//                rotationAnimation.isRemovedOnCompletion = false
-//                rotationAnimation.fillMode = kCAFillModeForwards
+        rotationAnimation.keyPath = "transform.rotation"
+        rotationAnimation.toValue = CGFloat(.pi * 6.0)
+        rotationAnimation.duration = animationDuration
         
         let animationGroup = CAAnimationGroup()
         animationGroup.animations = [xAnimation, yAnimation, rotationAnimation]

@@ -8,12 +8,6 @@
 
 import UIKit
 
-enum Constants {
-    enum Colors {
-        static let lightGray = UIColor(red: 211/255, green: 211/255, blue: 211/255, alpha: 1)
-    }
-}
-
 class AnimationBlockVC: UIViewController {
     
     @IBOutlet weak var circle1: UIView!
