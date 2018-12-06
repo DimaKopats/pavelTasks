@@ -36,7 +36,7 @@ class AnimationVC: UIViewController {
         view.addGestureRecognizer(tapGR)
     }
     
-    func sampleTapGestureTapped(recognizer: UITapGestureRecognizer) {
+    @objc func sampleTapGestureTapped(recognizer: UITapGestureRecognizer) {
         var tapPoint = recognizer.location(in: view)
         let animationDuration = Constants.animationDuration
         tapPoint = updated(tapPoint: tapPoint, using: animator.cornerRadius + 1)
@@ -130,7 +130,7 @@ class AnimationVC: UIViewController {
         zoomInAnimation.toValue = 0.5
         zoomInAnimation.duration = 0.25*animationDuration
         zoomInAnimation.isRemovedOnCompletion = false
-        zoomInAnimation.fillMode = kCAFillModeForwards
+        zoomInAnimation.fillMode = CAMediaTimingFillMode.forwards
         
         let zoomOutAnimation = CABasicAnimation()
         zoomOutAnimation.keyPath = "transform.scale"
@@ -138,7 +138,7 @@ class AnimationVC: UIViewController {
         zoomOutAnimation.duration = 0.25*animationDuration
         zoomOutAnimation.beginTime = 0.75*animationDuration
         zoomOutAnimation.isRemovedOnCompletion = false
-        zoomOutAnimation.fillMode = kCAFillModeForwards
+        zoomOutAnimation.fillMode = CAMediaTimingFillMode.forwards
         
         // change backgroundColor animation
         let colorAnimation = CABasicAnimation()
@@ -148,11 +148,11 @@ class AnimationVC: UIViewController {
         colorAnimation.duration = animationDuration
         
         let animationGroup = CAAnimationGroup()
-        animationGroup.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animationGroup.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeInEaseOut)
         animationGroup.animations = [xAnimation, yAnimation, zoomInAnimation, zoomOutAnimation, colorAnimation]
         animationGroup.duration = animationDuration
         animationGroup.isRemovedOnCompletion = false
-        animationGroup.fillMode = kCAFillModeForwards
+        animationGroup.fillMode = CAMediaTimingFillMode.forwards
         
         circle.layer.add(animationGroup, forKey: "movingHorizontalZigZag")
         
