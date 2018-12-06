@@ -8,24 +8,33 @@
 
 import UIKit
 
+enum Constants {
+    enum Colors {
+        static let lightGray = UIColor(red: 211/255, green: 211/255, blue: 211/255, alpha: 1)
+    }
+}
+
 class AnimationBlockVC: UIViewController {
     
     @IBOutlet weak var circle1: UIView!
     @IBOutlet weak var circle2: UIView!
-    @IBOutlet weak var circle3: UIView! // для анимации через блоки
     
+    @IBOutlet weak var circle3: UIView! // for animation using block
     let cornerRadius: CGFloat = 25
+    let animator = Animator.init(cornerRadius: 25)
     var randomColor: UIColor = UIColor(red: 196/255, green: 249/255, blue: 78/255, alpha: 1)
     let layer1 = CALayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        transformToCircle(view: circle1)
-        transformToCircle(view: circle2)
-        transformToCircle(view: circle3)
+        
+        animator.transformToCircle(view: circle1)
+        animator.transformToCircle(view: circle2)
+        animator.transformToCircle(view: circle3)
+        
         circle3.isHidden = true
         circle2.backgroundColor = randomColor
-        self.view.backgroundColor = UIColor(red: 211/255, green: 211/255, blue: 211/255, alpha: 1)
+        view.backgroundColor = Constants.Colors.lightGray
         
         //creating ball
         let ball = UIImageView.init(image: #imageLiteral(resourceName: "smallBall"))
@@ -33,12 +42,12 @@ class AnimationBlockVC: UIViewController {
         circle1.addSubview(ball)
         circle1.clipsToBounds = true
         
-        let tapGR = UITapGestureRecognizer(target: self, action: #selector(ViewController.sampleTapGestureTapped(recognizer:)))
+        let tapGR = UITapGestureRecognizer(target: self, action: #selector(AnimationVC.sampleTapGestureTapped(recognizer:)))
         self.view.addGestureRecognizer(tapGR)
     }
     
     func sampleTapGestureTapped(recognizer: UITapGestureRecognizer) {
-        var tapPoint = recognizer.location(in: self.view)
+        var tapPoint = recognizer.location(in: view)
         let animationDuration: CFTimeInterval = 5 // animation diration in seconds
         let indentFromBoard = 1 + cornerRadius
         tapPoint = self.check(tapPoint: tapPoint, indentFromBoard: indentFromBoard)
@@ -47,10 +56,6 @@ class AnimationBlockVC: UIViewController {
 //        print("circle1.layer.presentation()?.frame.origin == \(self.circle1.layer.presentation()!.frame.origin)")
 //        print("circle2.layer.presentation()?.frame.origin == \(self.circle2.layer.presentation()!.frame.origin)")
 
-        
-        
-        
-        
         
         
         if self.view.hitTest(tapPoint, with: nil) == self.circle2 {
@@ -71,21 +76,15 @@ class AnimationBlockVC: UIViewController {
         }
         
         
-        
-        
-        
-        
-        
-        
-        // moving green circle
-        moveWithHorizontalZigZag(circle: self.circle2,
+        // moving circle
+        moveWithHorizontalZigZag(circle: circle2,
                                  finishPoint: tapPoint,
                                  animationDuration: animationDuration,
                                  indent: indentFromBoard)
         // moving ball circle
-//        moveInLine(circle: circle1,
-//                   finishPoint: tapPoint,
-//                   animationDuration: animationDuration)
+        moveInLine(circle: circle1,
+                   finishPoint: tapPoint,
+                   animationDuration: animationDuration)
     }
     
     func check(tapPoint: CGPoint, indentFromBoard: CGFloat) -> CGPoint {
@@ -109,31 +108,32 @@ class AnimationBlockVC: UIViewController {
     
     // moving view + horizontal ZigZag
     func moveWithHorizontalZigZag(circle: UIView, finishPoint: CGPoint, animationDuration: CFTimeInterval, indent: CGFloat) {
-        var startPoint = circle.frame.origin
-        startPoint.x += self.cornerRadius
-        startPoint.y += self.cornerRadius
+        let startPoint = circle.center
         let screenBounds = UIScreen.main.bounds
         circle.backgroundColor = randomColor
-        randomColor = self.createRandomColor()
+        randomColor = animator.createRandomColor()
         
         // animation along vertical axis
 //        UIView.animate(withDuration: animationDuration, animations: {
+//            print("startPoint.y = \(startPoint.y)")
 //            print("circle.layer.position.y = \(circle.layer.position.y)")
 //            print("finishPoint.y = \(finishPoint.y)")
 //            
-//            
+//            circle.layer.position.y = finishPoint.y
+//
 //        }) { finished in
-//            print("animationX for circle2 completed")
+//            print("animationY for circle2 completed")
 //        }
         
-        //animation along horizontal axis
+        
         UIView.animateKeyframes(withDuration: animationDuration, delay: 0, options: .calculationModeLinear, animations: {
+            // animation along vertical axis
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: animationDuration, animations: {
                 
                 circle.layer.position.y = finishPoint.y
                 circle.layer.backgroundColor = self.randomColor.cgColor
             })
-            
+            // animation along horizontal axis
             var resultXPath: CGFloat
             var part1XPath: CGFloat
             let part2XPath = screenBounds.width - 2*indent
@@ -173,14 +173,10 @@ class AnimationBlockVC: UIViewController {
                 circle.layer.position.x = finishPoint.x
             })
         }) { finished in
-            print("animationY for circle2 completed")
+            print("animationX for circle2 completed")
         }
         
 
-        
-        
-        
-        
         
         
 //        // change circle size animation
@@ -225,23 +221,6 @@ class AnimationBlockVC: UIViewController {
         }
     }
     
-    func transformToCircle(view: UIView) {
-        view.layer.borderWidth = 3
-        view.layer.cornerRadius = cornerRadius
-        view.layer.borderColor = UIColor.gray.cgColor
-    }
-    
-    func createRandomColor() -> (UIColor) {
-        let rand1:CGFloat = ((CGFloat)(arc4random() % 256))/255
-        let rand2:CGFloat = ((CGFloat)(arc4random() % 256))/255
-        let rand3:CGFloat = ((CGFloat)(arc4random() % 256))/255
-        
-        let color = UIColor.init(red: rand1,
-                                 green: rand2,
-                                 blue: rand3,
-                                 alpha: 1)
-        return color
-    }
 }
 
 

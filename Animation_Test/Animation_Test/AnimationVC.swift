@@ -8,21 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AnimationVC: UIViewController {
     
     @IBOutlet weak var circle1: UIView!
     @IBOutlet weak var circle2: UIView!
-    @IBOutlet weak var circle3: UIView! // для анимации через блоки
+    @IBOutlet weak var circle3: UIView! // for animation using block
     
-    let cornerRadius: CGFloat = 25
+    let animator = Animator.init(cornerRadius: 25)
     var randomColor: UIColor = UIColor.init(red: 196/255, green: 249/255, blue: 78/255, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        transformToCircle(view: circle1)
-        transformToCircle(view: circle2)
-        transformToCircle(view: circle3)
-//        circle3.isHidden = true
+        
+        animator.transformToCircle(view: circle1)
+        animator.transformToCircle(view: circle2)
+        animator.transformToCircle(view: circle3)
+        
+        circle3.isHidden = true
         circle2.backgroundColor = randomColor
         
         //creating ball
@@ -30,15 +32,14 @@ class ViewController: UIViewController {
         ball.frame.size = circle1.frame.size
         circle1.addSubview(ball)
         
-        let tapGR = UITapGestureRecognizer(target: self, action: #selector(ViewController.sampleTapGestureTapped(recognizer:)))
+        let tapGR = UITapGestureRecognizer(target: self, action: #selector(AnimationVC.sampleTapGestureTapped(recognizer:)))
         self.view.addGestureRecognizer(tapGR)
     }
     
     func sampleTapGestureTapped(recognizer: UITapGestureRecognizer) {
         var tapPoint = recognizer.location(in: self.view)
         let animationDuration: CFTimeInterval = 5 // animation diration in seconds
-        let indentFromBoard = 1 + cornerRadius
-        tapPoint = self.check(tapPoint: tapPoint, indentFromBoard: indentFromBoard)
+        tapPoint = self.check(tapPoint: tapPoint, indentFromBoard: animator.cornerRadius + 1)
         
         print("tapPoint == \(tapPoint)")
 //        print("self.circle2.layer.presentation()?.frame.origin == \(self.circle2.layer.presentation()?.frame.origin ?? CGPoint(x: 0, y: 0))")
@@ -55,12 +56,12 @@ class ViewController: UIViewController {
 //            self.circle2.layer.removeAllAnimations()
 //            print("animations = \(self.circle2.layer.animationKeys())")
         }
-        // moving green circle
+        // moving circle with zigZag
         moveWithHorizontalZigZag(circle: self.circle2,
                                  finishPoint: tapPoint,
                                  animationDuration: animationDuration,
-                                 indent: indentFromBoard)
-        // moving ball circle
+                                 cornerRadius: animator.cornerRadius)
+        // moving ball circle linear
         moveInLine(circle: circle1,
                    finishPoint: tapPoint,
                    animationDuration: animationDuration)
@@ -86,13 +87,12 @@ class ViewController: UIViewController {
     }
 
     // moving view + horizontal ZigZag
-    func moveWithHorizontalZigZag(circle: UIView, finishPoint: CGPoint, animationDuration: CFTimeInterval, indent: CGFloat) {
-        var startPoint = circle.frame.origin
-        startPoint.x += self.cornerRadius
-        startPoint.y += self.cornerRadius
+    func moveWithHorizontalZigZag(circle: UIView, finishPoint: CGPoint, animationDuration: CFTimeInterval, cornerRadius: CGFloat) {
+        let startPoint = circle.center
+        let indent = cornerRadius + 1
         let screenBounds = UIScreen.main.bounds
         circle.backgroundColor = randomColor
-        randomColor = self.createRandomColor()
+        randomColor = animator.createRandomColor()
         
         let xAnimation = CAKeyframeAnimation()
         xAnimation.keyPath = "position.x"
@@ -125,15 +125,13 @@ class ViewController: UIViewController {
         }
         
         xAnimation.keyTimes = [0,
-                               NSNumber.init(value:Float(part1XPath/resultXPath)),
-                               NSNumber.init(value:Float((part1XPath + part2XPath)/resultXPath)),
+                               NSNumber(value:Float(part1XPath/resultXPath)),
+                               NSNumber(value:Float((part1XPath + part2XPath)/resultXPath)),
                                1]
         xAnimation.duration = animationDuration
         xAnimation.isAdditive = true
         
-        let yAnimation = yLineAnimationFor(circle: circle,
-                                           finishPoint: finishPoint,
-                                           animationDuration: animationDuration)
+        let yAnimation = animator.yLineAnimationFor(startPoint: circle.center, finishPoint: finishPoint, animationDuration: animationDuration)
         
         // change circle size animation
         let zoomInAnimation = CABasicAnimation()
@@ -176,14 +174,11 @@ class ViewController: UIViewController {
     
     // moving view linear
     func moveInLine(circle: UIView, finishPoint: CGPoint, animationDuration: CFTimeInterval) {
-        let xAnimation = xLineAnimationFor(circle: circle,
-                                           finishPoint: finishPoint,
-                                           animationDuration: animationDuration)
+        let xAnimation = animator.xLineAnimationFor(startPoint: circle.center, finishPoint: finishPoint, animationDuration: animationDuration)
         
-        let yAnimation = yLineAnimationFor(circle: circle,
-                                           finishPoint: finishPoint,
-                                           animationDuration: animationDuration)
-        //rotation
+        let yAnimation = animator.yLineAnimationFor(startPoint: circle.center, finishPoint: finishPoint, animationDuration: animationDuration)
+        
+        // rotation
         let rotationAnimation = CABasicAnimation()
         
                 rotationAnimation.keyPath = "transform.rotation"
@@ -199,54 +194,12 @@ class ViewController: UIViewController {
         
         circle.layer.position = CGPoint.init(x: finishPoint.x, y: finishPoint.y)
     }
-
-    // moving along Y axis in linear
-    func yLineAnimationFor(circle: UIView, finishPoint: CGPoint, animationDuration: CFTimeInterval) -> CABasicAnimation {
-        let yAnimation = CABasicAnimation()
-        yAnimation.keyPath = "position.y"
-        yAnimation.fromValue = circle.frame.origin.y + cornerRadius
-        yAnimation.toValue = finishPoint.y
-        yAnimation.duration = animationDuration
-        return yAnimation
-    }
     
-    // moving along X axis in linear
-    func xLineAnimationFor(circle: UIView, finishPoint: CGPoint, animationDuration: CFTimeInterval) -> CABasicAnimation {
-        let xAnimation = CABasicAnimation()
-        xAnimation.keyPath = "position.x"
-        xAnimation.fromValue = circle.frame.origin.x + cornerRadius
-        xAnimation.toValue = finishPoint.x
-        xAnimation.duration = animationDuration
-        return xAnimation
-    }
-    
-    func transformToCircle(view: UIView) {
-        view.layer.borderWidth = 3
-        view.layer.cornerRadius = cornerRadius
-        view.layer.borderColor = UIColor.gray.cgColor
-    }
-    
-    func createRandomColor() -> (UIColor) {
-        let rand1:CGFloat = ((CGFloat)(arc4random() % 256))/255
-        let rand2:CGFloat = ((CGFloat)(arc4random() % 256))/255
-        let rand3:CGFloat = ((CGFloat)(arc4random() % 256))/255
-        
-        let color = UIColor.init(red: rand1,
-                                 green: rand2,
-                                 blue: rand3,
-                                 alpha: 1)
-        return color
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 }
 
-extension ViewController: CAAnimationDelegate {
+extension AnimationVC: CAAnimationDelegate {
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        circle1.layer.position = CGPoint.init(x: 25, y: circle1.frame.origin.y + self.cornerRadius)
+        circle1.layer.position = CGPoint.init(x: 25, y: circle1.center.y)
     }
 }
 
