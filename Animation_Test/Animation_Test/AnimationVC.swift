@@ -8,37 +8,16 @@
 
 import UIKit
 
-class AnimationVC: UIViewController {
-    
-    @IBOutlet weak var circle1: UIView!
-    @IBOutlet weak var circle2: UIView!
-    @IBOutlet weak var circle3: UIView! // for animation using block
-    
-    let animator = Animator.init(cornerRadius: 25)
-    var randomColor: UIColor = UIColor.init(red: 196/255, green: 249/255, blue: 78/255, alpha: 1)
+class AnimationVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        animator.transformToCircle(view: circle1)
-        animator.transformToCircle(view: circle2)
-        animator.transformToCircle(view: circle3)
-        
-        circle3.isHidden = true
-        circle2.backgroundColor = randomColor
-        
-        //creating ball
-        let ball = UIImageView.init(image: #imageLiteral(resourceName: "smallBall"))
-        ball.frame.size = circle1.frame.size
-        circle1.addSubview(ball)
-        
-        let tapGR = UITapGestureRecognizer(target: self, action: #selector(AnimationVC.sampleTapGestureTapped(recognizer:)))
-        view.addGestureRecognizer(tapGR)
     }
     
     @objc func sampleTapGestureTapped(recognizer: UITapGestureRecognizer) {
         var tapPoint = recognizer.location(in: view)
         let animationDuration = Constants.animationDuration
+        
         tapPoint = updated(tapPoint: tapPoint, using: animator.cornerRadius + 1)
         
         self.circle1.frame.origin = (self.circle1.layer.presentation()?.frame.origin)!
@@ -58,24 +37,6 @@ class AnimationVC: UIViewController {
                    animationDuration: animationDuration)
     }
     
-    func updated(tapPoint: CGPoint, using indentFromBoard: CGFloat) -> CGPoint {
-        var resultPoint = tapPoint
-        let screenBounds = UIScreen.main.bounds
-        
-        if resultPoint.x <= indentFromBoard {
-            resultPoint.x = indentFromBoard
-        } else if resultPoint.x >= (screenBounds.width - indentFromBoard) {
-            resultPoint.x = screenBounds.width - indentFromBoard
-        }
-        
-        if resultPoint.y <= indentFromBoard {
-            resultPoint.y = indentFromBoard
-        } else if resultPoint.y >= (screenBounds.height - indentFromBoard) {
-            resultPoint.y = screenBounds.height - indentFromBoard
-        }
-        
-        return resultPoint
-    }
 
     // moving view + horizontal ZigZag
     func moveWithHorizontalZigZag(circle: UIView, finishPoint: CGPoint, animationDuration: CFTimeInterval) {
@@ -181,10 +142,3 @@ class AnimationVC: UIViewController {
     }
     
 }
-
-extension AnimationVC: CAAnimationDelegate {
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        circle1.layer.position = CGPoint.init(x: 25, y: circle1.center.y)
-    }
-}
-

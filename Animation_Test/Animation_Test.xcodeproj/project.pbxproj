@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2A7F2AF121B92AA3002A57BD /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7F2AF021B92AA3002A57BD /* Animator.swift */; };
+		2A7F2AF421BA9E3E002A57BD /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7F2AF221BA9E3E002A57BD /* BaseVC.swift */; };
+		2A7F2AF521BA9E3E002A57BD /* BaseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A7F2AF321BA9E3E002A57BD /* BaseVC.xib */; };
 		857D41F71FA1332A00C1D563 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857D41F61FA1332A00C1D563 /* AppDelegate.swift */; };
 		857D41F91FA1332A00C1D563 /* AnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857D41F81FA1332A00C1D563 /* AnimationVC.swift */; };
 		857D41FC1FA1332B00C1D563 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 857D41FA1FA1332B00C1D563 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		2A7F2AF021B92AA3002A57BD /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		2A7F2AF221BA9E3E002A57BD /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		2A7F2AF321BA9E3E002A57BD /* BaseVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseVC.xib; sourceTree = "<group>"; };
 		857D41F31FA1332A00C1D563 /* Animation_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animation_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		857D41F61FA1332A00C1D563 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		857D41F81FA1332A00C1D563 /* AnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVC.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 				857D41F61FA1332A00C1D563 /* AppDelegate.swift */,
 				857D41F81FA1332A00C1D563 /* AnimationVC.swift */,
 				85D6BE4D1FA89DEB00EE2E33 /* AnimationBlockVC.swift */,
+				2A7F2AF221BA9E3E002A57BD /* BaseVC.swift */,
+				2A7F2AF321BA9E3E002A57BD /* BaseVC.xib */,
 				2A7F2AF021B92AA3002A57BD /* Animator.swift */,
 				857D41FA1FA1332B00C1D563 /* Main.storyboard */,
 				857D41FD1FA1332B00C1D563 /* Assets.xcassets */,
@@ -97,13 +103,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Dzmitry Kopats";
 				TargetAttributes = {
 					857D41F21FA1332A00C1D563 = {
 						CreatedOnToolsVersion = 8.3.2;
 						LastSwiftMigration = 1010;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -133,6 +139,7 @@
 				857D42011FA1332B00C1D563 /* LaunchScreen.storyboard in Resources */,
 				857D41FE1FA1332B00C1D563 /* Assets.xcassets in Resources */,
 				857D41FC1FA1332B00C1D563 /* Main.storyboard in Resources */,
+				2A7F2AF521BA9E3E002A57BD /* BaseVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +154,7 @@
 				857D41F91FA1332A00C1D563 /* AnimationVC.swift in Sources */,
 				857D41F71FA1332A00C1D563 /* AppDelegate.swift in Sources */,
 				85D6BE4E1FA89DEB00EE2E33 /* AnimationBlockVC.swift in Sources */,
+				2A7F2AF421BA9E3E002A57BD /* BaseVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,15 +190,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -233,15 +249,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -271,10 +295,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Animation_Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kopat.dmitry.Animation-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.2;
 			};
@@ -284,10 +311,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Animation_Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kopat.dmitry.Animation-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.2;
 			};
