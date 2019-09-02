@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     }
     
     func createAnimationGroup(invert: Bool) -> [CAAnimation]? {
-        let sign = Int(NSNumber(booleanLiteral: invert))
+        let sign = Int(truncating: NSNumber(booleanLiteral: invert))
         
         let zPosition = CABasicAnimation(keyPath: "zPosition")
         zPosition.fromValue = 1 * sign
@@ -61,12 +61,12 @@ class ViewController: UIViewController {
         return [zPosition, rotation, position]
     }
     
-    func startShuffle() {
+    @objc func startShuffle() {
         card.layer.add((catFirst ? invertedAnimationGroup : animationGroup), forKey: Constants.animationKey)
         card2.layer.add((catFirst ? animationGroup : invertedAnimationGroup), forKey: Constants.animationKey)
         
-        card.layer.zPosition = CGFloat(NSNumber(booleanLiteral: !catFirst))
-        card2.layer.zPosition = CGFloat(NSNumber(booleanLiteral: catFirst))
+        card.layer.zPosition = CGFloat(truncating: NSNumber(booleanLiteral: !catFirst))
+        card2.layer.zPosition = CGFloat(truncating: NSNumber(booleanLiteral: catFirst))
         
         catFirst = !catFirst
     }
