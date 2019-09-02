@@ -7,14 +7,27 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var button: UIButton!
+    
+    private var count: Int = 0
+    private let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-
+        
+        self.label.text = "You have tapped that button \(count) times"
+        
+        self.button.rx.tap
+            .debug("button tap")
+            .subscribe(onNext: { _ in
+                self.count += 1
+                self.label.text = "You have tapped that button \(self.count) times"
+            }).disposed(by: self.disposeBag)
+    }    
 }
-
