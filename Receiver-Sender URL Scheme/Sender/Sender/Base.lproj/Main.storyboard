@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sender" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sender application" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Af-gH-OJK">
+                                <rect key="frame" x="99" y="94" width="216" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="строка поиска" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GvF-nr-T1h">
+                                <rect key="frame" x="50" y="186.5" width="314" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCA-S9-Bt9">
+                                <rect key="frame" x="107" y="246.5" width="200" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.37784023536724554" blue="0.54496690738101883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2TY-XB-WN2"/>
+                                    <constraint firstAttribute="width" constant="200" id="8gY-v8-RXc"/>
+                                </constraints>
+                                <state key="normal" title="Открыть Apple Maps">
+                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="mapsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sHz-xh-g9z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnE-2k-p0A">
+                                <rect key="frame" x="107" y="336.5" width="200" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.3778402354" blue="0.54496690739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Wre-Ot-euy"/>
+                                    <constraint firstAttribute="height" constant="60" id="rdy-Iu-KIA"/>
+                                </constraints>
+                                <state key="normal" title="Открыть Youtube">
+                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="youtubeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NRM-MT-xS7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuV-Uz-Blu">
+                                <rect key="frame" x="107" y="426.5" width="200" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.3778402354" blue="0.54496690739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Usx-bX-XvN"/>
+                                    <constraint firstAttribute="height" constant="60" id="WDB-X3-HTI"/>
+                                </constraints>
+                                <state key="normal" title="Открыть ReceiverApp">
+                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="receiverButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3rM-bv-weB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Что будем искать?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQh-a7-gRv">
+                                <rect key="frame" x="132" y="145.5" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84535078300145883" green="0.77694221205851433" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9Af-gH-OJK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="1fa-Mf-MUt"/>
+                            <constraint firstItem="WQh-a7-gRv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4yC-HS-d3p"/>
+                            <constraint firstItem="WQh-a7-gRv" firstAttribute="top" secondItem="9Af-gH-OJK" secondAttribute="bottom" constant="20" id="5rC-n0-iVC"/>
+                            <constraint firstItem="GvF-nr-T1h" firstAttribute="top" secondItem="WQh-a7-gRv" secondAttribute="bottom" constant="20" id="9aP-v9-13f"/>
+                            <constraint firstItem="bnE-2k-p0A" firstAttribute="centerX" secondItem="xuV-Uz-Blu" secondAttribute="centerX" id="BnI-UJ-MeC"/>
+                            <constraint firstItem="RCA-S9-Bt9" firstAttribute="width" secondItem="bnE-2k-p0A" secondAttribute="width" id="O30-CG-7e3"/>
+                            <constraint firstItem="xuV-Uz-Blu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P4Y-FZ-CGx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GvF-nr-T1h" secondAttribute="trailing" constant="50" id="RSc-EO-HFI"/>
+                            <constraint firstItem="bnE-2k-p0A" firstAttribute="top" secondItem="RCA-S9-Bt9" secondAttribute="bottom" constant="30" id="S5J-HZ-7m3"/>
+                            <constraint firstItem="RCA-S9-Bt9" firstAttribute="centerX" secondItem="bnE-2k-p0A" secondAttribute="centerX" id="Z48-0w-JeL"/>
+                            <constraint firstItem="xuV-Uz-Blu" firstAttribute="top" secondItem="bnE-2k-p0A" secondAttribute="bottom" constant="30" id="awb-EG-E4W"/>
+                            <constraint firstItem="9Af-gH-OJK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="blE-ow-TBm"/>
+                            <constraint firstItem="RCA-S9-Bt9" firstAttribute="top" secondItem="GvF-nr-T1h" secondAttribute="bottom" constant="30" id="dg0-3z-U8B"/>
+                            <constraint firstItem="RCA-S9-Bt9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="duH-0l-lDq"/>
+                            <constraint firstItem="GvF-nr-T1h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="lYB-eG-awB"/>
+                            <constraint firstItem="RCA-S9-Bt9" firstAttribute="width" secondItem="xuV-Uz-Blu" secondAttribute="width" id="qya-AF-ldy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapsButton" destination="RCA-S9-Bt9" id="lFu-lF-eHs"/>
+                        <outlet property="receiverButton" destination="xuV-Uz-Blu" id="OzV-cq-DSf"/>
+                        <outlet property="textField" destination="GvF-nr-T1h" id="gzd-j0-vRN"/>
+                        <outlet property="youtubeButton" destination="bnE-2k-p0A" id="ZHd-Y7-tEz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+</document>
