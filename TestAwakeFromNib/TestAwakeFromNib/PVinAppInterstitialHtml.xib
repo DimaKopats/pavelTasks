@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PVinAppInterstitialHtml" customModule="TestAwakeFromNib" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SiY-4q-dlh">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pvTintColor" value="White"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkn-hU-745">
+                    <rect key="frame" x="230" y="8" width="70" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="7II-nI-Fcr"/>
+                    </constraints>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Button" image="close_white">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <wkWebView tag="1001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59u-Pc-ZzC">
+                    <rect key="frame" x="20" y="57" width="280" height="366"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="59u-Pc-ZzC" secondAttribute="height" multiplier="564:738" id="1Ee-W1-bJW"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="OnG-2g-WWC"/>
+                    </constraints>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="59u-Pc-ZzC" secondAttribute="trailing" constant="20" id="2TI-ZM-LOD"/>
+                <constraint firstItem="59u-Pc-ZzC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" priority="250" constant="20" id="7C5-3g-5av"/>
+                <constraint firstItem="59u-Pc-ZzC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Cjx-0l-331"/>
+                <constraint firstAttribute="trailing" secondItem="SiY-4q-dlh" secondAttribute="trailing" id="OUk-ak-Anb"/>
+                <constraint firstItem="59u-Pc-ZzC" firstAttribute="trailing" secondItem="gkn-hU-745" secondAttribute="trailing" id="Yaj-Up-Z8s"/>
+                <constraint firstItem="SiY-4q-dlh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="edh-Ol-jJ8"/>
+                <constraint firstItem="59u-Pc-ZzC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="fI1-73-bye"/>
+                <constraint firstAttribute="bottom" secondItem="SiY-4q-dlh" secondAttribute="bottom" id="fPs-u9-693"/>
+                <constraint firstItem="SiY-4q-dlh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tBQ-Je-jWt"/>
+                <constraint firstItem="59u-Pc-ZzC" firstAttribute="top" secondItem="gkn-hU-745" secondAttribute="bottom" constant="4" id="z2V-VP-1D9"/>
+            </constraints>
+            <connections>
+                <outlet property="bgView" destination="SiY-4q-dlh" id="oJu-KA-CXe"/>
+                <outlet property="closeButton" destination="gkn-hU-745" id="0il-HV-xDo"/>
+                <outlet property="webView" destination="59u-Pc-ZzC" id="lBe-4K-UgG"/>
+            </connections>
+            <point key="canvasLocation" x="86.5" y="131.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close_white" width="24" height="24"/>
+    </resources>
+</document>

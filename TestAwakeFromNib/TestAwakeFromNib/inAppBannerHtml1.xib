@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PVinAppBannerHtml1" customModule="Privalia" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SiY-4q-dlh">
+                    <rect key="frame" x="216" y="460" width="94" height="40"/>
+                    <subviews>
+                        <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkn-hU-745" customClass="PVButton" customModule="Privalia" customModuleProvider="target">
+                            <rect key="frame" x="8" y="8" width="78" height="24"/>
+                            <state key="normal" title="Button" image="close_white">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="common_close"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="pvFontSize">
+                                    <real key="value" value="14"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="pvFontColor" value="White"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="pvFont" value="Light"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="7p8-D8-3cU"/>
+                        <constraint firstItem="gkn-hU-745" firstAttribute="leading" secondItem="SiY-4q-dlh" secondAttribute="leading" constant="8" id="CBR-Cb-emq"/>
+                        <constraint firstAttribute="trailing" secondItem="gkn-hU-745" secondAttribute="trailing" constant="8" id="bya-OS-Dgd"/>
+                        <constraint firstItem="gkn-hU-745" firstAttribute="centerY" secondItem="SiY-4q-dlh" secondAttribute="centerY" id="w1d-N1-MRB"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="pvTintColor" value="White"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <wkWebView tag="1001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bK2-Q3-bAV">
+                    <rect key="frame" x="10" y="500" width="300" height="68"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="400" id="CWA-Ri-dwJ"/>
+                        <constraint firstAttribute="width" secondItem="bK2-Q3-bAV" secondAttribute="height" multiplier="570:129" id="Fgd-4D-e12"/>
+                        <constraint firstAttribute="width" constant="300" id="Hsi-SJ-HNM"/>
+                    </constraints>
+                    <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
+                        <dataDetectorTypes key="dataDetectorTypes" none="YES"/>
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="CWA-Ri-dwJ"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <mask key="constraints">
+                            <include reference="CWA-Ri-dwJ"/>
+                            <exclude reference="Hsi-SJ-HNM"/>
+                        </mask>
+                    </variation>
+                </wkWebView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="SiY-4q-dlh" firstAttribute="trailing" secondItem="bK2-Q3-bAV" secondAttribute="trailing" id="1jf-hi-zZF"/>
+                <constraint firstItem="bK2-Q3-bAV" firstAttribute="top" secondItem="SiY-4q-dlh" secondAttribute="bottom" id="I8u-h9-UbW"/>
+                <constraint firstAttribute="bottom" secondItem="bK2-Q3-bAV" secondAttribute="bottom" id="Lf9-iP-sYN"/>
+                <constraint firstItem="bK2-Q3-bAV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Us2-ll-ImH"/>
+            </constraints>
+            <connections>
+                <outlet property="closeButton" destination="gkn-hU-745" id="nVg-nM-BSE"/>
+                <outlet property="webView" destination="bK2-Q3-bAV" id="b06-gx-7Wk"/>
+            </connections>
+            <point key="canvasLocation" x="86" y="131"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close_white" width="24" height="24"/>
+    </resources>
+</document>

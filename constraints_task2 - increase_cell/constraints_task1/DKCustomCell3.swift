@@ -29,7 +29,7 @@ class DKCustomCell3: DKCustomRootCell {
         self.backgroundColor = UIColor.init(red: 99/255, green: 245/255, blue: 147/255, alpha: 1)
         viewSeparator.backgroundColor = .lightGray
         
-        labelTitle.setContentCompressionResistancePriority(751, for: .vertical)
+        labelTitle.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 751), for: .vertical)
         
         labelTitle.translatesAutoresizingMaskIntoConstraints = false;
         labelDescription.translatesAutoresizingMaskIntoConstraints = false;
@@ -56,7 +56,7 @@ class DKCustomCell3: DKCustomRootCell {
         
         
         titleBottomConstraint = labelTitle.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -25.1)
-        titleBottomConstraint.priority = 990
+        titleBottomConstraint.priority = UILayoutPriority(rawValue: 990)
         labelsBottomConstraint = labelDescription.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -25)
         labelsIndentConstraint = labelDescription.topAnchor.constraint(equalTo: labelTitle.bottomAnchor, constant: 15)
         labelsLeadingAlign = labelTitle.leadingAnchor.constraint(equalTo: labelDescription.leadingAnchor)

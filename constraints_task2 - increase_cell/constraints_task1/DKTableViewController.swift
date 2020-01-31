@@ -31,16 +31,7 @@ class DKTableViewController: UITableViewController {
         self.tableView.separatorStyle = .none
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     // MARK: - Table view data source
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return numberOfRows
@@ -49,14 +40,14 @@ class DKTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cellIdentifier: String
         switch indexPath.row % 3 {
-        case 0:
-            cellIdentifier = cellIdentifier1
-        case 1:
-            cellIdentifier = cellIdentifier3
-        case 2:
-            cellIdentifier = cellIdentifier4
+//        case 0:
+//            cellIdentifier = cellIdentifier1
+//        case 1:
+//            cellIdentifier = cellIdentifier3
+//        case 2:
+//            cellIdentifier = cellIdentifier4
         default:
-            print("smth went wrong")
+//            print("smth went wrong")
             cellIdentifier = cellIdentifier1
         }
         
