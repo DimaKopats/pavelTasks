@@ -90,7 +90,7 @@ class RCValues {
         return
       }
       
-      RemoteConfig.remoteConfig().activateFetched()
+      RemoteConfig.remoteConfig().activate(completionHandler: nil)
       print ("Retrieved values from the cloud!")
       self?.fetchComplete = true
       self?.loadingDoneCallback?()
@@ -98,9 +98,8 @@ class RCValues {
   }
   
   func activateDebugMode() {
-    if let debugSettings = RemoteConfigSettings(developerModeEnabled: true) {
-      RemoteConfig.remoteConfig().configSettings = debugSettings
-    }
+    let debugSettings = RemoteConfigSettings()
+    RemoteConfig.remoteConfig().configSettings = debugSettings
   }
   
   func color(forKey key: ValueKey) -> UIColor {

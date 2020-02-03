@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A1C166D23E887FF006D4A46 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A1C166C23E887FF006D4A46 /* GoogleService-Info.plist */; };
 		447A083A933B455A8EDFA355 /* Pods_Planet_Tour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083ED95ADF8A81F0DB7DC851 /* Pods_Planet_Tour.framework */; };
 		494756501DA712C300FC5FA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49923F241CF3C4320064A124 /* Main.storyboard */; };
 		495915E81D00F68300CDFD8B /* CrossfadeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495915E71D00F68300CDFD8B /* CrossfadeSegue.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		083ED95ADF8A81F0DB7DC851 /* Pods_Planet_Tour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Planet_Tour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A1C166C23E887FF006D4A46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		39A22A6E9CDC6FEB71B5AA22 /* Pods-Planet Tour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Planet Tour.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Planet Tour/Pods-Planet Tour.debug.xcconfig"; sourceTree = "<group>"; };
 		495915E71D00F68300CDFD8B /* CrossfadeSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossfadeSegue.swift; sourceTree = "<group>"; };
 		496480681CF62CB100AB23CD /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		26B95F981FEA19EC0064D70E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2A1C166C23E887FF006D4A46 /* GoogleService-Info.plist */,
 				49923F271CF3C4320064A124 /* Assets.xcassets */,
 				49C83E731CF8B29C00B80E52 /* Planets.xcassets */,
 				950B479B1D95647A0032EC2D /* Planet Tour.entitlements */,
@@ -222,6 +225,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				Base,
 			);
 			mainGroup = 49923F141CF3C4310064A124;
@@ -244,6 +248,7 @@
 				49923F2B1CF3C4320064A124 /* LaunchScreen.storyboard in Resources */,
 				49C83E741CF8B29C00B80E52 /* Planets.xcassets in Resources */,
 				49923F281CF3C4320064A124 /* Assets.xcassets in Resources */,
+				2A1C166D23E887FF006D4A46 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

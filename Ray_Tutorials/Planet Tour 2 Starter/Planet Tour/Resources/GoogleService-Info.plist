@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>78944640068-f3oc8lrnlbl8fselchnjo1jn9q4l5rlk.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.78944640068-f3oc8lrnlbl8fselchnjo1jn9q4l5rlk</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCWojuwDQyUcdZxNHgENRzFmKMjF7CTmTc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>78944640068</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.razeware.Planet-Tour</string>
+	<key>PROJECT_ID</key>
+	<string>planet-tour-d529a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>planet-tour-d529a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:78944640068:ios:5cea38af76f0f436a13011</string>
+	<key>DATABASE_URL</key>
+	<string>https://planet-tour-d529a.firebaseio.com</string>
+</dict>
+</plist>
