@@ -27,6 +27,7 @@
 /// THE SOFTWARE.
 
 import UIKit
+import Firebase
 
 class ContainerViewController: UIViewController {
   
@@ -39,6 +40,8 @@ class ContainerViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     updateBanner()
+    
+    Analytics.logEvent("mainPageLoaded", parameters: nil)
   }
   
   override func viewWillAppear(_ animated: Bool) {

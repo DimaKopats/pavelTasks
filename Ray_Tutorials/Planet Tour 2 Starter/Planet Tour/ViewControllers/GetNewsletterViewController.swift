@@ -27,6 +27,7 @@
 /// THE SOFTWARE.
 
 import UIKit
+import Firebase
 
 class GetNewsletterViewController: UIViewController {
   
@@ -43,6 +44,8 @@ class GetNewsletterViewController: UIViewController {
     updateText()
     updateSubmitButton()
     thankYouLabel.isHidden = true
+    
+    Analytics.logEvent("newsletterPageLoaded", parameters: nil)
   }
 }
 
@@ -54,6 +57,8 @@ extension GetNewsletterViewController {
     submitButton.isHidden = true
     thankYouLabel.isHidden = false
     emailTextField.isEnabled = false
+    
+    Analytics.logEvent("newsletterSubscribed", parameters: nil)
   }
 }
 
