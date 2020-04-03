@@ -29,8 +29,11 @@ class ViewController: UIViewController {
         
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(startShuffle))
         view.addGestureRecognizer(tapGesture)
+        self.printConfigVariables()
     }
-    
+}
+ 
+private extension ViewController {
     func setupAnimationGroups() {
         animationGroup.animations = createAnimationGroup(invert: false)
         animationGroup.duration = Constants.animationDuration
@@ -69,5 +72,16 @@ class ViewController: UIViewController {
         card2.layer.zPosition = CGFloat(truncating: NSNumber(booleanLiteral: catFirst))
         
         catFirst = !catFirst
+    }
+    
+    func printConfigVariables() {
+        print(infoForKey("BACKEND_URL"))
+        print(infoForKey("CONSUMER_KEY"))
+        print(infoForKey("CONSUMER_KEY"))
+    }
+    
+    func infoForKey(_ key: String) -> String? {
+           return (Bundle.main.infoDictionary?[key] as? String)?
+               .replacingOccurrences(of: "\\", with: "")
     }
 }

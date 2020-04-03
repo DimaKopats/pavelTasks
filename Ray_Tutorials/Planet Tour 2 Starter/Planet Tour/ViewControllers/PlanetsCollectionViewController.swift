@@ -27,10 +27,13 @@
 /// THE SOFTWARE.
 
 import UIKit
+import Firebase
 
 class PlanetsCollectionViewController: UICollectionViewController {
   
   // MARK: - Properties
+  private let takenSurveyKey = "takenSurvey"
+  private let kLikesSmallRocks = "likesSmallRocks"
   private let reuseIdentifier = "PlanetCell"
   private let sectionInsets = UIEdgeInsets(top: 10, left: 80, bottom: 10, right: 70)
   var starBackground: UIImageView!
@@ -47,6 +50,11 @@ class PlanetsCollectionViewController: UICollectionViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
+    let retakeSurveyButton = UIBarButtonItem(barButtonSystemItem: .compose,
+                                             target: self,
+                                             action: #selector(runUserSurvey))
+    parent?.navigationItem.rightBarButtonItem = retakeSurveyButton
+    
     customizeNavigationBar()
   }
   
@@ -54,6 +62,10 @@ class PlanetsCollectionViewController: UICollectionViewController {
     super.viewDidAppear(animated)
     
     removeWaitingViewController()
+    
+    if !UserDefaults.standard.bool(forKey: takenSurveyKey) {
+      runUserSurvey()
+    }
   }
   
   override func viewDidLayoutSubviews() {
@@ -76,6 +88,28 @@ class PlanetsCollectionViewController: UICollectionViewController {
     super.willTransition(to: newCollection, with: coordinator)
     
     collectionView?.collectionViewLayout.invalidateLayout()
+  }
+}
+
+extension PlanetsCollectionViewController {
+  @objc func runUserSurvey() {
+    let alertController = UIAlertController(title: "User survey",
+      message: "How do you feel about small, remote, cold rocks in space?",
+      preferredStyle: .actionSheet)
+
+    let fanOfPluto = UIAlertAction(title: "They're planets, too!", style: .default) { _ in
+      Analytics.setUserProperty("true", forName: self.kLikesSmallRocks)
+    }
+
+    let notAFan = UIAlertAction(title: "Not worth my time", style: .default) { _ in
+      Analytics.setUserProperty("false", forName: self.kLikesSmallRocks)
+    }
+
+    alertController.addAction(fanOfPluto)
+    alertController.addAction(notAFan)
+    navigationController?.present(alertController, animated: true)
+
+    UserDefaults.standard.set(true, forKey: takenSurveyKey)
   }
 }
 

@@ -1,0 +1,16 @@
+//
+//  Release.xcconfig
+//  Animation_groups
+//
+//  Created by Dzmitry Kopats on 4/3/20.
+//  Copyright © 2020 Dzmitry Kopats. All rights reserved.
+//
+
+HS_APP_NAME = Hamster
+HS_APP_VERSION = 0.1
+HS_APP_BUNDLE_ID = com.dmitryKopats.HamsterRelease
+HS_APP_ICON = AppIconRelease
+
+BACKEND_URL = http:\/\/api.intensifystudio.com/
+CONSUMER_KEY = ck_a57e4fa2e14c12f400371cf2951ec3dea5
+CONSUMER_SECRET = cs_c847caa35ce1041e9c69d239141f1f63bb22b

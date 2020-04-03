@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,17 +20,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="ghx-54-VqZ">
-                                <rect key="frame" x="107.5" y="213.5" width="160" height="240"/>
+                                <rect key="frame" x="67.5" y="153.5" width="240" height="360"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="E00-OI-FMU"/>
-                                    <constraint firstAttribute="height" constant="240" id="EQ9-Up-LQy"/>
+                                    <constraint firstAttribute="width" constant="240" id="E00-OI-FMU"/>
+                                    <constraint firstAttribute="height" constant="360" id="EQ9-Up-LQy"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humster" translatesAutoresizingMaskIntoConstraints="NO" id="bLu-uj-DBc">
-                                <rect key="frame" x="107.5" y="213.5" width="160" height="240"/>
+                                <rect key="frame" x="67.5" y="153.5" width="240" height="360"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="3De-db-uC8"/>
-                                    <constraint firstAttribute="height" constant="240" id="oTS-hl-CX1"/>
+                                    <constraint firstAttribute="width" constant="240" id="3De-db-uC8"/>
+                                    <constraint firstAttribute="height" constant="360" id="oTS-hl-CX1"/>
                                 </constraints>
                             </imageView>
                         </subviews>
