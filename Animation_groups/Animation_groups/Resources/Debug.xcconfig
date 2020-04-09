@@ -14,3 +14,5 @@ HS_APP_ICON = AppIconDebug
 BACKEND_URL = http:\/\/api.intensifystudio.com/development
 CONSUMER_KEY = ck_a57e4fa2e14c12ae3f400371cf2951ec3dea5_dev
 CONSUMER_SECRET = cs_c847caa35ce1041e9c69d239141f13f63bb22b_dev
+
+HS_TARGET_SWIFT_FLAGS = DEBUG

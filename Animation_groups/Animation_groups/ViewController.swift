@@ -26,10 +26,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         setupAnimationGroups()
-        
-        let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(startShuffle))
-        view.addGestureRecognizer(tapGesture)
-        self.printConfigVariables()
+        addGestureRecognizer()
+        printConfigVariables()
+        setupBackground()
     }
 }
  
@@ -64,6 +63,11 @@ private extension ViewController {
         return [zPosition, rotation, position]
     }
     
+    func addGestureRecognizer() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(startShuffle))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
     @objc func startShuffle() {
         card.layer.add((catFirst ? invertedAnimationGroup : animationGroup), forKey: Constants.animationKey)
         card2.layer.add((catFirst ? animationGroup : invertedAnimationGroup), forKey: Constants.animationKey)
@@ -75,13 +79,32 @@ private extension ViewController {
     }
     
     func printConfigVariables() {
-        print(infoForKey("BACKEND_URL"))
-        print(infoForKey("CONSUMER_KEY"))
-        print(infoForKey("CONSUMER_KEY"))
+        printKeyValuePair("Backend url")
+        printKeyValuePair("Consumer secret")
+        printKeyValuePair("Consumer key")
     }
     
-    func infoForKey(_ key: String) -> String? {
+    func printKeyValuePair(_ key: String) {
+        print("\(key) = \(infoForKey(key))")
+    }
+    
+    func infoForKey(_ key: String) -> String {
            return (Bundle.main.infoDictionary?[key] as? String)?
-               .replacingOccurrences(of: "\\", with: "")
+               .replacingOccurrences(of: "\\", with: "") ?? ""
+    }
+    
+    func setupBackground() {
+        let color: UIColor
+        #if RELEASE
+        color = UIColor.darkGray
+        #elseif DEBUG
+        color = UIColor.brown
+        #elseif STAGING
+        color = UIColor.white
+        #else
+        color = UIColor.green
+        #endif
+        
+        view.backgroundColor = color
     }
 }
